@@ -1,0 +1,7 @@
+{
+  "_fv": 6,
+  "_type": "procedure",
+  "definition": {
+    "procedurexml": "<xml xmlns=\"http://www.w3.org/1999/xhtml\"><variables></variables><block type=\"event_trigger\" id=\"6e.ICrlI9fHUBC@#2^V=\" deletable=\"false\" x=\"40\" y=\"40\"><field name=\"trigger\">No additional trigger</field><next><block type=\"entity_open_gui\" id=\"?yy6YB`~0J`u[^F+.7n!\"><field name=\"guiname\">FusionInterface</field></block></next></block></xml>"
+  }
+}

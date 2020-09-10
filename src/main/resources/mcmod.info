@@ -1,0 +1,20 @@
+[
+  {
+    "modid": "minecrown",
+    "name": "MinecrownMOD",
+    "description": "The mod introduces a new crafting-table-like block which can be used for fusing Redstone Dust, Diamonds and Gold with Iron Blocks. You put 1 iron block in the top left slot and one of the 3 materials to create Red Iron, Diamond Blocks or Gold Blocks.  ",
+    "version": "1.0.0",
+    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "logoFile": "",
+    "mcversion": "1.12.2",
+    "url": "https://mcreator.net",
+    "updateUrl": "",
+    "authorList": [
+      "Klemen"
+    ],
+    "dependencies": [],
+    "dependants": [],
+    "requiredMods": [],
+    "useDependencyInformation": "true"
+  }
+]

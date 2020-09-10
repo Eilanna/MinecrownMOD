@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecrown:blocks/bottom",
+    "up": "minecrown:blocks/top",
+    "north": "minecrown:blocks/side",
+    "east": "minecrown:blocks/side",
+    "south": "minecrown:blocks/side",
+    "west": "minecrown:blocks/side",
+    "particle": "minecrown:blocks/bottom"
+  }
+}

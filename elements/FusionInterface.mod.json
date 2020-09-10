@@ -1,0 +1,89 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "image",
+        "data": {
+          "image": "craft-arrow.png",
+          "name": "craft-arrow",
+          "x": 392,
+          "y": 142
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fusion table",
+          "color": {
+            "value": -39322,
+            "falpha": 0.0
+          },
+          "name": "Fusion table",
+          "x": 264,
+          "y": 84
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Fuse",
+          "onClick": {
+            "name": "FusionProcedure"
+          },
+          "width": 96,
+          "height": 40,
+          "name": "Fuse",
+          "x": 378,
+          "y": 192
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 300,
+          "y": 114
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "color": {
+            "value": -256,
+            "falpha": 0.0
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 298,
+          "y": 168
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "color": {
+            "value": -39322,
+            "falpha": 0.0
+          },
+          "id": 2,
+          "name": "Slot #2",
+          "x": 516,
+          "y": 142
+        }
+      }
+    ]
+  }
+}
