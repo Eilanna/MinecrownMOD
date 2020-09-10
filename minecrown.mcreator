@@ -1,6 +1,6 @@
 {
   "id_map": {
-    "GUI": 5
+    "GUI": 6
   },
   "mod_elements": [
     {
@@ -189,6 +189,16 @@
             "type": "world"
           }
         ]
+      }
+    },
+    {
+      "name": "Cvcxv",
+      "type": "gui",
+      "sortid": 13,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 6
       }
     }
   ],
