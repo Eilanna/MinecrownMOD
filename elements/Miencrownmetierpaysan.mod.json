@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "Minecrown Metier",
+    "name": "Miencrown - Paysan",
     "icon": {
-      "value": "Blocks.IRON_BLOCK"
+      "value": "Items.WHEAT"
     },
     "showSearch": false
   }

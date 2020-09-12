@@ -7,22 +7,22 @@ import net.minecraftforge.fml.relauncher.SideOnly;
 import net.minecraftforge.fml.relauncher.Side;
 
 import net.minecraft.item.ItemStack;
-import net.minecraft.init.Blocks;
+import net.minecraft.init.Items;
 import net.minecraft.creativetab.CreativeTabs;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class TabMinecrownMetier extends ElementsMinecrownMOD.ModElement {
-	public TabMinecrownMetier(ElementsMinecrownMOD instance) {
+public class TabMiencrownmetierpaysan extends ElementsMinecrownMOD.ModElement {
+	public TabMiencrownmetierpaysan(ElementsMinecrownMOD instance) {
 		super(instance, 8);
 	}
 
 	@Override
 	public void initElements() {
-		tab = new CreativeTabs("tabminecrownmetier") {
+		tab = new CreativeTabs("tabmiencrownmetierpaysan") {
 			@SideOnly(Side.CLIENT)
 			@Override
 			public ItemStack getTabIconItem() {
-				return new ItemStack(Blocks.IRON_BLOCK, (int) (1));
+				return new ItemStack(Items.WHEAT, (int) (1));
 			}
 
 			@SideOnly(Side.CLIENT)

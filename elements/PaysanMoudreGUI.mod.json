@@ -15,8 +15,8 @@
           },
           "id": 0,
           "name": "Slot #0",
-          "x": 318,
-          "y": 186
+          "x": 264,
+          "y": 96
         }
       },
       {
@@ -27,35 +27,8 @@
           },
           "id": 1,
           "name": "Slot #1",
-          "x": 318,
-          "y": 96
-        }
-      },
-      {
-        "type": "button",
-        "data": {
-          "text": "FORGER",
-          "onClick": {
-            "name": "ForgeAProcedure"
-          },
-          "width": 120,
-          "height": 40,
-          "name": "FORGER",
-          "x": 372,
-          "y": 132
-        }
-      },
-      {
-        "type": "label",
-        "data": {
-          "text": "La Forge",
-          "color": {
-            "value": -1,
-            "falpha": 0.0
-          },
-          "name": "La Forge",
-          "x": 498,
-          "y": 204
+          "x": 264,
+          "y": 168
         }
       },
       {
@@ -63,8 +36,32 @@
         "data": {
           "id": 2,
           "name": "Slot #2",
-          "x": 516,
+          "x": 318,
           "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Moudre",
+          "width": 120,
+          "height": 40,
+          "name": "Moudre",
+          "x": 462,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Fuel: 10%",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Fuel: 10%",
+          "x": 498,
+          "y": 78
         }
       }
     ]

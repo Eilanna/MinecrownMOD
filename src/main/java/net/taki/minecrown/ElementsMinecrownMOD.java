@@ -6,8 +6,8 @@
  */
 package net.taki.minecrown;
 
+import net.taki.minecrown.gui.GuiPaysanMoudreGUI;
 import net.taki.minecrown.gui.GuiFusionInterface;
-import net.taki.minecrown.gui.GuiForgeAGui;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -127,8 +127,8 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiFusionInterface.GUIID)
 				return new GuiFusionInterface.GuiContainerMod(world, x, y, z, player);
-			if (id == GuiForgeAGui.GUIID)
-				return new GuiForgeAGui.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiPaysanMoudreGUI.GUIID)
+				return new GuiPaysanMoudreGUI.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
@@ -136,8 +136,8 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiFusionInterface.GUIID)
 				return new GuiFusionInterface.GuiWindow(world, x, y, z, player);
-			if (id == GuiForgeAGui.GUIID)
-				return new GuiForgeAGui.GuiWindow(world, x, y, z, player);
+			if (id == GuiPaysanMoudreGUI.GUIID)
+				return new GuiPaysanMoudreGUI.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}
