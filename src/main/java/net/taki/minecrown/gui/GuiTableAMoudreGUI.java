@@ -4,7 +4,6 @@ package net.taki.minecrown.gui;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.input.Keyboard;
 
-import net.taki.minecrown.procedure.ProcedureFusionProcedure;
 import net.taki.minecrown.MinecrownMOD;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -35,11 +34,11 @@ import java.util.HashMap;
 import java.io.IOException;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
-	public static int GUIID = 4;
+public class GuiTableAMoudreGUI extends ElementsMinecrownMOD.ModElement {
+	public static int GUIID = 9;
 	public static HashMap guistate = new HashMap();
-	public GuiFusionInterface(ElementsMinecrownMOD instance) {
-		super(instance, 6);
+	public GuiTableAMoudreGUI(ElementsMinecrownMOD instance) {
+		super(instance, 2);
 	}
 
 	@Override
@@ -63,11 +62,11 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 			TileEntity ent = world.getTileEntity(new BlockPos(x, y, z));
 			if (ent instanceof IInventory)
 				this.internal = (IInventory) ent;
-			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 26, 21) {
+			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 8, 21) {
 			}));
-			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 25, 48) {
+			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 8, 57) {
 			}));
-			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 134, 35) {
+			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 44, 39) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -241,7 +240,7 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/fusioninterface.png");
+		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/tableamoudregui.png");
 		@Override
 		public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 			this.drawDefaultBackground();
@@ -257,8 +256,6 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 			int l = (this.height - this.ySize) / 2;
 			this.drawTexturedModalRect(k, l, 0, 0, this.xSize, this.ySize);
 			zLevel = 100.0F;
-			this.mc.renderEngine.bindTexture(new ResourceLocation("minecrown:textures/craft-arrow.png"));
-			this.drawTexturedModalRect(this.guiLeft + 71, this.guiTop + 34, 0, 0, 256, 256);
 		}
 
 		@Override
@@ -278,7 +275,6 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
-			this.fontRenderer.drawString("Fusion table", 7, 5, -39322);
 		}
 
 		@Override
@@ -294,7 +290,7 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 			this.guiTop = (this.height - 166) / 2;
 			Keyboard.enableRepeatEvents(true);
 			this.buttonList.clear();
-			this.buttonList.add(new GuiButton(0, this.guiLeft + 64, this.guiTop + 59, 48, 20, "Fuse"));
+			this.buttonList.add(new GuiButton(0, this.guiLeft + 106, this.guiTop + 56, 60, 20, "Moudre"));
 		}
 
 		@Override
@@ -409,16 +405,6 @@ public class GuiFusionInterface extends ElementsMinecrownMOD.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
-		if (buttonID == 0) {
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureFusionProcedure.executeProcedure($_dependencies);
-			}
-		}
 	}
 
 	private static void handleSlotAction(EntityPlayer entity, int slotID, int changeType, int meta, int x, int y, int z) {

@@ -2,8 +2,8 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "bottom",
-    "textureTop": "top",
+    "texture": "side",
+    "textureTop": "side",
     "textureLeft": "side",
     "textureFront": "side",
     "textureRight": "side",
@@ -20,25 +20,25 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Fusion Table",
+    "name": "Machine A Moudre",
     "specialInfo": [],
-    "hardness": 2.0,
-    "resistance": 5.0,
+    "hardness": 1.0,
+    "resistance": 10.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "DECORATIONS"
+      "value": "CUSTOM:MinecrownPaysanTable"
     },
-    "destroyTool": "pickaxe",
+    "destroyTool": "Not specified",
     "affectedBySilkTouch": true,
     "customDrop": {
-      "value": "CUSTOM:RedIron"
+      "value": ""
     },
-    "dropAmount": 2,
+    "dropAmount": 1,
     "isBeaconBase": false,
     "enchantPowerBonus": 0.0,
     "plantsGrowOn": false,
     "canProvidePower": false,
-    "lightOpacity": 0,
+    "lightOpacity": 255,
     "material": {
       "value": "IRON"
     },
@@ -60,7 +60,7 @@
     },
     "luminance": 0.0,
     "unbreakable": false,
-    "breakHarvestLevel": 3,
+    "breakHarvestLevel": 1,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -78,7 +78,7 @@
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "onRightClicked": {
-      "name": "OpenFusionUI"
+      "name": "ProcessMachineAMoudreOPENGUI"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
@@ -89,7 +89,7 @@
     ],
     "frequencyPerChunks": 10,
     "frequencyOnChunk": 16,
-    "minGenerateHeight": 10,
-    "maxGenerateHeight": 110
+    "minGenerateHeight": 0,
+    "maxGenerateHeight": 64
   }
 }

@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "Miencrown - Paysan",
+    "name": "Minecrown Paysan Table",
     "icon": {
-      "value": "Items.WHEAT"
+      "value": "Blocks.WHEAT"
     },
     "showSearch": false
   }

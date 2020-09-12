@@ -1,10 +1,28 @@
 {
   "id_map": {
-    "GUI": 8
+    "GUI": 9
   },
   "mod_elements": [
     {
-      "name": "FusionTable",
+      "name": "MinecrownPaysanTable",
+      "type": "tab",
+      "sortid": 1,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "TableAMoudreGUI",
+      "type": "gui",
+      "sortid": 2,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 9
+      }
+    },
+    {
+      "name": "MachineAMoudre",
       "type": "block",
       "sortid": 3,
       "compiles": true,
@@ -12,9 +30,9 @@
       "ids": {}
     },
     {
-      "name": "FusionProcedure",
+      "name": "ProcessMachineAMoudreCraft",
       "type": "procedure",
-      "sortid": 5,
+      "sortid": 4,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -40,19 +58,9 @@
       }
     },
     {
-      "name": "FusionInterface",
-      "type": "gui",
-      "sortid": 6,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 4
-      }
-    },
-    {
-      "name": "OpenFusionUI",
+      "name": "ProcessMachineAMoudreOPENGUI",
       "type": "procedure",
-      "sortid": 7,
+      "sortid": 5,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -80,32 +88,14 @@
           }
         ]
       }
-    },
-    {
-      "name": "PaysanMoudreGUI",
-      "type": "gui",
-      "sortid": 9,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 8
-      }
-    },
-    {
-      "name": "Miencrownmetierpaysan",
-      "type": "tab",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "itemGroup.tabmiencrownmetierpaysan": "Miencrown - Paysan",
-      "tile.fusiontable.name": "Fusion Table"
+      "itemGroup.tabminecrownpaysantable": "Minecrown Paysan Table",
+      "tile.machineamoudre.name": "Machine A Moudre"
     }
   },
   "workspaceSettings": {
