@@ -1,17 +1,9 @@
 
 package net.taki.minecrown.creativetab;
 
-import net.taki.minecrown.ElementsMinecrownMOD;
-
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.fml.relauncher.Side;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.init.Items;
-import net.minecraft.creativetab.CreativeTabs;
-
 @ElementsMinecrownMOD.ModElement.Tag
 public class TabMiencrownmetierpaysan extends ElementsMinecrownMOD.ModElement {
+
 	public TabMiencrownmetierpaysan(ElementsMinecrownMOD instance) {
 		super(instance, 8);
 	}
@@ -31,5 +23,7 @@ public class TabMiencrownmetierpaysan extends ElementsMinecrownMOD.ModElement {
 			}
 		};
 	}
+
 	public static CreativeTabs tab;
+
 }

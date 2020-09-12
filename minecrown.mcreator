@@ -82,14 +82,6 @@
       }
     },
     {
-      "name": "Miencrownmetierpaysan",
-      "type": "tab",
-      "sortid": 8,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "PaysanMoudreGUI",
       "type": "gui",
       "sortid": 9,
@@ -98,6 +90,14 @@
       "ids": {
         "0": 8
       }
+    },
+    {
+      "name": "Miencrownmetierpaysan",
+      "type": "tab",
+      "sortid": 8,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
