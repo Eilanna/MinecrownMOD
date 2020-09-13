@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureProcessMachineAMoudreOPENGUI;
+import net.taki.minecrown.procedure.ProcedureProcessMachineamoudreopen;
 import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -40,34 +40,34 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockMachineAMoudre extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:machineamoudre")
+public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:machineamoudreblock")
 	public static final Block block = null;
-	public BlockMachineAMoudre(ElementsMinecrownMOD instance) {
+	public BlockMachineAMoudreblock(ElementsMinecrownMOD instance) {
 		super(instance, 3);
 	}
 
 	@Override
 	public void initElements() {
-		elements.blocks.add(() -> new BlockCustom().setRegistryName("machineamoudre"));
+		elements.blocks.add(() -> new BlockCustom().setRegistryName("machineamoudreblock"));
 		elements.items.add(() -> new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachineamoudre");
+		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachineamoudreblock");
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:machineamoudre", "inventory"));
+				new ModelResourceLocation("minecrown:machineamoudreblock", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
 		public BlockCustom() {
 			super(Material.IRON);
-			setUnlocalizedName("machineamoudre");
+			setUnlocalizedName("machineamoudreblock");
 			setSoundType(SoundType.METAL);
 			setHardness(1F);
 			setResistance(10F);
@@ -130,7 +130,7 @@ public class BlockMachineAMoudre extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureProcessMachineAMoudreOPENGUI.executeProcedure($_dependencies);
+				ProcedureProcessMachineamoudreopen.executeProcedure($_dependencies);
 			}
 			return true;
 		}
@@ -163,7 +163,7 @@ public class BlockMachineAMoudre extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getName() {
-			return "container.machineamoudre";
+			return "container.machineamoudreblock";
 		}
 
 		@Override
@@ -209,7 +209,7 @@ public class BlockMachineAMoudre extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getGuiID() {
-			return "minecrown:machineamoudre";
+			return "minecrown:machineamoudreblock";
 		}
 
 		@Override

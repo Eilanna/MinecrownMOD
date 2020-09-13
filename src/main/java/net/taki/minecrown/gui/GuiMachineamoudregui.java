@@ -4,6 +4,7 @@ package net.taki.minecrown.gui;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.input.Keyboard;
 
+import net.taki.minecrown.procedure.ProcedureProcessMachineAMoudreMoudre;
 import net.taki.minecrown.MinecrownMOD;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -34,10 +35,10 @@ import java.util.HashMap;
 import java.io.IOException;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class GuiTableAMoudreGUI extends ElementsMinecrownMOD.ModElement {
-	public static int GUIID = 9;
+public class GuiMachineamoudregui extends ElementsMinecrownMOD.ModElement {
+	public static int GUIID = 10;
 	public static HashMap guistate = new HashMap();
-	public GuiTableAMoudreGUI(ElementsMinecrownMOD instance) {
+	public GuiMachineamoudregui(ElementsMinecrownMOD instance) {
 		super(instance, 2);
 	}
 
@@ -64,9 +65,9 @@ public class GuiTableAMoudreGUI extends ElementsMinecrownMOD.ModElement {
 				this.internal = (IInventory) ent;
 			this.customSlots.put(0, this.addSlotToContainer(new Slot(internal, 0, 8, 21) {
 			}));
-			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 8, 57) {
+			this.customSlots.put(1, this.addSlotToContainer(new Slot(internal, 1, 8, 48) {
 			}));
-			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 44, 39) {
+			this.customSlots.put(2, this.addSlotToContainer(new Slot(internal, 2, 44, 30) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
@@ -240,7 +241,7 @@ public class GuiTableAMoudreGUI extends ElementsMinecrownMOD.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/tableamoudregui.png");
+		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/machineamoudregui.png");
 		@Override
 		public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 			this.drawDefaultBackground();
@@ -405,6 +406,16 @@ public class GuiTableAMoudreGUI extends ElementsMinecrownMOD.ModElement {
 		// security measure to prevent arbitrary chunk generation
 		if (!world.isBlockLoaded(new BlockPos(x, y, z)))
 			return;
+		if (buttonID == 0) {
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureProcessMachineAMoudreMoudre.executeProcedure($_dependencies);
+			}
+		}
 	}
 
 	private static void handleSlotAction(EntityPlayer entity, int slotID, int changeType, int meta, int x, int y, int z) {

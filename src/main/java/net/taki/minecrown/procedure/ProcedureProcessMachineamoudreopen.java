@@ -1,6 +1,6 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.gui.GuiTableAMoudreGUI;
+import net.taki.minecrown.gui.GuiMachineamoudregui;
 import net.taki.minecrown.MinecrownMOD;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -9,30 +9,30 @@ import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.Entity;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class ProcedureProcessMachineAMoudreOPENGUI extends ElementsMinecrownMOD.ModElement {
-	public ProcedureProcessMachineAMoudreOPENGUI(ElementsMinecrownMOD instance) {
+public class ProcedureProcessMachineamoudreopen extends ElementsMinecrownMOD.ModElement {
+	public ProcedureProcessMachineamoudreopen(ElementsMinecrownMOD instance) {
 		super(instance, 5);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("entity") == null) {
-			System.err.println("Failed to load dependency entity for procedure ProcessMachineAMoudreOPENGUI!");
+			System.err.println("Failed to load dependency entity for procedure ProcessMachineamoudreopen!");
 			return;
 		}
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure ProcessMachineAMoudreOPENGUI!");
+			System.err.println("Failed to load dependency x for procedure ProcessMachineamoudreopen!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure ProcessMachineAMoudreOPENGUI!");
+			System.err.println("Failed to load dependency y for procedure ProcessMachineamoudreopen!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure ProcessMachineAMoudreOPENGUI!");
+			System.err.println("Failed to load dependency z for procedure ProcessMachineamoudreopen!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure ProcessMachineAMoudreOPENGUI!");
+			System.err.println("Failed to load dependency world for procedure ProcessMachineamoudreopen!");
 			return;
 		}
 		Entity entity = (Entity) dependencies.get("entity");
@@ -41,6 +41,6 @@ public class ProcedureProcessMachineAMoudreOPENGUI extends ElementsMinecrownMOD.
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if (entity instanceof EntityPlayer)
-			((EntityPlayer) entity).openGui(MinecrownMOD.instance, GuiTableAMoudreGUI.GUIID, world, x, y, z);
+			((EntityPlayer) entity).openGui(MinecrownMOD.instance, GuiMachineamoudregui.GUIID, world, x, y, z);
 	}
 }

@@ -6,7 +6,7 @@
  */
 package net.taki.minecrown;
 
-import net.taki.minecrown.gui.GuiTableAMoudreGUI;
+import net.taki.minecrown.gui.GuiMachineamoudregui;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -124,15 +124,15 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 	public static class GuiHandler implements IGuiHandler {
 		@Override
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiTableAMoudreGUI.GUIID)
-				return new GuiTableAMoudreGUI.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiMachineamoudregui.GUIID)
+				return new GuiMachineamoudregui.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
 		@Override
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiTableAMoudreGUI.GUIID)
-				return new GuiTableAMoudreGUI.GuiWindow(world, x, y, z, player);
+			if (id == GuiMachineamoudregui.GUIID)
+				return new GuiMachineamoudregui.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

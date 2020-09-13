@@ -1,6 +1,6 @@
 {
   "id_map": {
-    "GUI": 9
+    "GUI": 10
   },
   "mod_elements": [
     {
@@ -12,17 +12,17 @@
       "ids": {}
     },
     {
-      "name": "TableAMoudreGUI",
+      "name": "Machineamoudregui",
       "type": "gui",
       "sortid": 2,
       "compiles": true,
       "locked_code": false,
       "ids": {
-        "0": 9
+        "0": 10
       }
     },
     {
-      "name": "MachineAMoudre",
+      "name": "MachineAMoudreblock",
       "type": "block",
       "sortid": 3,
       "compiles": true,
@@ -30,7 +30,7 @@
       "ids": {}
     },
     {
-      "name": "ProcessMachineAMoudreCraft",
+      "name": "ProcessMachineAMoudreMoudre",
       "type": "procedure",
       "sortid": 4,
       "compiles": true,
@@ -58,7 +58,7 @@
       }
     },
     {
-      "name": "ProcessMachineAMoudreOPENGUI",
+      "name": "ProcessMachineamoudreopen",
       "type": "procedure",
       "sortid": 5,
       "compiles": true,
@@ -94,8 +94,8 @@
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "itemGroup.tabminecrownpaysantable": "Minecrown Paysan Table",
-      "tile.machineamoudre.name": "Machine A Moudre"
+      "tile.machineamoudreblock.name": "Machine A Moudreblock",
+      "itemGroup.tabminecrownpaysantable": "Minecrown Paysan Table"
     }
   },
   "workspaceSettings": {

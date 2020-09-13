@@ -20,7 +20,7 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Machine A Moudre",
+    "name": "Machine A Moudreblock",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -78,7 +78,7 @@
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
     "onRightClicked": {
-      "name": "ProcessMachineAMoudreOPENGUI"
+      "name": "ProcessMachineamoudreopen"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
