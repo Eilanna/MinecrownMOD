@@ -4,7 +4,7 @@
   "definition": {
     "name": "Minecrown Paysan Table",
     "icon": {
-      "value": "Blocks.WHEAT"
+      "value": "CUSTOM:MachineAMoudreblock"
     },
     "showSearch": false
   }
