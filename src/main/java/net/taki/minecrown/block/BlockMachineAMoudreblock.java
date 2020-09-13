@@ -1,8 +1,8 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureForgeAOpenGUI;
-import net.taki.minecrown.creativetab.TabMinecrownMetier;
+import net.taki.minecrown.procedure.ProcedureProcessMachineamoudreopen;
+import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -40,39 +40,40 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockForgeABlock extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:forgeablock")
+public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:machineamoudreblock")
 	public static final Block block = null;
-	public BlockForgeABlock(ElementsMinecrownMOD instance) {
-		super(instance, 11);
+	public BlockMachineAMoudreblock(ElementsMinecrownMOD instance) {
+		super(instance, 3);
 	}
 
 	@Override
 	public void initElements() {
-		elements.blocks.add(() -> new BlockCustom().setRegistryName("forgeablock"));
+		elements.blocks.add(() -> new BlockCustom().setRegistryName("machineamoudreblock"));
 		elements.items.add(() -> new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentityforgeablock");
+		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachineamoudreblock");
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation("minecrown:forgeablock", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
+				new ModelResourceLocation("minecrown:machineamoudreblock", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
 		public BlockCustom() {
-			super(Material.ROCK);
-			setUnlocalizedName("forgeablock");
-			setSoundType(SoundType.GROUND);
+			super(Material.IRON);
+			setUnlocalizedName("machineamoudreblock");
+			setSoundType(SoundType.METAL);
 			setHardness(1F);
 			setResistance(10F);
 			setLightLevel(0F);
 			setLightOpacity(255);
-			setCreativeTab(TabMinecrownMetier.tab);
+			setCreativeTab(TabMinecrownPaysanTable.tab);
 		}
 
 		@Override
@@ -129,17 +130,17 @@ public class BlockForgeABlock extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureForgeAOpenGUI.executeProcedure($_dependencies);
+				ProcedureProcessMachineamoudreopen.executeProcedure($_dependencies);
 			}
 			return true;
 		}
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
 		@Override
 		public int getSizeInventory() {
-			return 9;
+			return 3;
 		}
 
 		@Override
@@ -162,7 +163,7 @@ public class BlockForgeABlock extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getName() {
-			return "container.forgeablock";
+			return "container.machineamoudreblock";
 		}
 
 		@Override
@@ -208,7 +209,7 @@ public class BlockForgeABlock extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getGuiID() {
-			return "minecrown:forgeablock";
+			return "minecrown:machineamoudreblock";
 		}
 
 		@Override

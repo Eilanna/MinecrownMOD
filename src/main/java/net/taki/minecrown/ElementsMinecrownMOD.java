@@ -6,10 +6,6 @@
  */
 package net.taki.minecrown;
 
-import net.taki.minecrown.gui.GuiFusionInterface;
-import net.taki.minecrown.gui.GuiForgeAGui;
-import net.taki.minecrown.gui.GuiCvcxv;
-
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;

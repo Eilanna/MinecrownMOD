@@ -1,0 +1,59 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 264,
+          "y": 114
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 264,
+          "y": 168
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "name": "Slot #2",
+          "x": 336,
+          "y": 132
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Moudre",
+          "onClick": {
+            "name": "ProcessMachineAMoudreMoudre"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Moudre",
+          "x": 462,
+          "y": 186
+        }
+      }
+    ]
+  }
+}

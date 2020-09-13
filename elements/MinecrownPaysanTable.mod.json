@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "Minecrown Metier",
+    "name": "Minecrown Paysan Table",
     "icon": {
-      "value": "Blocks.IRON_BLOCK"
+      "value": "CUSTOM:MachineAMoudreblock"
     },
     "showSearch": false
   }
