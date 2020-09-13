@@ -6,6 +6,8 @@
  */
 package net.taki.minecrown;
 
+import net.taki.minecrown.gui.GuiMachineamoudregui;
+
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.EntityEntry;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
@@ -122,23 +124,15 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 	public static class GuiHandler implements IGuiHandler {
 		@Override
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiFusionInterface.GUIID)
-				return new GuiFusionInterface.GuiContainerMod(world, x, y, z, player);
-			if (id == GuiForgeAGui.GUIID)
-				return new GuiForgeAGui.GuiContainerMod(world, x, y, z, player);
-			if (id == GuiCvcxv.GUIID)
-				return new GuiCvcxv.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiMachineamoudregui.GUIID)
+				return new GuiMachineamoudregui.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
 		@Override
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiFusionInterface.GUIID)
-				return new GuiFusionInterface.GuiWindow(world, x, y, z, player);
-			if (id == GuiForgeAGui.GUIID)
-				return new GuiForgeAGui.GuiWindow(world, x, y, z, player);
-			if (id == GuiCvcxv.GUIID)
-				return new GuiCvcxv.GuiWindow(world, x, y, z, player);
+			if (id == GuiMachineamoudregui.GUIID)
+				return new GuiMachineamoudregui.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}
