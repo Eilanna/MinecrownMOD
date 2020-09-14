@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "minecrown:blocks/side",
-    "up": "minecrown:blocks/side",
-    "north": "minecrown:blocks/side",
-    "east": "minecrown:blocks/side",
-    "south": "minecrown:blocks/side",
-    "west": "minecrown:blocks/side",
-    "particle": "minecrown:blocks/side"
+    "down": "minecrown:blocks/GRINDER_Bottom",
+    "up": "minecrown:blocks/GRINDER_Top",
+    "north": "minecrown:blocks/GRINDER_Front",
+    "east": "minecrown:blocks/GRINDER_Side",
+    "south": "minecrown:blocks/GRINDER_Back",
+    "west": "minecrown:blocks/GRINDER_Side",
+    "particle": "minecrown:blocks/GRINDER_Bottom"
   }
 }
