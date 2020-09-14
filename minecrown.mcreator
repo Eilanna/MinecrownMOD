@@ -101,10 +101,10 @@
   "workspaceSettings": {
     "modid": "minecrown",
     "modName": "MinecrownMOD",
-    "version": "1.0.0",
-    "description": "The mod introduces a new crafting-table-like block which can be used for fusing Redstone Dust, Diamonds and Gold with Iron Blocks. You put 1 iron block in the top left slot and one of the 3 materials to create Red Iron, Diamond Blocks or Gold Blocks.  ",
-    "author": "Klemen",
-    "websiteURL": "https://mcreator.net",
+    "version": "0.0.1",
+    "description": "Mods RP MineCrown",
+    "author": "T4K1 \u0026 M30W",
+    "websiteURL": "Minecrown",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -112,7 +112,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
-    "credits": "Created using mod maker MCreator - https://mcreator.net/about",
+    "credits": "Created with MCreator",
     "modElementsPackage": "net.taki.minecrown",
     "lockBaseModFiles": false
   },
