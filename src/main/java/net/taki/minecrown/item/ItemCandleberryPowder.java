@@ -1,24 +1,12 @@
 
 package net.taki.minecrown.item;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
-import net.taki.minecrown.ElementsMinecrownMOD;
-
-import net.minecraftforge.fml.relauncher.SideOnly;
-import net.minecraftforge.fml.relauncher.Side;
-import net.minecraftforge.fml.common.registry.GameRegistry;
-import net.minecraftforge.client.model.ModelLoader;
-import net.minecraftforge.client.event.ModelRegistryEvent;
-
-import net.minecraft.item.ItemStack;
-import net.minecraft.item.Item;
-import net.minecraft.client.renderer.block.model.ModelResourceLocation;
-import net.minecraft.block.state.IBlockState;
-
 @ElementsMinecrownMOD.ModElement.Tag
 public class ItemCandleberryPowder extends ElementsMinecrownMOD.ModElement {
+
 	@GameRegistry.ObjectHolder("minecrown:candleberrypowder")
 	public static final Item block = null;
+
 	public ItemCandleberryPowder(ElementsMinecrownMOD instance) {
 		super(instance, 106);
 	}
@@ -33,7 +21,9 @@ public class ItemCandleberryPowder extends ElementsMinecrownMOD.ModElement {
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("minecrown:candleberrypowder", "inventory"));
 	}
+
 	public static class ItemCustom extends Item {
+
 		public ItemCustom() {
 			setMaxDamage(0);
 			maxStackSize = 64;
@@ -56,5 +46,7 @@ public class ItemCandleberryPowder extends ElementsMinecrownMOD.ModElement {
 		public float getDestroySpeed(ItemStack par1ItemStack, IBlockState par2Block) {
 			return 1F;
 		}
+
 	}
+
 }
