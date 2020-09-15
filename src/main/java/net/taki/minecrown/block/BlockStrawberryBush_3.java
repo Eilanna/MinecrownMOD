@@ -77,7 +77,7 @@ public class BlockStrawberryBush_3 extends ElementsMinecrownMOD.ModElement {
 		public BlockCustomFlower() {
 			setSoundType(SoundType.GROUND);
 			setCreativeTab(null);
-			setHardness(4F);
+			setHardness(3.9999999999999996F);
 			setResistance(0F);
 			setLightLevel(0F);
 			setUnlocalizedName("strawberrybush_3");

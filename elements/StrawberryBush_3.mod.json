@@ -8,11 +8,11 @@
     "plantType": "normal",
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 3,
-    "name": "Blackberry Bush3",
+    "name": "Strawberry Bush3",
     "creativeTab": {
       "value": "No creative tab entry"
     },
-    "hardness": 4.0,
+    "hardness": 3.9999999999999996,
     "resistance": 0.0,
     "luminance": 0.0,
     "unbreakable": false,

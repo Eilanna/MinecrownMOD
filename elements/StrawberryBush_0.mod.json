@@ -8,7 +8,7 @@
     "plantType": "normal",
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 3,
-    "name": "Cranberry Bush0",
+    "name": "Strawberry Bush0",
     "creativeTab": {
       "value": "No creative tab entry"
     },
@@ -20,7 +20,7 @@
       "value": "GROUND"
     },
     "customDrop": {
-      "value": "CUSTOM:CranberrySeed"
+      "value": ""
     },
     "dropAmount": 0,
     "isReplaceable": false,
