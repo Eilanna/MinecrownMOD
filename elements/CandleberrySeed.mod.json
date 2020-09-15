@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "trawberryseeditem",
+    "texture": "symphorineseeditem",
     "customModelName": "Normal",
-    "name": "Graine de Fraise",
+    "name": "Graine de Canneberge",
     "creativeTab": {
       "value": "CUSTOM:MinecrownPaysanTable"
     },
@@ -21,7 +21,7 @@
     "specialInfo": [],
     "hasGlow": false,
     "onRightClickedOnBlock": {
-      "name": "StrawberryBushPlantation"
+      "name": "CandleberryBushPlantation"
     }
   }
 }

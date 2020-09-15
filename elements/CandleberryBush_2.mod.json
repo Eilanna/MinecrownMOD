@@ -1,0 +1,54 @@
+{
+  "_fv": 6,
+  "_type": "plant",
+  "definition": {
+    "renderType": 12,
+    "texture": "symphorine_stage_2",
+    "customModelName": "Cross model",
+    "plantType": "normal",
+    "growapableSpawnType": "Plains",
+    "growapableMaxHeight": 3,
+    "name": "Cranberry Bush0",
+    "creativeTab": {
+      "value": "No creative tab entry"
+    },
+    "hardness": 0.0,
+    "resistance": 0.0,
+    "luminance": 0.0,
+    "unbreakable": false,
+    "soundOnStep": {
+      "value": "GROUND"
+    },
+    "customDrop": {
+      "value": "CUSTOM:CranberrySeed"
+    },
+    "dropAmount": 0,
+    "isReplaceable": false,
+    "colorOnMap": "DEFAULT",
+    "creativePickItem": {
+      "value": ""
+    },
+    "flammability": 0,
+    "fireSpreadSpeed": 0,
+    "frequencyOnChunks": 0,
+    "spawnWorldTypes": [
+      "Surface"
+    ],
+    "restrictionBiomes": [],
+    "onNeighbourBlockChanges": {
+      "name": "Bush_UpdateBlock"
+    },
+    "onTickUpdate": {
+      "name": "CandleberryBush_Transform2"
+    },
+    "onDestroyedByPlayer": {
+      "name": "CandleberryBush_Break2"
+    },
+    "onDestroyedByExplosion": {
+      "name": "Bush_Break"
+    },
+    "onRightClicked": {
+      "name": "CandleberryBush_Recolt2"
+    }
+  }
+}

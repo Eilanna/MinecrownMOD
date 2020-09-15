@@ -3,9 +3,9 @@
   "_type": "item",
   "definition": {
     "renderType": 0,
-    "texture": "trawberryseeditem",
+    "texture": "symphorinepowderitem",
     "customModelName": "Normal",
-    "name": "Graine de Fraise",
+    "name": "Poudre de Canneberge",
     "creativeTab": {
       "value": "CUSTOM:MinecrownPaysanTable"
     },
@@ -19,9 +19,6 @@
     "enableMeleeDamage": false,
     "damageVsEntity": 0.0,
     "specialInfo": [],
-    "hasGlow": false,
-    "onRightClickedOnBlock": {
-      "name": "StrawberryBushPlantation"
-    }
+    "hasGlow": false
   }
 }
