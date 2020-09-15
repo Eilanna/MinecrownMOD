@@ -1,6 +1,7 @@
 package net.taki.minecrown.procedure;
 
 import net.taki.minecrown.item.ItemCranberrySeed;
+import net.taki.minecrown.block.BlockCranberryBush_0;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -9,34 +10,35 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.EntityItem;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class ProcedureCranberryBush_Break1 extends ElementsMinecrownMOD.ModElement {
-	public ProcedureCranberryBush_Break1(ElementsMinecrownMOD instance) {
-		super(instance, 34);
+public class ProcedureCranberryBush_Recolt1 extends ElementsMinecrownMOD.ModElement {
+	public ProcedureCranberryBush_Recolt1(ElementsMinecrownMOD instance) {
+		super(instance, 38);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure CranberryBush_Break1!");
+			System.err.println("Failed to load dependency x for procedure CranberryBush_Recolt1!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure CranberryBush_Break1!");
+			System.err.println("Failed to load dependency y for procedure CranberryBush_Recolt1!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure CranberryBush_Break1!");
+			System.err.println("Failed to load dependency z for procedure CranberryBush_Recolt1!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure CranberryBush_Break1!");
+			System.err.println("Failed to load dependency world for procedure CranberryBush_Recolt1!");
 			return;
 		}
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-		if ((Math.random() >= 0.8)) {
+		world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_0.block.getDefaultState(), 3);
+		if ((Math.random() <= 0.05)) {
 			if (!world.isRemote) {
 				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);

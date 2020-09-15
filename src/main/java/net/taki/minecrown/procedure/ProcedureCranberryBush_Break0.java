@@ -36,7 +36,7 @@ public class ProcedureCranberryBush_Break0 extends ElementsMinecrownMOD.ModEleme
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-		if ((Math.random() >= 0.8)) {
+		if ((Math.random() >= 0.9)) {
 			if (!world.isRemote) {
 				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);

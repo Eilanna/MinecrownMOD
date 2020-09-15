@@ -48,7 +48,7 @@
       "name": "CranberryBush_Break2"
     },
     "onRightClicked": {
-      "name": "RecoltCranberryBush"
+      "name": "CranberryBush_Recolt2"
     }
   }
 }

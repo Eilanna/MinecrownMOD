@@ -1,8 +1,8 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureRecoltCranberryBushEmpty;
 import net.taki.minecrown.procedure.ProcedureCranberryBush_Transform1;
+import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt1;
 import net.taki.minecrown.procedure.ProcedureCranberryBush_Break1;
 import net.taki.minecrown.procedure.ProcedureCranberryBushUpgradeBlock;
 import net.taki.minecrown.item.ItemCranberrySeed;
@@ -189,7 +189,7 @@ public class BlockCranberryBush_1 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureRecoltCranberryBushEmpty.executeProcedure($_dependencies);
+				ProcedureCranberryBush_Recolt1.executeProcedure($_dependencies);
 			}
 			return true;
 		}
