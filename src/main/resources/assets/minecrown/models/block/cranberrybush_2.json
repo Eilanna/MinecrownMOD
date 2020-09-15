@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "minecrown:blocks/bush_berry_stage_2",
+    "particle": "minecrown:blocks/bush_berry_stage_2"
+  }
+}
