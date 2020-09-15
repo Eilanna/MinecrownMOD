@@ -1,12 +1,46 @@
 
 package net.taki.minecrown.block;
 
+import net.taki.minecrown.procedure.ProcedureCandleberryBush_Transform0;
+import net.taki.minecrown.procedure.ProcedureCandleberryBush_Break0;
+import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
+import net.taki.minecrown.procedure.ProcedureBush_Break;
+import net.taki.minecrown.item.ItemCranberrySeed;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.common.EnumPlantType;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+
+import net.minecraft.world.gen.feature.WorldGenFlowers;
+import net.minecraft.world.gen.IChunkGenerator;
+import net.minecraft.world.chunk.IChunkProvider;
+import net.minecraft.world.World;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.Explosion;
+import net.minecraft.util.math.RayTraceResult;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.NonNullList;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.Item;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.BlockFlower;
+import net.minecraft.block.Block;
+
+import java.util.Random;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
-
 	@GameRegistry.ObjectHolder("minecrown:candleberrybush_0")
 	public static final Block block = null;
-
 	public BlockCandleberryBush_0(ElementsMinecrownMOD instance) {
 		super(instance, 93);
 	}
@@ -27,23 +61,18 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 	@Override
 	public void generateWorld(Random random, int chunkX, int chunkZ, World world, int dimID, IChunkGenerator cg, IChunkProvider cp) {
 		boolean dimensionCriteria = false;
-
 		if (dimID == 0)
 			dimensionCriteria = true;
 		if (!dimensionCriteria)
 			return;
-
 		for (int i = 0; i < 1; i++) {
 			int l6 = chunkX + random.nextInt(16) + 8;
 			int i11 = random.nextInt(128);
 			int l14 = chunkZ + random.nextInt(16) + 8;
 			(new WorldGenFlowers(((BlockFlower) block), BlockFlower.EnumFlowerType.DANDELION)).generate(world, random, new BlockPos(l6, i11, l14));
 		}
-
 	}
-
 	public static class BlockCustomFlower extends BlockFlower {
-
 		public BlockCustomFlower() {
 			setSoundType(SoundType.GROUND);
 			setCreativeTab(null);
@@ -52,7 +81,6 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 			setLightLevel(0F);
 			setUnlocalizedName("candleberrybush_0");
 			setRegistryName("candleberrybush_0");
-
 		}
 
 		@Override
@@ -94,10 +122,8 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureCandleberryBush_Transform0.executeProcedure($_dependencies);
 			}
-
 		}
 
 		@Override
@@ -112,7 +138,6 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureBush_UpdateBlock.executeProcedure($_dependencies);
 			}
 		}
@@ -130,7 +155,6 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureCandleberryBush_Break0.executeProcedure($_dependencies);
 			}
 			return retval;
@@ -148,10 +172,8 @@ public class BlockCandleberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureBush_Break.executeProcedure($_dependencies);
 			}
 		}
-
 	}
 }

@@ -10,6 +10,10 @@ import net.taki.minecrown.block.BlockCranberryBush_3;
 import net.taki.minecrown.block.BlockCranberryBush_2;
 import net.taki.minecrown.block.BlockCranberryBush_1;
 import net.taki.minecrown.block.BlockCranberryBush_0;
+import net.taki.minecrown.block.BlockCandleberryBush_3;
+import net.taki.minecrown.block.BlockCandleberryBush_2;
+import net.taki.minecrown.block.BlockCandleberryBush_1;
+import net.taki.minecrown.block.BlockCandleberryBush_0;
 import net.taki.minecrown.block.BlockBlackberryBush_3;
 import net.taki.minecrown.block.BlockBlackberryBush_2;
 import net.taki.minecrown.block.BlockBlackberryBush_1;
@@ -107,6 +111,18 @@ public class ItemFaucille extends ElementsMinecrownMOD.ModElement {
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			require = BlockStrawberryBush_3.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockCandleberryBush_0.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockCandleberryBush_1.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockCandleberryBush_2.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockCandleberryBush_3.block.getDefaultState();
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			return 0;

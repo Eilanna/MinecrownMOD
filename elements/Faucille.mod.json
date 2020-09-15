@@ -52,6 +52,18 @@
       },
       {
         "value": "CUSTOM:StrawberryBush_3"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_0"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_1"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_2"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_3"
       }
     ],
     "hasGlow": false,

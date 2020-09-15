@@ -1736,44 +1736,43 @@
           }
         ]
       }
-    },
-    {
-      "name": "Meow",
-      "type": "block",
-      "sortid": 92,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "tile.blackberrybush_2.name": "Cranberry Bush0",
+      "tile.blackberrybush_2.name": "Blackberry Bush2",
       "item.faucille.name": "Faucille",
+      "item.candleberryseed.name": "Graine de Symphorine",
       "tile.strawberrybush_0.name": "Cranberry Bush0",
+      "tile.candleberrybush_0.name": "Candleberry Bush0",
       "itemGroup.tabminecrownpaysantable": "Minecrown AGRICULTEUR",
-      "tile.cranberrybush_3.name": "Cranberry Bush0",
+      "tile.candleberrybush_3.name": "Candleberry Bush3",
+      "tile.cranberrybush_3.name": "Cranberry Bush3",
       "item.blackberry.name": "Mûre",
       "tile.strawberrybush_2.name": "Cranberry Bush0",
       "tile.machineamoudreblock.name": "Machine A Moudreblock",
-      "tile.blackberrybush_0.name": "Cranberry Bush0",
+      "tile.blackberrybush_0.name": "Blackberry Bush0",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "item.blackberryseed.name": "Graine de Mûre",
-      "tile.strawberrybush_3.name": "Cranberry Bush0",
+      "tile.strawberrybush_3.name": "Blackberry Bush3",
+      "tile.candleberrybush_2.name": "Candleberry Bush2",
       "item.cranberrypowder.name": "Poudre de Canneberge",
       "tile.blackberrybush_3.name": "Cranberry Bush0",
       "item.cranberryseed.name": "Graine de Canneberge",
-      "tile.cranberrybush_1.name": "Cranberry Bush0",
+      "tile.cranberrybush_1.name": "Cranberry Bush1",
       "item.cranberry.name": "Canneberge",
+      "tile.candleberrybush_1.name": "Candleberry Bush1",
+      "item.candleberrypowder.name": "Poudre de Symphorine",
       "item.strawberrypowder.name": "Poudre de Fraise",
+      "item.candleberry.name": "Symphorine",
       "item.strawberryseed.name": "Graine de Fraise",
       "item.blackberrypowder.name": "Poudre de Mûre",
-      "tile.blackberrybush_1.name": "Cranberry Bush0",
+      "tile.blackberrybush_1.name": "Blackberry Bush1",
       "item.strawberry.name": "Fraise",
       "tile.strawberrybush_1.name": "Cranberry Bush0",
-      "tile.cranberrybush_2.name": "Cranberry Bush0"
+      "tile.cranberrybush_2.name": "Cranberry Bush2"
     }
   },
   "workspaceSettings": {

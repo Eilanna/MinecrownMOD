@@ -1,8 +1,13 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.block.BlockCandleberryBush_1;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class ProcedureCandleberryBush_Transform0 extends ElementsMinecrownMOD.ModElement {
-
 	public ProcedureCandleberryBush_Transform0(ElementsMinecrownMOD instance) {
 		super(instance, 98);
 	}
@@ -24,15 +29,11 @@ public class ProcedureCandleberryBush_Transform0 extends ElementsMinecrownMOD.Mo
 			System.err.println("Failed to load dependency world for procedure CandleberryBush_Transform0!");
 			return;
 		}
-
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-
 		world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_1.block.getDefaultState(), 3);
-
+		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCandleberryBush_1.block.getDefaultState(), 3);
 	}
-
 }
