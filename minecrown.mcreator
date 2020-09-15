@@ -1340,6 +1340,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "Meow",
+      "type": "block",
+      "sortid": 92,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -1352,6 +1360,7 @@
       "itemGroup.tabminecrownpaysantable": "Minecrown AGRICULTEUR",
       "tile.cranberrybush_3.name": "Cranberry Bush0",
       "item.blackberry.name": "Mûre",
+      "tile.meow.name": "Meow",
       "tile.strawberrybush_2.name": "Cranberry Bush0",
       "tile.machineamoudreblock.name": "Machine A Moudreblock",
       "tile.blackberrybush_0.name": "Cranberry Bush0",
