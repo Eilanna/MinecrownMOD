@@ -1,10 +1,10 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureCranberryBush_Transform0;
-import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt0;
-import net.taki.minecrown.procedure.ProcedureCranberryBushUpgradeBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
+import net.taki.minecrown.procedure.ProcedureBlackberryBush_Transform2;
+import net.taki.minecrown.procedure.ProcedureBlackberryBush_Recolt1;
+import net.taki.minecrown.procedure.ProcedureBlackberryBushUpdateBlock;
 import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -40,11 +40,11 @@ import net.minecraft.block.Block;
 import java.util.Random;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:cranberrybush_0")
+public class BlockBlackberryBush_2 extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:blackberrybush_2")
 	public static final Block block = null;
-	public BlockCranberryBush_0(ElementsMinecrownMOD instance) {
-		super(instance, 10);
+	public BlockBlackberryBush_2(ElementsMinecrownMOD instance) {
+		super(instance, 45);
 	}
 
 	@Override
@@ -57,7 +57,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:cranberrybush_0", "inventory"));
+				new ModelResourceLocation("minecrown:blackberrybush_2", "inventory"));
 	}
 
 	@Override
@@ -67,7 +67,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 			dimensionCriteria = true;
 		if (!dimensionCriteria)
 			return;
-		for (int i = 0; i < 1; i++) {
+		for (int i = 0; i < 0; i++) {
 			int l6 = chunkX + random.nextInt(16) + 8;
 			int i11 = random.nextInt(128);
 			int l14 = chunkZ + random.nextInt(16) + 8;
@@ -81,8 +81,8 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 			setHardness(0F);
 			setResistance(0F);
 			setLightLevel(0F);
-			setUnlocalizedName("cranberrybush_0");
-			setRegistryName("cranberrybush_0");
+			setUnlocalizedName("blackberrybush_2");
+			setRegistryName("blackberrybush_2");
 		}
 
 		@Override
@@ -124,7 +124,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCranberryBush_Transform0.executeProcedure($_dependencies);
+				ProcedureBlackberryBush_Transform2.executeProcedure($_dependencies);
 			}
 		}
 
@@ -140,7 +140,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCranberryBushUpgradeBlock.executeProcedure($_dependencies);
+				ProcedureBlackberryBushUpdateBlock.executeProcedure($_dependencies);
 			}
 		}
 
@@ -189,7 +189,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCranberryBush_Recolt0.executeProcedure($_dependencies);
+				ProcedureBlackberryBush_Recolt1.executeProcedure($_dependencies);
 			}
 			return true;
 		}

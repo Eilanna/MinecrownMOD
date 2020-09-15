@@ -1,10 +1,9 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureCranberryBush_Transform0;
-import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt0;
-import net.taki.minecrown.procedure.ProcedureCranberryBushUpgradeBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
+import net.taki.minecrown.procedure.ProcedureBlackberryBush_Transform0;
+import net.taki.minecrown.procedure.ProcedureBlackberryBushUpdateBlock;
 import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -24,8 +23,6 @@ import net.minecraft.world.Explosion;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.Item;
@@ -40,11 +37,11 @@ import net.minecraft.block.Block;
 import java.util.Random;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:cranberrybush_0")
+public class BlockBlackberryBush_0 extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:blackberrybush_0")
 	public static final Block block = null;
-	public BlockCranberryBush_0(ElementsMinecrownMOD instance) {
-		super(instance, 10);
+	public BlockBlackberryBush_0(ElementsMinecrownMOD instance) {
+		super(instance, 43);
 	}
 
 	@Override
@@ -57,7 +54,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:cranberrybush_0", "inventory"));
+				new ModelResourceLocation("minecrown:blackberrybush_0", "inventory"));
 	}
 
 	@Override
@@ -81,8 +78,8 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 			setHardness(0F);
 			setResistance(0F);
 			setLightLevel(0F);
-			setUnlocalizedName("cranberrybush_0");
-			setRegistryName("cranberrybush_0");
+			setUnlocalizedName("blackberrybush_0");
+			setRegistryName("blackberrybush_0");
 		}
 
 		@Override
@@ -124,7 +121,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCranberryBush_Transform0.executeProcedure($_dependencies);
+				ProcedureBlackberryBush_Transform0.executeProcedure($_dependencies);
 			}
 		}
 
@@ -140,7 +137,7 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCranberryBushUpgradeBlock.executeProcedure($_dependencies);
+				ProcedureBlackberryBushUpdateBlock.executeProcedure($_dependencies);
 			}
 		}
 
@@ -175,23 +172,6 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("world", world);
 				ProcedureBush_Break.executeProcedure($_dependencies);
 			}
-		}
-
-		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
-				float hitX, float hitY, float hitZ) {
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureCranberryBush_Recolt0.executeProcedure($_dependencies);
-			}
-			return true;
 		}
 	}
 }

@@ -28,6 +28,18 @@
       },
       {
         "value": "CUSTOM:CranberryBush_0"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_0"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_1"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_2"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_3"
       }
     ],
     "hasGlow": false,

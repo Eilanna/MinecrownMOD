@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "bush_berry_stage_3",
+    "texture": "bush_blackberry_stage_3",
     "customModelName": "Cross model",
     "plantType": "normal",
     "growapableSpawnType": "Plains",
@@ -36,7 +36,7 @@
     ],
     "restrictionBiomes": [],
     "onNeighbourBlockChanges": {
-      "name": "CranberryBushUpgradeBlock"
+      "name": "BlackberryBushUpdateBlock"
     },
     "onDestroyedByPlayer": {
       "name": "Bush_Break"
@@ -45,7 +45,7 @@
       "name": "Bush_Break"
     },
     "onRightClicked": {
-      "name": "CranberryBush_Recolt3"
+      "name": "BlackberryBush_Recolt2"
     }
   }
 }

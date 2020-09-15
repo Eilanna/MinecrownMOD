@@ -6,6 +6,10 @@ import net.taki.minecrown.block.BlockCranberryBush_3;
 import net.taki.minecrown.block.BlockCranberryBush_2;
 import net.taki.minecrown.block.BlockCranberryBush_1;
 import net.taki.minecrown.block.BlockCranberryBush_0;
+import net.taki.minecrown.block.BlockBlackberryBush_3;
+import net.taki.minecrown.block.BlockBlackberryBush_2;
+import net.taki.minecrown.block.BlockBlackberryBush_1;
+import net.taki.minecrown.block.BlockBlackberryBush_0;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -75,6 +79,18 @@ public class ItemFaucille extends ElementsMinecrownMOD.ModElement {
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			require = BlockCranberryBush_0.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockBlackberryBush_0.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockBlackberryBush_1.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockBlackberryBush_2.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockBlackberryBush_3.block.getDefaultState();
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			return 0;

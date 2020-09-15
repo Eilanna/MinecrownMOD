@@ -42,10 +42,10 @@
       "name": "CranberryBush_Transform1"
     },
     "onDestroyedByPlayer": {
-      "name": "CranberryBush_Break1"
+      "name": "Bush_Break"
     },
     "onDestroyedByExplosion": {
-      "name": "CranberryBush_Break1"
+      "name": "Bush_Break"
     },
     "onRightClicked": {
       "name": "CranberryBush_Recolt1"

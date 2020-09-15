@@ -3,7 +3,7 @@
   "_type": "plant",
   "definition": {
     "renderType": 12,
-    "texture": "bush_berry_stage_3",
+    "texture": "bush_blackberry_stage_0",
     "customModelName": "Cross model",
     "plantType": "normal",
     "growapableSpawnType": "Plains",
@@ -30,22 +30,22 @@
     },
     "flammability": 0,
     "fireSpreadSpeed": 0,
-    "frequencyOnChunks": 0,
+    "frequencyOnChunks": 1,
     "spawnWorldTypes": [
       "Surface"
     ],
     "restrictionBiomes": [],
     "onNeighbourBlockChanges": {
-      "name": "CranberryBushUpgradeBlock"
+      "name": "BlackberryBushUpdateBlock"
+    },
+    "onTickUpdate": {
+      "name": "BlackberryBush_Transform0"
     },
     "onDestroyedByPlayer": {
       "name": "Bush_Break"
     },
     "onDestroyedByExplosion": {
       "name": "Bush_Break"
-    },
-    "onRightClicked": {
-      "name": "CranberryBush_Recolt3"
     }
   }
 }
