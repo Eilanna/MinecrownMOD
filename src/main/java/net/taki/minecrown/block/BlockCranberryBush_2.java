@@ -79,7 +79,7 @@ public class BlockCranberryBush_2 extends ElementsMinecrownMOD.ModElement {
 		public BlockCustomFlower() {
 			setSoundType(SoundType.GROUND);
 			setCreativeTab(null);
-			setHardness(0F);
+			setHardness(3F);
 			setResistance(0F);
 			setLightLevel(0F);
 			setUnlocalizedName("cranberrybush_2");

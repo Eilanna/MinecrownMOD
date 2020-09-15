@@ -78,7 +78,7 @@ public class BlockBlackberryBush_3 extends ElementsMinecrownMOD.ModElement {
 		public BlockCustomFlower() {
 			setSoundType(SoundType.GROUND);
 			setCreativeTab(null);
-			setHardness(0F);
+			setHardness(4F);
 			setResistance(0F);
 			setLightLevel(0F);
 			setUnlocalizedName("blackberrybush_3");
