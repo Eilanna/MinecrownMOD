@@ -1,8 +1,8 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemStrawberry;
 import net.taki.minecrown.item.ItemFaucille;
 import net.taki.minecrown.item.ItemCranberrySeed;
+import net.taki.minecrown.item.ItemCranberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -50,14 +50,14 @@ public class ProcedureCranberryBush_Break3 extends ElementsMinecrownMOD.ModEleme
 			if ((Math.random() <= 0.5)) {
 				for (int index0 = 0; index0 < (int) (2); index0++) {
 					if (!world.isRemote) {
-						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberry.block, (int) (1)));
+						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
 						world.spawnEntity(entityToSpawn);
 					}
 				}
 			} else {
 				if (!world.isRemote) {
-					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberry.block, (int) (1)));
+					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.spawnEntity(entityToSpawn);
 				}
@@ -72,14 +72,14 @@ public class ProcedureCranberryBush_Break3 extends ElementsMinecrownMOD.ModEleme
 		} else if ((Math.random() <= 0.5)) {
 			for (int index1 = 0; index1 < (int) (2); index1++) {
 				if (!world.isRemote) {
-					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberry.block, (int) (1)));
+					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.spawnEntity(entityToSpawn);
 				}
 			}
 		} else {
 			if (!world.isRemote) {
-				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberry.block, (int) (1)));
+				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);
 				world.spawnEntity(entityToSpawn);
 			}

@@ -20,7 +20,7 @@
       "value": "GROUND"
     },
     "customDrop": {
-      "value": "CUSTOM:CranberrySeed"
+      "value": ""
     },
     "dropAmount": 0,
     "isReplaceable": false,
@@ -43,6 +43,9 @@
     },
     "onDestroyedByExplosion": {
       "name": "Bush_Break"
+    },
+    "onStartToDestroy": {
+      "name": "StrawberryBush_Break3"
     },
     "onRightClicked": {
       "name": "StrawberryBush_Recolt3"

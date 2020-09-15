@@ -1,8 +1,8 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemStrawberry;
 import net.taki.minecrown.item.ItemFaucille;
 import net.taki.minecrown.item.ItemCranberrySeed;
+import net.taki.minecrown.item.ItemCranberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -57,7 +57,7 @@ public class ProcedureCranberryBush_Break2 extends ElementsMinecrownMOD.ModEleme
 		} else {
 			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			if (!world.isRemote) {
-				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberry.block, (int) (1)));
+				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 				entityToSpawn.setPickupDelay(10);
 				world.spawnEntity(entityToSpawn);
 			}
