@@ -26,7 +26,7 @@
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:CranberrySeed"
     },
     "flammability": 0,
     "fireSpreadSpeed": 0,

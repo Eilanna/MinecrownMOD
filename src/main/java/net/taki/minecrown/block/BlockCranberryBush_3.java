@@ -5,6 +5,7 @@ import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt3;
 import net.taki.minecrown.procedure.ProcedureCranberryBush_Break3;
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
+import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -96,7 +97,7 @@ public class BlockCranberryBush_3 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-			return new ItemStack(Item.getItemFromBlock(this), 1, this.damageDropped(state));
+			return new ItemStack(ItemCranberrySeed.block, (int) (1));
 		}
 
 		@Override

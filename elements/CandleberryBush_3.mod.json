@@ -26,7 +26,7 @@
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:CandleberrySeed"
     },
     "flammability": 0,
     "fireSpreadSpeed": 0,

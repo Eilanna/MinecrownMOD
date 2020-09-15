@@ -6,6 +6,7 @@ import net.taki.minecrown.procedure.ProcedureCandleberryBush_Recolt1;
 import net.taki.minecrown.procedure.ProcedureCandleberryBush_Break1;
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
+import net.taki.minecrown.item.ItemCandleberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -97,7 +98,7 @@ public class BlockCandleberryBush_1 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-			return new ItemStack(Item.getItemFromBlock(this), 1, this.damageDropped(state));
+			return new ItemStack(ItemCandleberrySeed.block, (int) (1));
 		}
 
 		@Override
