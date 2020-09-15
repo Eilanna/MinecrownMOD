@@ -40,6 +40,18 @@
       },
       {
         "value": "CUSTOM:BlackberryBush_3"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_0"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_1"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_2"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_3"
       }
     ],
     "hasGlow": false,

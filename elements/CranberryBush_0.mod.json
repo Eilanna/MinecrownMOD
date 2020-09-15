@@ -36,13 +36,13 @@
     ],
     "restrictionBiomes": [],
     "onNeighbourBlockChanges": {
-      "name": "CranberryBushUpgradeBlock"
+      "name": "Bush_UpdateBlock"
     },
     "onTickUpdate": {
       "name": "CranberryBush_Transform0"
     },
     "onDestroyedByPlayer": {
-      "name": "Bush_Break"
+      "name": "CranberryBush_Break0"
     },
     "onDestroyedByExplosion": {
       "name": "Bush_Break"

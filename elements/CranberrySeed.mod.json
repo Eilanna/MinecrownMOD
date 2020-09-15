@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "cranberryseeditem",
     "customModelName": "Normal",
-    "name": "Cranberry Seed",
+    "name": "Graine de Canneberge",
     "creativeTab": {
       "value": "CUSTOM:MinecrownPaysanTable"
     },

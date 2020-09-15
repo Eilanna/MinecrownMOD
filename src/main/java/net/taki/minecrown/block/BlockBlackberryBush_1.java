@@ -1,10 +1,11 @@
 
 package net.taki.minecrown.block;
 
+import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Transform1;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Recolt0;
-import net.taki.minecrown.procedure.ProcedureBlackberryBushUpdateBlock;
+import net.taki.minecrown.procedure.ProcedureBlackberryBush_Break1;
 import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -140,7 +141,7 @@ public class BlockBlackberryBush_1 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureBlackberryBushUpdateBlock.executeProcedure($_dependencies);
+				ProcedureBush_UpdateBlock.executeProcedure($_dependencies);
 			}
 		}
 
@@ -152,11 +153,12 @@ public class BlockBlackberryBush_1 extends ElementsMinecrownMOD.ModElement {
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureBush_Break.executeProcedure($_dependencies);
+				ProcedureBlackberryBush_Break1.executeProcedure($_dependencies);
 			}
 			return retval;
 		}

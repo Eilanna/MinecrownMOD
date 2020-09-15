@@ -36,10 +36,10 @@
     ],
     "restrictionBiomes": [],
     "onNeighbourBlockChanges": {
-      "name": "BlackberryBushUpdateBlock"
+      "name": "Bush_UpdateBlock"
     },
     "onDestroyedByPlayer": {
-      "name": "Bush_Break"
+      "name": "BlackberryBush_Break3"
     },
     "onDestroyedByExplosion": {
       "name": "Bush_Break"

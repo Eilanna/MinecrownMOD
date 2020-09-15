@@ -2,6 +2,10 @@
 package net.taki.minecrown.item;
 
 import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.block.BlockStrawberryBush_3;
+import net.taki.minecrown.block.BlockStrawberryBush_2;
+import net.taki.minecrown.block.BlockStrawberryBush_1;
+import net.taki.minecrown.block.BlockStrawberryBush_0;
 import net.taki.minecrown.block.BlockCranberryBush_3;
 import net.taki.minecrown.block.BlockCranberryBush_2;
 import net.taki.minecrown.block.BlockCranberryBush_1;
@@ -91,6 +95,18 @@ public class ItemFaucille extends ElementsMinecrownMOD.ModElement {
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			require = BlockBlackberryBush_3.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockStrawberryBush_0.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockStrawberryBush_1.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockStrawberryBush_2.block.getDefaultState();
+			if (par2Block.getBlock() == require.getBlock())
+				return 4f;
+			require = BlockStrawberryBush_3.block.getDefaultState();
 			if (par2Block.getBlock() == require.getBlock())
 				return 4f;
 			return 0;

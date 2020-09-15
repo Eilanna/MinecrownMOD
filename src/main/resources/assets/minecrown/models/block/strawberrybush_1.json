@@ -1,0 +1,7 @@
+{
+  "parent": "block/cross",
+  "textures": {
+    "cross": "minecrown:blocks/strawberry_stage_1",
+    "particle": "minecrown:blocks/strawberry_stage_1"
+  }
+}

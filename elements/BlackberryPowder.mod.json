@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "blackberrypowderitem",
     "customModelName": "Normal",
-    "name": "Poudre de Canneberge",
+    "name": "Poudre de Mûre",
     "creativeTab": {
       "value": "CUSTOM:MinecrownPaysanTable"
     },

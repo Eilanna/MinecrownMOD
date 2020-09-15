@@ -7,26 +7,26 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.init.Blocks;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class ProcedureBlackberryBushUpdateBlock extends ElementsMinecrownMOD.ModElement {
-	public ProcedureBlackberryBushUpdateBlock(ElementsMinecrownMOD instance) {
-		super(instance, 52);
+public class ProcedureBush_UpdateBlock extends ElementsMinecrownMOD.ModElement {
+	public ProcedureBush_UpdateBlock(ElementsMinecrownMOD instance) {
+		super(instance, 71);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure BlackberryBushUpdateBlock!");
+			System.err.println("Failed to load dependency x for procedure Bush_UpdateBlock!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure BlackberryBushUpdateBlock!");
+			System.err.println("Failed to load dependency y for procedure Bush_UpdateBlock!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure BlackberryBushUpdateBlock!");
+			System.err.println("Failed to load dependency z for procedure Bush_UpdateBlock!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure BlackberryBushUpdateBlock!");
+			System.err.println("Failed to load dependency world for procedure Bush_UpdateBlock!");
 			return;
 		}
 		int x = (int) dependencies.get("x");
