@@ -2,7 +2,6 @@
 package net.taki.minecrown.block;
 
 import net.taki.minecrown.procedure.ProcedureCranberryBush_Transform0;
-import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt0;
 import net.taki.minecrown.procedure.ProcedureCranberryBushUpgradeBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
 import net.taki.minecrown.item.ItemCranberrySeed;
@@ -24,8 +23,6 @@ import net.minecraft.world.Explosion;
 import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.EnumHand;
-import net.minecraft.util.EnumFacing;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.Item;
@@ -175,23 +172,6 @@ public class BlockCranberryBush_0 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("world", world);
 				ProcedureBush_Break.executeProcedure($_dependencies);
 			}
-		}
-
-		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
-				float hitX, float hitY, float hitZ) {
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureCranberryBush_Recolt0.executeProcedure($_dependencies);
-			}
-			return true;
 		}
 	}
 }

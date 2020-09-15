@@ -79,6 +79,14 @@ public class ProcedureCranberryBush_Recolt3 extends ElementsMinecrownMOD.ModElem
 					world.spawnEntity(entityToSpawn);
 				}
 			}
+		} else {
+			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_0.block.getDefaultState(), 3);
+			if (!world.isRemote) {
+				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+				entityToSpawn.setPickupDelay(10);
+				world.spawnEntity(entityToSpawn);
+			}
 		}
 	}
 }

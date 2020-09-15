@@ -46,9 +46,6 @@
     },
     "onDestroyedByExplosion": {
       "name": "Bush_Break"
-    },
-    "onRightClicked": {
-      "name": "CranberryBush_Recolt0"
     }
   }
 }
