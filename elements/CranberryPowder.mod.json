@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "cranberrypowderitem",
     "customModelName": "Normal",
-    "name": "Cranberry Powder",
+    "name": "Poudre de Canneberge",
     "creativeTab": {
       "value": "CUSTOM:MinecrownPaysanTable"
     },

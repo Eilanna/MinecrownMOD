@@ -520,11 +520,11 @@
     "en_us": {
       "tile.machineamoudreblock.name": "Machine A Moudreblock",
       "tile.cranberrybush_1.name": "Cranberry Bush0",
-      "item.cranberry.name": "Cranberry",
+      "item.cranberry.name": "Canneberge",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "itemGroup.tabminecrownpaysantable": "Minecrown Paysan Table",
       "tile.cranberrybush_3.name": "Cranberry Bush0",
-      "item.cranberrypowder.name": "Cranberry Powder",
+      "item.cranberrypowder.name": "Poudre de Canneberge",
       "tile.cranberrybush_2.name": "Cranberry Bush0",
       "item.cranberryseed.name": "Cranberry Seed"
     }
@@ -535,7 +535,7 @@
     "version": "0.0.1",
     "description": "Mods RP MineCrown",
     "author": "T4K1 \u0026 M30W",
-    "websiteURL": "Minecrown",
+    "websiteURL": "https://minecrown.net",
     "disableForgeVersionCheck": true,
     "serverSideOnly": false,
     "requiredMods": [],
@@ -543,7 +543,7 @@
     "dependants": [],
     "mcreatorDependencies": [],
     "currentGenerator": "1.12.2",
-    "credits": "Created with MCreator",
+    "credits": "avec l\u0027aide de MCreator",
     "modElementsPackage": "net.taki.minecrown",
     "lockBaseModFiles": false
   },

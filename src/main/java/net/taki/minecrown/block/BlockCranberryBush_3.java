@@ -5,7 +5,6 @@ import net.taki.minecrown.procedure.ProcedureCranberryBush_Recolt3;
 import net.taki.minecrown.procedure.ProcedureCranberryBush_Break3;
 import net.taki.minecrown.procedure.ProcedureCranberryBushUpgradeBlock;
 import net.taki.minecrown.item.ItemCranberrySeed;
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -77,7 +76,7 @@ public class BlockCranberryBush_3 extends ElementsMinecrownMOD.ModElement {
 	public static class BlockCustomFlower extends BlockFlower {
 		public BlockCustomFlower() {
 			setSoundType(SoundType.GROUND);
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(null);
 			setHardness(0F);
 			setResistance(0F);
 			setLightLevel(0F);
