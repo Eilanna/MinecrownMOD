@@ -38,10 +38,12 @@ public class ProcedureCranberryBushUpgradeBlock extends ElementsMinecrownMOD.Mod
 		World world = (World) dependencies.get("world");
 		if ((!((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.GRASS.getDefaultState().getBlock()))) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-			if (!world.isRemote) {
-				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
-				world.spawnEntity(entityToSpawn);
+			if ((Math.random() <= 0.1)) {
+				if (!world.isRemote) {
+					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));
+					entityToSpawn.setPickupDelay(10);
+					world.spawnEntity(entityToSpawn);
+				}
 			}
 		}
 	}

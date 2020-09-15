@@ -1,0 +1,40 @@
+{
+  "_fv": 6,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "faucille",
+    "customModelName": "Normal",
+    "name": "Faucille",
+    "creativeTab": {
+      "value": "CUSTOM:MinecrownPaysanTable"
+    },
+    "toolType": "Special",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 100,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:CranberryBush_2"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_3"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_1"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_0"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
+  }
+}

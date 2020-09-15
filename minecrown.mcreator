@@ -403,6 +403,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "int"
           },
@@ -430,6 +434,10 @@
       "ids": {},
       "metadata": {
         "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
           {
             "name": "x",
             "type": "int"
@@ -459,6 +467,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "int"
           },
@@ -487,6 +499,10 @@
       "metadata": {
         "dependencies": [
           {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
             "name": "x",
             "type": "int"
           },
@@ -512,6 +528,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "Faucille",
+      "type": "tool",
+      "sortid": 42,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -521,6 +545,7 @@
       "tile.machineamoudreblock.name": "Machine A Moudreblock",
       "tile.cranberrybush_1.name": "Cranberry Bush0",
       "item.cranberry.name": "Canneberge",
+      "item.faucille.name": "Faucille",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "itemGroup.tabminecrownpaysantable": "Minecrown Paysan Table",
       "tile.cranberrybush_3.name": "Cranberry Bush0",
