@@ -1,6 +1,6 @@
 {
   "id_map": {
-    "GUI": 10
+    "GUI": 11
   },
   "mod_elements": [
     {
@@ -1736,6 +1736,14 @@
           }
         ]
       }
+    },
+    {
+      "name": "MinecrownForgeTAB",
+      "type": "tab",
+      "sortid": 111,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -1766,6 +1774,7 @@
       "tile.candleberrybush_1.name": "Candleberry Bush1",
       "item.candleberrypowder.name": "Poudre de Symphorine",
       "item.strawberrypowder.name": "Poudre de Fraise",
+      "itemGroup.tabminecrownforgetab": "Minecrown Métier Forge",
       "item.candleberry.name": "Symphorine",
       "item.strawberryseed.name": "Graine de Fraise",
       "item.blackberrypowder.name": "Poudre de Mûre",
