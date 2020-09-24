@@ -11,9 +11,9 @@ import net.minecraft.init.Blocks;
 import net.minecraft.creativetab.CreativeTabs;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class TabMinecrownForgeTAB extends ElementsMinecrownMOD.ModElement {
-	public TabMinecrownForgeTAB(ElementsMinecrownMOD instance) {
-		super(instance, 111);
+public class TabMineCrownForgeTAB extends ElementsMinecrownMOD.ModElement {
+	public TabMineCrownForgeTAB(ElementsMinecrownMOD instance) {
+		super(instance, 117);
 	}
 
 	@Override

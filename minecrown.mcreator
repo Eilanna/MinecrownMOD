@@ -1738,9 +1738,41 @@
       }
     },
     {
-      "name": "MinecrownForgeTAB",
+      "name": "Raspberry",
+      "type": "food",
+      "sortid": 112,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Elderberry",
+      "type": "food",
+      "sortid": 113,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Gooseberry",
+      "type": "food",
+      "sortid": 114,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "Blueberry",
+      "type": "food",
+      "sortid": 115,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MineCrownForgeTAB",
       "type": "tab",
-      "sortid": 111,
+      "sortid": 117,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -1753,6 +1785,7 @@
       "tile.blackberrybush_2.name": "Blackberry Bush2",
       "item.faucille.name": "Faucille",
       "item.candleberryseed.name": "Graine de Symphorine",
+      "item.raspberry.name": "Framboise",
       "tile.strawberrybush_0.name": "Strawberry Bush0",
       "tile.candleberrybush_0.name": "Candleberry Bush0",
       "itemGroup.tabminecrownpaysantable": "Minecrown AGRICULTEUR",
@@ -1765,6 +1798,7 @@
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "item.blackberryseed.name": "Graine de Mûre",
       "tile.strawberrybush_3.name": "Strawberry Bush3",
+      "item.elderberry.name": "Sureau",
       "tile.candleberrybush_2.name": "Candleberry Bush2",
       "item.cranberrypowder.name": "Poudre de Canneberge",
       "tile.blackberrybush_3.name": "Cranberry Bush0",
@@ -1777,8 +1811,10 @@
       "itemGroup.tabminecrownforgetab": "Minecrown Métier Forge",
       "item.candleberry.name": "Symphorine",
       "item.strawberryseed.name": "Graine de Fraise",
+      "item.gooseberry.name": "Groseille",
       "item.blackberrypowder.name": "Poudre de Mûre",
       "tile.blackberrybush_1.name": "Blackberry Bush1",
+      "item.blueberry.name": "Myrtille",
       "item.strawberry.name": "Fraise",
       "tile.strawberrybush_1.name": "Strawberry Bush1",
       "tile.cranberrybush_2.name": "Cranberry Bush2"

@@ -1,12 +1,12 @@
 {
   "parent": "block/cube",
   "textures": {
-    "down": "minecrown:blocks/grind_bot",
-    "up": "minecrown:blocks/grind_top",
-    "north": "minecrown:blocks/grind_front",
-    "east": "minecrown:blocks/grind_side",
-    "south": "minecrown:blocks/grind_back",
-    "west": "minecrown:blocks/grind_side",
-    "particle": "minecrown:blocks/grind_bot"
+    "down": "minecrown:blocks/royeurottom",
+    "up": "minecrown:blocks/royeurop",
+    "north": "minecrown:blocks/royeurront",
+    "east": "minecrown:blocks/royeuride",
+    "south": "minecrown:blocks/royeuride",
+    "west": "minecrown:blocks/royeuride",
+    "particle": "minecrown:blocks/royeurottom"
   }
 }
