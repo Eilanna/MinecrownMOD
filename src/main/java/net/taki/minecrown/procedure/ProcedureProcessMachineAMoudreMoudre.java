@@ -1,13 +1,13 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.item.ItemStrawberrySeed;
 import net.taki.minecrown.item.ItemStrawberryPowder;
-import net.taki.minecrown.item.ItemStrawberry;
+import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.item.ItemCranberryPowder;
-import net.taki.minecrown.item.ItemCranberry;
+import net.taki.minecrown.item.ItemCandleberrySeed;
 import net.taki.minecrown.item.ItemCandleberryPowder;
-import net.taki.minecrown.item.ItemCandleBerry;
+import net.taki.minecrown.item.ItemBlackberrySeed;
 import net.taki.minecrown.item.ItemBlackberryPowder;
-import net.taki.minecrown.item.ItemBlackberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -68,7 +68,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 							return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemCranberry.block, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemCranberrySeed.block, (int) (1))
 						.getItem() && (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -77,7 +77,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
-								.getMetadata() == new ItemStack(ItemCranberry.block, (int) (1)).getMetadata()))
+								.getMetadata() == new ItemStack(ItemCranberrySeed.block, (int) (1)).getMetadata()))
 				&& (((new Object() {
 					public int getAmount(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
@@ -169,7 +169,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 							return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemBlackberry.block, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemBlackberrySeed.block, (int) (1))
 						.getItem() && (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -178,7 +178,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
-								.getMetadata() == new ItemStack(ItemBlackberry.block, (int) (1)).getMetadata()))
+								.getMetadata() == new ItemStack(ItemBlackberrySeed.block, (int) (1)).getMetadata()))
 				&& (((new Object() {
 					public int getAmount(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
@@ -270,7 +270,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 							return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemStrawberry.block, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemStrawberrySeed.block, (int) (1))
 						.getItem() && (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -279,7 +279,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
-								.getMetadata() == new ItemStack(ItemStrawberry.block, (int) (1)).getMetadata()))
+								.getMetadata() == new ItemStack(ItemStrawberrySeed.block, (int) (1)).getMetadata()))
 				&& (((new Object() {
 					public int getAmount(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
@@ -371,7 +371,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 							return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemCandleBerry.block, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1))).getItem() == new ItemStack(ItemCandleberrySeed.block, (int) (1))
 						.getItem() && (new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -380,7 +380,7 @@ public class ProcedureProcessMachineAMoudreMoudre extends ElementsMinecrownMOD.M
 								return ItemStack.EMPTY;
 							}
 						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (1)))
-								.getMetadata() == new ItemStack(ItemCandleBerry.block, (int) (1)).getMetadata()))
+								.getMetadata() == new ItemStack(ItemCandleberrySeed.block, (int) (1)).getMetadata()))
 				&& (((new Object() {
 					public int getAmount(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
