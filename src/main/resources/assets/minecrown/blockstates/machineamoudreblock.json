@@ -2,6 +2,21 @@
   "variants": {
     "normal": {
       "model": "minecrown:machineamoudreblock"
+    },
+    "facing=north": {
+      "model": "minecrown:machineamoudreblock"
+    },
+    "facing=east": {
+      "model": "minecrown:machineamoudreblock",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:machineamoudreblock",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:machineamoudreblock",
+      "y": 270
     }
   }
 }

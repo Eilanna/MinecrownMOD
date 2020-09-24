@@ -2,15 +2,15 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "royeurottom",
+    "texture": "planks_oak",
     "textureTop": "royeurop",
     "textureLeft": "royeuride",
     "textureFront": "royeurront",
     "textureRight": "royeuride",
     "textureBack": "royeuride",
-    "renderType": 10,
-    "customModelName": "Normal",
-    "rotationMode": 1,
+    "renderType": 2,
+    "customModelName": "support_outer_corner:default",
+    "rotationMode": 4,
     "hasTransparency": true,
     "transparencyType": "CUTOUT",
     "mx": 0.0,
@@ -20,7 +20,7 @@
     "My": 1.0,
     "Mz": 1.0,
     "faceShape": "SOLID",
-    "name": "Broyeur",
+    "name": "Support angle intérieur",
     "specialInfo": [],
     "hardness": 1.0,
     "resistance": 10.0,
@@ -40,7 +40,7 @@
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
-      "value": "ANVIL"
+      "value": "WOOD"
     },
     "tickRate": 10,
     "tickRandomly": false,
@@ -56,7 +56,7 @@
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "WOOD"
     },
     "luminance": 0.0,
     "unbreakable": false,
@@ -69,7 +69,7 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "particleSpawningCondition": "ALWAYS",
-    "hasInventory": true,
+    "hasInventory": false,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
     "inventorySize": 3,
@@ -77,9 +77,6 @@
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
     "inventoryOutSlotIDs": [],
-    "onRightClicked": {
-      "name": "ProcessMachineamoudreopen"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

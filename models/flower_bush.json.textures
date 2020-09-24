@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "flower_bush",
+        "2": "flower_bush_cross"
+      },
+      "name": "default"
+    }
+  }
+}

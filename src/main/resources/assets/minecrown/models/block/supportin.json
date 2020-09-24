@@ -1,0 +1,8 @@
+{
+  "parent": "minecrown:custom/support_inner_corner",
+  "textures": {
+    "all": "minecrown:blocks/planks_oak",
+    "particle": "minecrown:blocks/planks_oak",
+    "beam": "minecrown:blocks/planks_oak"
+  }
+}

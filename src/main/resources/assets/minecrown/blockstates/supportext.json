@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:supportext"
+    },
+    "facing=north": {
+      "model": "minecrown:supportext"
+    },
+    "facing=east": {
+      "model": "minecrown:supportext",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:supportext",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:supportext",
+      "y": 270
+    },
+    "facing=up": {
+      "model": "minecrown:supportext",
+      "x": 270
+    },
+    "facing=down": {
+      "model": "minecrown:supportext",
+      "x": 90
+    }
+  }
+}
