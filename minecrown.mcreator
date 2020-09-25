@@ -1776,38 +1776,6 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
-    },
-    {
-      "name": "JsonBush",
-      "type": "plant",
-      "sortid": 122,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "SupportIn",
-      "type": "block",
-      "sortid": 123,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "SupportExt",
-      "type": "block",
-      "sortid": 124,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "SupportStraight",
-      "type": "block",
-      "sortid": 125,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -1816,7 +1784,6 @@
     "en_us": {
       "tile.blackberrybush_2.name": "Blackberry Bush2",
       "item.faucille.name": "Faucille",
-      "tile.supportext.name": "Support angle intérieur",
       "item.candleberryseed.name": "Graine de Symphorine",
       "item.raspberry.name": "Framboise",
       "tile.strawberrybush_0.name": "Strawberry Bush0",
@@ -1827,9 +1794,7 @@
       "item.blackberry.name": "Mûre",
       "tile.strawberrybush_2.name": "Strawberry Bush2",
       "tile.machineamoudreblock.name": "Broyeur",
-      "tile.supportstraight.name": "Support droit",
       "tile.blackberrybush_0.name": "Blackberry Bush0",
-      "tile.jsonbush.name": "Json Bush",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "item.blackberryseed.name": "Graine de Mûre",
       "item.paleoberry.name": "Paléobaie",
@@ -1846,7 +1811,6 @@
       "item.strawberrypowder.name": "Poudre de Fraise",
       "item.candleberry.name": "Symphorine",
       "item.strawberryseed.name": "Graine de Fraise",
-      "tile.supportin.name": "Support angle extérieur",
       "item.gooseberry.name": "Groseille",
       "item.blackberrypowder.name": "Poudre de Mûre",
       "tile.blackberrybush_1.name": "Blackberry Bush1",

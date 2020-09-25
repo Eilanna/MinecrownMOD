@@ -1,9 +1,0 @@
-{
-  "parent": "minecrown:custom/flower_bush",
-  "textures": {
-    "all": "minecrown:blocks/flower_bush_cross",
-    "particle": "minecrown:blocks/flower_bush_cross",
-    "1": "minecrown:blocks/flower_bush",
-    "2": "minecrown:blocks/flower_bush_cross"
-  }
-}
