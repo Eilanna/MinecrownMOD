@@ -1,7 +1,10 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureProcessMachineamoudreopen;
+import net.taki.minecrown.procedure.ProcedureLogFenceUpdateTick;
+import net.taki.minecrown.procedure.ProcedureLogFencePlace;
+import net.taki.minecrown.procedure.ProcedureLogFenceExplode;
+import net.taki.minecrown.procedure.ProcedureLogFenceDestroyedByPlayer;
 import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -13,11 +16,13 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.Explosion;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.BlockRenderLayer;
@@ -30,7 +35,6 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.item.ItemBlock;
 import net.minecraft.item.Item;
 import net.minecraft.inventory.ItemStackHelper;
-import net.minecraft.inventory.InventoryHelper;
 import net.minecraft.inventory.ContainerChest;
 import net.minecraft.inventory.Container;
 import net.minecraft.entity.player.InventoryPlayer;
@@ -41,44 +45,47 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.block.properties.PropertyDirection;
 import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MapColor;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.Block;
 
+import java.util.Random;
+
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:machineamoudreblock")
+public class BlockLogFenceNone extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:logfencenone")
 	public static final Block block = null;
-	public BlockMachineAMoudreblock(ElementsMinecrownMOD instance) {
-		super(instance, 3);
+	public BlockLogFenceNone(ElementsMinecrownMOD instance) {
+		super(instance, 119);
 	}
 
 	@Override
 	public void initElements() {
-		elements.blocks.add(() -> new BlockCustom().setRegistryName("machineamoudreblock"));
+		elements.blocks.add(() -> new BlockCustom().setRegistryName("logfencenone"));
 		elements.items.add(() -> new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachineamoudreblock");
+		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitylogfencenone");
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:machineamoudreblock", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0, new ModelResourceLocation("minecrown:logfencenone", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
 		public static final PropertyDirection FACING = BlockHorizontal.FACING;
 		public BlockCustom() {
-			super(Material.IRON);
-			setUnlocalizedName("machineamoudreblock");
-			setSoundType(SoundType.METAL);
-			setHardness(3F);
-			setResistance(5F);
+			super(Material.WOOD);
+			setUnlocalizedName("logfencenone");
+			setSoundType(SoundType.WOOD);
+			setHarvestLevel("axe", 0);
+			setHardness(2F);
+			setResistance(3F);
 			setLightLevel(0F);
 			setLightOpacity(0);
 			setCreativeTab(TabMinecrownPaysanTable.tab);
@@ -89,6 +96,33 @@ public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
 		@Override
 		public BlockRenderLayer getBlockLayer() {
 			return BlockRenderLayer.CUTOUT;
+		}
+
+		@Override
+		public boolean isFullCube(IBlockState state) {
+			return false;
+		}
+
+		@Override
+		public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+			switch ((EnumFacing) state.getValue(BlockHorizontal.FACING)) {
+				case UP :
+				case DOWN :
+				case SOUTH :
+				default :
+					return new AxisAlignedBB(0.625D, 0D, 0.625D, 0.375D, 1.5D, 0.375D);
+				case NORTH :
+					return new AxisAlignedBB(0.375D, 0D, 0.375D, 0.625D, 1.5D, 0.625D);
+				case WEST :
+					return new AxisAlignedBB(0.375D, 0D, 0.625D, 0.625D, 1.5D, 0.375D);
+				case EAST :
+					return new AxisAlignedBB(0.625D, 0D, 0.375D, 0.375D, 1.5D, 0.625D);
+			}
+		}
+
+		@Override
+		public int tickRate(World world) {
+			return 1;
 		}
 
 		@Override
@@ -128,6 +162,16 @@ public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
+		public int getFlammability(IBlockAccess world, BlockPos pos, EnumFacing face) {
+			return 5;
+		}
+
+		@Override
+		public MapColor getMapColor(IBlockState state, IBlockAccess blockAccess, BlockPos pos) {
+			return MapColor.WOOD;
+		}
+
+		@Override
 		public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
 			return false;
 		}
@@ -150,53 +194,86 @@ public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public void breakBlock(World world, BlockPos pos, IBlockState state) {
-			TileEntity tileentity = world.getTileEntity(pos);
-			if (tileentity instanceof TileEntityCustom)
-				InventoryHelper.dropInventoryItems(world, pos, (TileEntityCustom) tileentity);
-			world.removeTileEntity(pos);
-			super.breakBlock(world, pos, state);
+		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+			super.onBlockAdded(world, pos, state);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
 
 		@Override
-		public boolean hasComparatorInputOverride(IBlockState state) {
-			return true;
-		}
-
-		@Override
-		public int getComparatorInputOverride(IBlockState blockState, World worldIn, BlockPos pos) {
-			TileEntity tileentity = worldIn.getTileEntity(pos);
-			if (tileentity instanceof TileEntityCustom)
-				return Container.calcRedstoneFromInventory((TileEntityCustom) tileentity);
-			else
-				return 0;
-		}
-
-		@Override
-		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
-				float hitX, float hitY, float hitZ) {
-			super.onBlockActivated(world, pos, state, entity, hand, direction, hitX, hitY, hitZ);
+		public void updateTick(World world, BlockPos pos, IBlockState state, Random random) {
+			super.updateTick(world, pos, state, random);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureProcessMachineamoudreopen.executeProcedure($_dependencies);
+				ProcedureLogFenceUpdateTick.executeProcedure($_dependencies);
 			}
-			return true;
+			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
+		}
+
+		@Override
+		public boolean removedByPlayer(IBlockState state, World world, BlockPos pos, EntityPlayer entity, boolean willHarvest) {
+			boolean retval = super.removedByPlayer(state, world, pos, entity, willHarvest);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureLogFenceDestroyedByPlayer.executeProcedure($_dependencies);
+			}
+			return retval;
+		}
+
+		@Override
+		public void onBlockDestroyedByExplosion(World world, BlockPos pos, Explosion e) {
+			super.onBlockDestroyedByExplosion(world, pos, e);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureLogFenceExplode.executeProcedure($_dependencies);
+			}
+		}
+
+		@Override
+		public void onBlockPlacedBy(World world, BlockPos pos, IBlockState state, EntityLivingBase entity, ItemStack itemstack) {
+			super.onBlockPlacedBy(world, pos, state, entity, itemstack);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureLogFencePlace.executeProcedure($_dependencies);
+			}
 		}
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
 		@Override
 		public int getSizeInventory() {
-			return 3;
+			return 0;
 		}
 
 		@Override
@@ -219,7 +296,7 @@ public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getName() {
-			return "container.machineamoudreblock";
+			return "container.logfencenone";
 		}
 
 		@Override
@@ -265,7 +342,7 @@ public class BlockMachineAMoudreblock extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getGuiID() {
-			return "minecrown:machineamoudreblock";
+			return "minecrown:logfencenone";
 		}
 
 		@Override

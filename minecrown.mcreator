@@ -1776,6 +1776,302 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "LogFenceNone",
+      "type": "block",
+      "sortid": 119,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceCorner",
+      "type": "block",
+      "sortid": 120,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceEnd",
+      "type": "block",
+      "sortid": 121,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceStraight",
+      "type": "block",
+      "sortid": 122,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceTCorner",
+      "type": "block",
+      "sortid": 123,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceXCorner",
+      "type": "block",
+      "sortid": 124,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFencePlace",
+      "type": "procedure",
+      "sortid": 125,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceExplode",
+      "type": "procedure",
+      "sortid": 126,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceUpdateTick",
+      "type": "procedure",
+      "sortid": 127,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceGateClosed",
+      "type": "block",
+      "sortid": 128,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceGateOpen",
+      "type": "block",
+      "sortid": 129,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "LogFenceGateRightClicked",
+      "type": "procedure",
+      "sortid": 130,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceGateDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 131,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceGatePlacedBy",
+      "type": "procedure",
+      "sortid": 132,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceGateExploded",
+      "type": "procedure",
+      "sortid": 133,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "LogFenceDestroyedByPlayer",
+      "type": "procedure",
+      "sortid": 134,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "Fences",
+      "type": "tag",
+      "sortid": 135,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -1785,6 +2081,7 @@
       "tile.blackberrybush_2.name": "Blackberry Bush2",
       "item.faucille.name": "Faucille",
       "item.candleberryseed.name": "Graine de Symphorine",
+      "tile.logfenceend.name": "Log Fence End",
       "item.raspberry.name": "Framboise",
       "tile.strawberrybush_0.name": "Strawberry Bush0",
       "tile.candleberrybush_0.name": "Candleberry Bush0",
@@ -1792,6 +2089,7 @@
       "tile.candleberrybush_3.name": "Candleberry Bush3",
       "tile.cranberrybush_3.name": "Cranberry Bush3",
       "item.blackberry.name": "Mûre",
+      "tile.logfencecorner.name": "Log Fence Corner",
       "tile.strawberrybush_2.name": "Strawberry Bush2",
       "tile.machineamoudreblock.name": "Broyeur",
       "tile.blackberrybush_0.name": "Blackberry Bush0",
@@ -1800,18 +2098,24 @@
       "item.paleoberry.name": "Paléobaie",
       "tile.strawberrybush_3.name": "Strawberry Bush3",
       "item.elderberry.name": "Sureau",
+      "tile.logfencegateclosed.name": "Log Fence Gate",
       "tile.candleberrybush_2.name": "Candleberry Bush2",
       "item.cranberrypowder.name": "Poudre de Canneberge",
       "tile.blackberrybush_3.name": "Cranberry Bush0",
+      "tile.logfencetcorner.name": "Log Fence End",
       "item.cranberryseed.name": "Graine de Canneberge",
+      "tile.logfencexcorner.name": "Log Fence End",
       "tile.cranberrybush_1.name": "Cranberry Bush1",
       "item.cranberry.name": "Canneberge",
       "tile.candleberrybush_1.name": "Candleberry Bush1",
       "item.candleberrypowder.name": "Poudre de Symphorine",
+      "tile.logfencenone.name": "Log Fence",
       "item.strawberrypowder.name": "Poudre de Fraise",
       "item.candleberry.name": "Symphorine",
+      "tile.logfencestraight.name": "Log Fence End",
       "item.strawberryseed.name": "Graine de Fraise",
       "item.gooseberry.name": "Groseille",
+      "tile.logfencegateopen.name": "Log Fence Gate Open",
       "item.blackberrypowder.name": "Poudre de Mûre",
       "tile.blackberrybush_1.name": "Blackberry Bush1",
       "item.blueberry.name": "Myrtille",

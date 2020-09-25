@@ -1,0 +1,12 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "dark_oak_log",
+        "1": "dark_oak_fence",
+        "missing": "dark_oak_log"
+      },
+      "name": "default"
+    }
+  }
+}

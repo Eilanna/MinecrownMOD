@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:logfencegateopen"
+    },
+    "facing=north": {
+      "model": "minecrown:logfencegateopen"
+    },
+    "facing=east": {
+      "model": "minecrown:logfencegateopen",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:logfencegateopen",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:logfencegateopen",
+      "y": 270
+    }
+  }
+}

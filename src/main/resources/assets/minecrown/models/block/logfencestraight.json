@@ -1,0 +1,10 @@
+{
+  "parent": "minecrown:custom/log_fence_straight",
+  "textures": {
+    "all": "minecrown:blocks/dark_oak_fence",
+    "particle": "minecrown:blocks/dark_oak_fence",
+    "0": "minecrown:blocks/dark_oak_log",
+    "1": "minecrown:blocks/dark_oak_fence",
+    "missing": "minecrown:blocks/dark_oak_log"
+  }
+}

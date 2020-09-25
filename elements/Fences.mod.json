@@ -1,0 +1,34 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:LogFenceNone"
+      },
+      {
+        "value": "CUSTOM:LogFenceCorner"
+      },
+      {
+        "value": "CUSTOM:LogFenceEnd"
+      },
+      {
+        "value": "CUSTOM:LogFenceStraight"
+      },
+      {
+        "value": "CUSTOM:LogFenceTCorner"
+      },
+      {
+        "value": "CUSTOM:LogFenceXCorner"
+      },
+      {
+        "value": "CUSTOM:LogFenceGateClosed"
+      }
+    ],
+    "functions": [],
+    "name": "fences",
+    "namespace": "minecraft"
+  }
+}

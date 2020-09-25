@@ -2,14 +2,14 @@
   "_fv": 6,
   "_type": "block",
   "definition": {
-    "texture": "royeurtem64",
-    "textureTop": "royeurop",
-    "textureLeft": "royeuride",
-    "textureFront": "royeurront",
-    "textureRight": "royeuride",
-    "textureBack": "royeuride",
+    "texture": "dark_oak_fence",
+    "textureTop": "",
+    "textureLeft": "",
+    "textureFront": "",
+    "textureRight": "",
+    "textureBack": "",
     "renderType": 2,
-    "customModelName": "grinder:default",
+    "customModelName": "log_fence_t_corner:default",
     "rotationMode": 1,
     "hasTransparency": true,
     "transparencyType": "CUTOUT",
@@ -17,21 +17,21 @@
     "my": 0.0,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 1.0,
-    "Mz": 1.0,
+    "My": 1.5,
+    "Mz": 0.625,
     "faceShape": "SOLID",
-    "name": "Broyeur",
+    "name": "Log Fence End",
     "specialInfo": [],
-    "hardness": 3.0,
-    "resistance": 5.0,
+    "hardness": 2.0,
+    "resistance": 3.0,
     "hasGravity": false,
     "creativeTab": {
-      "value": "CUSTOM:MinecrownPaysanTable"
+      "value": "No creative tab entry"
     },
-    "destroyTool": "Not specified",
+    "destroyTool": "axe",
     "affectedBySilkTouch": false,
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:LogFenceNone"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -40,27 +40,27 @@
     "canProvidePower": false,
     "lightOpacity": 0,
     "material": {
-      "value": "IRON"
+      "value": "WOOD"
     },
-    "tickRate": 10,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
-    "colorOnMap": "DEFAULT",
+    "colorOnMap": "WOOD",
     "creativePickItem": {
-      "value": ""
+      "value": "CUSTOM:LogFenceNone"
     },
-    "flammability": 0,
+    "flammability": 5,
     "fireSpreadSpeed": 0,
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
     "isNotColidable": false,
     "soundOnStep": {
-      "value": "METAL"
+      "value": "WOOD"
     },
     "luminance": 0.0,
     "unbreakable": false,
-    "breakHarvestLevel": 1,
+    "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
       "value": "EXPLOSION_NORMAL"
@@ -72,13 +72,22 @@
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 3,
+    "inventorySize": 0,
     "inventoryStackSize": 64,
-    "inventoryDropWhenDestroyed": true,
-    "inventoryComparatorPower": true,
+    "inventoryDropWhenDestroyed": false,
+    "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
-    "onRightClicked": {
-      "name": "ProcessMachineamoudreopen"
+    "onTickUpdate": {
+      "name": "LogFenceUpdateTick"
+    },
+    "onDestroyedByPlayer": {
+      "name": "LogFenceDestroyedByPlayer"
+    },
+    "onDestroyedByExplosion": {
+      "name": "LogFenceExplode"
+    },
+    "onBlockPlayedBy": {
+      "name": "LogFencePlace"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],

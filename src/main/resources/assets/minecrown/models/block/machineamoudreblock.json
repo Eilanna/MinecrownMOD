@@ -1,8 +1,8 @@
 {
   "parent": "minecrown:custom/grinder",
   "textures": {
-    "all": "minecrown:blocks/royeur",
-    "particle": "minecrown:blocks/royeur",
+    "all": "minecrown:blocks/royeurtem64",
+    "particle": "minecrown:blocks/royeurtem64",
     "0": "minecrown:blocks/royeur"
   }
 }
