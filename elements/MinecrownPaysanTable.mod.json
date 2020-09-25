@@ -4,7 +4,7 @@
   "definition": {
     "name": "Minecrown AGRICULTEUR",
     "icon": {
-      "value": "CUSTOM:MachineAMoudreblock"
+      "value": "CUSTOM:MachineBroyeuse"
     },
     "showSearch": false
   }

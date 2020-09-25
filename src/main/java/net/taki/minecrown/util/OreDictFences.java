@@ -1,6 +1,13 @@
 
 package net.taki.minecrown.util;
 
+import net.taki.minecrown.block.BlockRopeFenceXCorner;
+import net.taki.minecrown.block.BlockRopeFenceTCorner;
+import net.taki.minecrown.block.BlockRopeFenceStraight;
+import net.taki.minecrown.block.BlockRopeFenceNone;
+import net.taki.minecrown.block.BlockRopeFenceGateClose;
+import net.taki.minecrown.block.BlockRopeFenceEnd;
+import net.taki.minecrown.block.BlockRopeFenceCorner;
 import net.taki.minecrown.block.BlockLogFenceXCorner;
 import net.taki.minecrown.block.BlockLogFenceTCorner;
 import net.taki.minecrown.block.BlockLogFenceStraight;
@@ -30,5 +37,12 @@ public class OreDictFences extends ElementsMinecrownMOD.ModElement {
 		OreDictionary.registerOre("fences", new ItemStack(BlockLogFenceTCorner.block, (int) (1)));
 		OreDictionary.registerOre("fences", new ItemStack(BlockLogFenceXCorner.block, (int) (1)));
 		OreDictionary.registerOre("fences", new ItemStack(BlockLogFenceGateClosed.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceNone.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceCorner.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceEnd.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceStraight.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceTCorner.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceXCorner.block, (int) (1)));
+		OreDictionary.registerOre("fences", new ItemStack(BlockRopeFenceGateClose.block, (int) (1)));
 	}
 }

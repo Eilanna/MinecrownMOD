@@ -1,0 +1,72 @@
+{
+  "_fv": 6,
+  "_type": "gui",
+  "definition": {
+    "type": 1,
+    "width": 352,
+    "height": 332,
+    "renderBgLayer": true,
+    "components": [
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 0,
+          "name": "Slot #0",
+          "x": 318,
+          "y": 114
+        }
+      },
+      {
+        "type": "inputslot",
+        "data": {
+          "inputLimit": {
+            "value": ""
+          },
+          "id": 1,
+          "name": "Slot #1",
+          "x": 318,
+          "y": 186
+        }
+      },
+      {
+        "type": "outputslot",
+        "data": {
+          "id": 2,
+          "name": "Slot #2",
+          "x": 408,
+          "y": 150
+        }
+      },
+      {
+        "type": "button",
+        "data": {
+          "text": "Broyer",
+          "onClick": {
+            "name": "MachineBroyeuseProcess"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Broyer",
+          "x": 462,
+          "y": 186
+        }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "Machine à Moudre",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "Machine à Moudre",
+          "x": 408,
+          "y": 114
+        }
+      }
+    ]
+  }
+}

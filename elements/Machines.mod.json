@@ -1,0 +1,22 @@
+{
+  "_fv": 6,
+  "_type": "tag",
+  "definition": {
+    "type": "Blocks",
+    "items": [],
+    "blocks": [
+      {
+        "value": "CUSTOM:MachineScieuse"
+      },
+      {
+        "value": "CUSTOM:MachineMeuleuse"
+      },
+      {
+        "value": "CUSTOM:MachineBroyeuse"
+      }
+    ],
+    "functions": [],
+    "name": "machines",
+    "namespace": "forge"
+  }
+}

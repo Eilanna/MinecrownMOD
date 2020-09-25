@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:machinemeuleuse"
+    },
+    "facing=north": {
+      "model": "minecrown:machinemeuleuse"
+    },
+    "facing=east": {
+      "model": "minecrown:machinemeuleuse",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:machinemeuleuse",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:machinemeuleuse",
+      "y": 270
+    }
+  }
+}

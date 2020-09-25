@@ -1,5 +1,5 @@
 {
-  "parent": "minecrown:custom/log_fence_none",
+  "parent": "minecrown:custom/log_fence_nonebis",
   "textures": {
     "all": "minecrown:blocks/dark_oak_fence",
     "particle": "minecrown:blocks/dark_oak_fence",

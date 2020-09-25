@@ -25,6 +25,27 @@
       },
       {
         "value": "CUSTOM:LogFenceGateClosed"
+      },
+      {
+        "value": "CUSTOM:RopeFenceNone"
+      },
+      {
+        "value": "CUSTOM:RopeFenceCorner"
+      },
+      {
+        "value": "CUSTOM:RopeFenceEnd"
+      },
+      {
+        "value": "CUSTOM:RopeFenceStraight"
+      },
+      {
+        "value": "CUSTOM:RopeFenceTCorner"
+      },
+      {
+        "value": "CUSTOM:RopeFenceXCorner"
+      },
+      {
+        "value": "CUSTOM:RopeFenceGateClose"
       }
     ],
     "functions": [],

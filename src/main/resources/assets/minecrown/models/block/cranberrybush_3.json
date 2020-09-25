@@ -1,7 +1,9 @@
 {
-  "parent": "block/cross",
+  "parent": "minecrown:custom/sweet_bush_berry2",
   "textures": {
-    "cross": "minecrown:blocks/bush_berry_stage_3",
-    "particle": "minecrown:blocks/bush_berry_stage_3"
+    "all": "minecrown:blocks/bush_berry_stage_3",
+    "particle": "minecrown:blocks/bush_berry_stage_3",
+    "1": "minecrown:blocks/sweet_berry_bush",
+    "2": "minecrown:blocks/sweet_berry_bush_cross"
   }
 }

@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "plant",
   "definition": {
-    "renderType": 12,
+    "renderType": 2,
     "texture": "bush_berry_stage_3",
-    "customModelName": "Cross model",
+    "customModelName": "sweet_bush_berry2:default",
     "plantType": "normal",
     "growapableSpawnType": "Plains",
     "growapableMaxHeight": 3,

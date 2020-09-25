@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.creativetab;
 
-import net.taki.minecrown.block.BlockMachineAMoudreblock;
+import net.taki.minecrown.block.BlockMachineBroyeuse;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,7 +22,7 @@ public class TabMinecrownPaysanTable extends ElementsMinecrownMOD.ModElement {
 			@SideOnly(Side.CLIENT)
 			@Override
 			public ItemStack getTabIconItem() {
-				return new ItemStack(BlockMachineAMoudreblock.block, (int) (1));
+				return new ItemStack(BlockMachineBroyeuse.block, (int) (1));
 			}
 
 			@SideOnly(Side.CLIENT)

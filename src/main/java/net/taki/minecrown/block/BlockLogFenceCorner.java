@@ -111,13 +111,13 @@ public class BlockLogFenceCorner extends ElementsMinecrownMOD.ModElement {
 				case DOWN :
 				case SOUTH :
 				default :
-					return new AxisAlignedBB(1D, 0D, 1D, 0.375D, 1.5D, 0.375D);
+					return new AxisAlignedBB(0.625D, 0D, 1D, 0D, 1.5D, 0.375D);
 				case NORTH :
-					return new AxisAlignedBB(0D, 0D, 0D, 0.625D, 1.5D, 0.625D);
+					return new AxisAlignedBB(0.375D, 0D, 0D, 1D, 1.5D, 0.625D);
 				case WEST :
-					return new AxisAlignedBB(0D, 0D, 1D, 0.625D, 1.5D, 0.375D);
+					return new AxisAlignedBB(0D, 0D, 0.625D, 0.625D, 1.5D, 0D);
 				case EAST :
-					return new AxisAlignedBB(1D, 0D, 0D, 0.375D, 1.5D, 0.625D);
+					return new AxisAlignedBB(1D, 0D, 0.375D, 0.375D, 1.5D, 1D);
 			}
 		}
 

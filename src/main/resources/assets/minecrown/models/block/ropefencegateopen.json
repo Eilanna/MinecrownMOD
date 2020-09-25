@@ -1,0 +1,8 @@
+{
+  "parent": "minecrown:custom/ropped_fence_gate_open",
+  "textures": {
+    "all": "minecrown:blocks/fence02",
+    "particle": "minecrown:blocks/fence02",
+    "1": "minecrown:blocks/fence02"
+  }
+}

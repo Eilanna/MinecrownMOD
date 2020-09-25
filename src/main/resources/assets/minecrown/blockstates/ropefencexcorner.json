@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:ropefencexcorner"
+    },
+    "facing=north": {
+      "model": "minecrown:ropefencexcorner"
+    },
+    "facing=east": {
+      "model": "minecrown:ropefencexcorner",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:ropefencexcorner",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:ropefencexcorner",
+      "y": 270
+    }
+  }
+}

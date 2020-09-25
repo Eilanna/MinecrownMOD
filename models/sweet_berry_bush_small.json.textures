@@ -1,0 +1,11 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "1": "sweet_berry_bush",
+        "2": "sweet_berry_bush_small_cross"
+      },
+      "name": "default"
+    }
+  }
+}

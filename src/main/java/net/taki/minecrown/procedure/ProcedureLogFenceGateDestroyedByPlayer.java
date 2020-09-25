@@ -36,8 +36,8 @@ public class ProcedureLogFenceGateDestroyedByPlayer extends ElementsMinecrownMOD
 		World world = (World) dependencies.get("world");
 		String fenceGroup = "";
 		String fenceUpdate = "";
-		fenceGroup = (String) "loggedFences";
-		fenceUpdate = (String) "loggedFencesUpdate";
+		fenceGroup = (String) "unloggedFences";
+		fenceUpdate = (String) "unloggedFencesUpdate";
 		if ((((new Object() {
 			public boolean getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);
