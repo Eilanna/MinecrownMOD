@@ -1,12 +1,8 @@
 {
-  "parent": "block/cube",
+  "parent": "minecrown:custom/grinder",
   "textures": {
-    "down": "minecrown:blocks/royeurottom",
-    "up": "minecrown:blocks/royeurop",
-    "north": "minecrown:blocks/royeurront",
-    "east": "minecrown:blocks/royeuride",
-    "south": "minecrown:blocks/royeuride",
-    "west": "minecrown:blocks/royeuride",
-    "particle": "minecrown:blocks/royeurottom"
+    "all": "minecrown:blocks/royeur",
+    "particle": "minecrown:blocks/royeur",
+    "0": "minecrown:blocks/royeur"
   }
 }
