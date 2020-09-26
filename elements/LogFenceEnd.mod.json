@@ -9,7 +9,7 @@
     "textureRight": "",
     "textureBack": "",
     "renderType": 2,
-    "customModelName": "log_fence_endbis:default",
+    "customModelName": "log_fence_end:default",
     "rotationMode": 1,
     "hasTransparency": true,
     "transparencyType": "CUTOUT",
