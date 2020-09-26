@@ -2416,6 +2416,14 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "MiCroJobsForgeron",
+      "type": "tab",
+      "sortid": 164,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -2459,6 +2467,7 @@
       "tile.strawberrybush_1.name": "Strawberry Bush1",
       "tile.blackberrybush_2.name": "Blackberry Bush2",
       "tile.logfenceend.name": "Log Fence End",
+      "itemGroup.tabmicrojobsforgeron": "Minecrown BOTANISTE",
       "tile.strawberrybush_0.name": "Strawberry Bush0",
       "tile.candleberrybush_0.name": "Candleberry Bush0",
       "tile.ropefencetcorner.name": "Rope Fence T Corner",
@@ -2477,7 +2486,7 @@
       "item.gooseberry.name": "Groseille",
       "itemGroup.tabmicrojobsagriculteur": "Minecrown AGRICULTEUR",
       "item.blackberrypowder.name": "Poudre de Mûre",
-      "itemGroup.tabmicrojobsmineur": "Minecrown MENUISIER",
+      "itemGroup.tabmicrojobsmineur": "Minecrown MINEUR",
       "tile.cranberrybush_2.name": "Cranberry Bush2",
       "tile.machinemeuleuse.name": "Broyeur Fixe"
     }

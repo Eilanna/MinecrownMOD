@@ -2,9 +2,9 @@
   "_fv": 6,
   "_type": "tab",
   "definition": {
-    "name": "Minecrown MINEUR",
+    "name": "Minecrown BOTANISTE",
     "icon": {
-      "value": "CUSTOM:MachineConcasseuse"
+      "value": "Blocks.ANVIL#0"
     },
     "showSearch": false
   }
