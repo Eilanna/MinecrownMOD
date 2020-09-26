@@ -2,7 +2,7 @@
 package net.taki.minecrown.block;
 
 import net.taki.minecrown.procedure.ProcedureMachineBroyeuseOpen;
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -81,7 +81,7 @@ public class BlockMachineBroyeuse extends ElementsMinecrownMOD.ModElement {
 			setResistance(5F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsAgriculteur.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
 

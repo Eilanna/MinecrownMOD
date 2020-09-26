@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.creativetab;
 
-import net.taki.minecrown.block.BlockMachineBroyeuse;
+import net.taki.minecrown.block.BlockMachineScieuse;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -11,18 +11,18 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.creativetab.CreativeTabs;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class TabMinecrownPaysanTable extends ElementsMinecrownMOD.ModElement {
-	public TabMinecrownPaysanTable(ElementsMinecrownMOD instance) {
-		super(instance, 1);
+public class TabMiCroJobsMenuisier extends ElementsMinecrownMOD.ModElement {
+	public TabMiCroJobsMenuisier(ElementsMinecrownMOD instance) {
+		super(instance, 160);
 	}
 
 	@Override
 	public void initElements() {
-		tab = new CreativeTabs("tabminecrownpaysantable") {
+		tab = new CreativeTabs("tabmicrojobsmenuisier") {
 			@SideOnly(Side.CLIENT)
 			@Override
 			public ItemStack getTabIconItem() {
-				return new ItemStack(BlockMachineBroyeuse.block, (int) (1));
+				return new ItemStack(BlockMachineScieuse.block, (int) (1));
 			}
 
 			@SideOnly(Side.CLIENT)

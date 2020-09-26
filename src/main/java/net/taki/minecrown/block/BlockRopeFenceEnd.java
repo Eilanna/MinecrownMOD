@@ -168,7 +168,7 @@ public class BlockRopeFenceEnd extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-			return new ItemStack(BlockRopeFenceNone.block, (int) (1));
+			return new ItemStack(BlockRopeFenceStraight.block, (int) (1));
 		}
 
 		@Override
@@ -183,7 +183,7 @@ public class BlockRopeFenceEnd extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-			drops.add(new ItemStack(BlockRopeFenceNone.block, (int) (1)));
+			drops.add(new ItemStack(BlockRopeFenceStraight.block, (int) (1)));
 		}
 
 		@Override

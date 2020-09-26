@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.item;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -40,7 +40,7 @@ public class ItemCandleBerry extends ElementsMinecrownMOD.ModElement {
 			setUnlocalizedName("candleberry");
 			setRegistryName("candleberry");
 			setAlwaysEdible();
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsAgriculteur.tab);
 			setMaxStackSize(64);
 		}
 

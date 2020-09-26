@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsMenuisier;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -79,7 +79,7 @@ public class BlockMachineScieuse extends ElementsMinecrownMOD.ModElement {
 			setResistance(5F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsMenuisier.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
 

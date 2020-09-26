@@ -31,7 +31,7 @@
     "destroyTool": "axe",
     "affectedBySilkTouch": false,
     "customDrop": {
-      "value": "CUSTOM:RopeFenceNone"
+      "value": "CUSTOM:RopeFenceStraight"
     },
     "dropAmount": 1,
     "isBeaconBase": false,
@@ -47,7 +47,7 @@
     "isReplaceable": false,
     "colorOnMap": "WOOD",
     "creativePickItem": {
-      "value": "CUSTOM:RopeFenceNone"
+      "value": "CUSTOM:RopeFenceStraight"
     },
     "flammability": 5,
     "fireSpreadSpeed": 0,

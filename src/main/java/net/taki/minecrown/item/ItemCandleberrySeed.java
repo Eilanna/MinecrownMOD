@@ -2,7 +2,7 @@
 package net.taki.minecrown.item;
 
 import net.taki.minecrown.procedure.ProcedureCandleberryBushPlantation;
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -46,7 +46,7 @@ public class ItemCandleberrySeed extends ElementsMinecrownMOD.ModElement {
 			maxStackSize = 64;
 			setUnlocalizedName("candleberryseed");
 			setRegistryName("candleberryseed");
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsAgriculteur.tab);
 		}
 
 		@Override

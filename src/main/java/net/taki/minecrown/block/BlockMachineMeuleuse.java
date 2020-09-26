@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsMenuisier;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -12,10 +12,11 @@ import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.client.event.ModelRegistryEvent;
 
 import net.minecraft.world.World;
+import net.minecraft.world.IBlockAccess;
 import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
-import net.minecraft.util.Mirror;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.BlockRenderLayer;
@@ -41,7 +42,7 @@ import net.minecraft.block.properties.IProperty;
 import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.ITileEntityProvider;
-import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.BlockDirectional;
 import net.minecraft.block.Block;
 
 @ElementsMinecrownMOD.ModElement.Tag
@@ -70,7 +71,7 @@ public class BlockMachineMeuleuse extends ElementsMinecrownMOD.ModElement {
 				new ModelResourceLocation("minecrown:machinemeuleuse", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
-		public static final PropertyDirection FACING = BlockHorizontal.FACING;
+		public static final PropertyDirection FACING = BlockDirectional.FACING;
 		public BlockCustom() {
 			super(Material.IRON);
 			setUnlocalizedName("machinemeuleuse");
@@ -79,8 +80,8 @@ public class BlockMachineMeuleuse extends ElementsMinecrownMOD.ModElement {
 			setResistance(5F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(TabMinecrownPaysanTable.tab);
-			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
+			setCreativeTab(TabMiCroJobsMenuisier.tab);
+			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.SOUTH));
 		}
 
 		@SideOnly(Side.CLIENT)
@@ -90,18 +91,41 @@ public class BlockMachineMeuleuse extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
+		public boolean isFullCube(IBlockState state) {
+			return false;
+		}
+
+		@Override
+		public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
+			switch ((EnumFacing) state.getValue(BlockDirectional.FACING)) {
+				case SOUTH :
+				case NORTH :
+				default :
+					return new AxisAlignedBB(0D, 0D, 0D, 1D, 1.375D, 1D);
+				case EAST :
+				case WEST :
+					return new AxisAlignedBB(0D, 1D, 0D, 1D, 0D, 1.375D);
+				case UP :
+				case DOWN :
+					return new AxisAlignedBB(0D, 1D, 1D, 1.375D, 0D, 0D);
+			}
+		}
+
+		@Override
 		protected net.minecraft.block.state.BlockStateContainer createBlockState() {
 			return new net.minecraft.block.state.BlockStateContainer(this, new IProperty[]{FACING});
 		}
 
 		@Override
 		public IBlockState withRotation(IBlockState state, Rotation rot) {
-			return state.withProperty(FACING, rot.rotate((EnumFacing) state.getValue(FACING)));
-		}
-
-		@Override
-		public IBlockState withMirror(IBlockState state, Mirror mirrorIn) {
-			return state.withRotation(mirrorIn.toRotation((EnumFacing) state.getValue(FACING)));
+			if (rot == Rotation.CLOCKWISE_90 || rot == Rotation.COUNTERCLOCKWISE_90) {
+				if ((EnumFacing) state.getValue(FACING) == EnumFacing.WEST || (EnumFacing) state.getValue(FACING) == EnumFacing.EAST) {
+					return state.withProperty(FACING, EnumFacing.UP);
+				} else if ((EnumFacing) state.getValue(FACING) == EnumFacing.UP || (EnumFacing) state.getValue(FACING) == EnumFacing.DOWN) {
+					return state.withProperty(FACING, EnumFacing.WEST);
+				}
+			}
+			return state;
 		}
 
 		@Override
@@ -117,7 +141,13 @@ public class BlockMachineMeuleuse extends ElementsMinecrownMOD.ModElement {
 		@Override
 		public IBlockState getStateForPlacement(World worldIn, BlockPos pos, EnumFacing facing, float hitX, float hitY, float hitZ, int meta,
 				EntityLivingBase placer) {
-			return this.getDefaultState().withProperty(FACING, placer.getHorizontalFacing().getOpposite());
+			if (facing == EnumFacing.WEST || facing == EnumFacing.EAST)
+				facing = EnumFacing.UP;
+			else if (facing == EnumFacing.NORTH || facing == EnumFacing.SOUTH)
+				facing = EnumFacing.EAST;
+			else
+				facing = EnumFacing.SOUTH;
+			return this.getDefaultState().withProperty(FACING, facing);
 		}
 
 		@Override

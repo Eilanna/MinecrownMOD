@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:machineconcasseuse"
+    },
+    "facing=north": {
+      "model": "minecrown:machineconcasseuse"
+    },
+    "facing=east": {
+      "model": "minecrown:machineconcasseuse",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:machineconcasseuse",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:machineconcasseuse",
+      "y": 270
+    }
+  }
+}

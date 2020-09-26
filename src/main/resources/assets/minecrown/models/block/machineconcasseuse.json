@@ -1,0 +1,11 @@
+{
+  "parent": "minecrown:custom/stonegrinder",
+  "textures": {
+    "all": "minecrown:blocks/tonerinder64",
+    "particle": "minecrown:blocks/tonerinder64",
+    "0": "minecrown:blocks/grindstone_wheel",
+    "side": "minecrown:blocks/stonecutter_side",
+    "top": "minecrown:blocks/stonecutter_top",
+    "bottom": "minecrown:blocks/stonecutter_bottom"
+  }
+}

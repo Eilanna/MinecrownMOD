@@ -4,14 +4,6 @@
   },
   "mod_elements": [
     {
-      "name": "MinecrownPaysanTable",
-      "type": "tab",
-      "sortid": 1,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
       "name": "Cranberry",
       "type": "food",
       "sortid": 7,
@@ -2384,6 +2376,38 @@
           }
         ]
       }
+    },
+    {
+      "name": "MiCroJobsAgriculteur",
+      "type": "tab",
+      "sortid": 159,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MiCroJobsMenuisier",
+      "type": "tab",
+      "sortid": 160,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MachineConcasseuse",
+      "type": "block",
+      "sortid": 161,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MiCroJobsMineur",
+      "type": "tab",
+      "sortid": 162,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -2394,7 +2418,9 @@
       "item.candleberryseed.name": "Graine de Symphorine",
       "tile.ropefencexcorner.name": "Rope Fence X Corner",
       "item.raspberry.name": "Framboise",
+      "tile.machineconcasseuse.name": "Broyeur",
       "tile.candleberrybush_3.name": "Candleberry Bush3",
+      "itemGroup.tabmicrojobsmenuisier": "Minecrown MENUISIER",
       "tile.ropefencegateclose.name": "Rope Fence Gate",
       "tile.cranberrybush_3.name": "Cranberry Bush3",
       "item.blackberry.name": "Mûre",
@@ -2426,7 +2452,6 @@
       "tile.logfenceend.name": "Log Fence End",
       "tile.strawberrybush_0.name": "Strawberry Bush0",
       "tile.candleberrybush_0.name": "Candleberry Bush0",
-      "itemGroup.tabminecrownpaysantable": "Minecrown AGRICULTEUR",
       "tile.ropefencetcorner.name": "Rope Fence T Corner",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "tile.blackberrybush_3.name": "Cranberry Bush0",
@@ -2441,9 +2466,11 @@
       "item.candleberry.name": "Symphorine",
       "tile.ropefenceend.name": "Rope Fence End",
       "item.gooseberry.name": "Groseille",
+      "itemGroup.tabmicrojobsagriculteur": "Minecrown AGRICULTEUR",
       "item.blackberrypowder.name": "Poudre de Mûre",
+      "itemGroup.tabmicrojobsmineur": "Minecrown MENUISIER",
       "tile.cranberrybush_2.name": "Cranberry Bush2",
-      "tile.machinemeuleuse.name": "Broyeur"
+      "tile.machinemeuleuse.name": "Broyeur Fixe"
     }
   },
   "workspaceSettings": {

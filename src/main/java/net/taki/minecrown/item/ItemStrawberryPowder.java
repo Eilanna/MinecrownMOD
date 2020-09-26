@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.item;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -39,7 +39,7 @@ public class ItemStrawberryPowder extends ElementsMinecrownMOD.ModElement {
 			maxStackSize = 64;
 			setUnlocalizedName("strawberrypowder");
 			setRegistryName("strawberrypowder");
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsAgriculteur.tab);
 		}
 
 		@Override

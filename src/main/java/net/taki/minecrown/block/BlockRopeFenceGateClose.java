@@ -5,7 +5,7 @@ import net.taki.minecrown.procedure.ProcedureRopeFenceGateRightClicked;
 import net.taki.minecrown.procedure.ProcedureRopeFenceGatePlacedBy;
 import net.taki.minecrown.procedure.ProcedureRopeFenceGateExploded;
 import net.taki.minecrown.procedure.ProcedureRopeFenceGateDestroyedByPlayer;
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsMenuisier;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -88,7 +88,7 @@ public class BlockRopeFenceGateClose extends ElementsMinecrownMOD.ModElement {
 			setResistance(3F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(TabMinecrownPaysanTable.tab);
+			setCreativeTab(TabMiCroJobsMenuisier.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
 

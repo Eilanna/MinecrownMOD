@@ -5,6 +5,7 @@ import net.taki.minecrown.procedure.ProcedureLogFenceUpdateTick;
 import net.taki.minecrown.procedure.ProcedureLogFencePlace;
 import net.taki.minecrown.procedure.ProcedureLogFenceExplode;
 import net.taki.minecrown.procedure.ProcedureLogFenceDestroyedByPlayer;
+import net.taki.minecrown.creativetab.TabMiCroJobsMenuisier;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,7 +18,6 @@ import net.minecraftforge.client.event.ModelRegistryEvent;
 import net.minecraft.world.World;
 import net.minecraft.world.IBlockAccess;
 import net.minecraft.world.Explosion;
-import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.Rotation;
@@ -89,7 +89,7 @@ public class BlockLogFenceStraight extends ElementsMinecrownMOD.ModElement {
 			setResistance(3F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(null);
+			setCreativeTab(TabMiCroJobsMenuisier.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
 
@@ -168,11 +168,6 @@ public class BlockLogFenceStraight extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public ItemStack getPickBlock(IBlockState state, RayTraceResult target, World world, BlockPos pos, EntityPlayer player) {
-			return new ItemStack(BlockLogFenceNone.block, (int) (1));
-		}
-
-		@Override
 		public MapColor getMapColor(IBlockState state, IBlockAccess blockAccess, BlockPos pos) {
 			return MapColor.WOOD;
 		}
@@ -180,11 +175,6 @@ public class BlockLogFenceStraight extends ElementsMinecrownMOD.ModElement {
 		@Override
 		public boolean canSilkHarvest(World world, BlockPos pos, IBlockState state, EntityPlayer player) {
 			return false;
-		}
-
-		@Override
-		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-			drops.add(new ItemStack(BlockLogFenceNone.block, (int) (1)));
 		}
 
 		@Override

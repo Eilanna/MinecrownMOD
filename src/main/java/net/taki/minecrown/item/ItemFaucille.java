@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.item;
 
-import net.taki.minecrown.creativetab.TabMinecrownPaysanTable;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
 import net.taki.minecrown.block.BlockStrawberryBush_3;
 import net.taki.minecrown.block.BlockStrawberryBush_2;
 import net.taki.minecrown.block.BlockStrawberryBush_1;
@@ -50,7 +50,7 @@ public class ItemFaucille extends ElementsMinecrownMOD.ModElement {
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
-		}.setUnlocalizedName("faucille").setRegistryName("faucille").setCreativeTab(TabMinecrownPaysanTable.tab));
+		}.setUnlocalizedName("faucille").setRegistryName("faucille").setCreativeTab(TabMiCroJobsAgriculteur.tab));
 	}
 
 	@SideOnly(Side.CLIENT)

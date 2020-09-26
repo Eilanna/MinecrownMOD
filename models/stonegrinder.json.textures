@@ -1,0 +1,13 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "0": "grindstone_wheel",
+        "side": "stonecutter_side",
+        "top": "stonecutter_top",
+        "bottom": "stonecutter_bottom"
+      },
+      "name": "default"
+    }
+  }
+}
