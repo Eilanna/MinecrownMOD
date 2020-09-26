@@ -2,8 +2,7 @@
   "mappings": {
     "default": {
       "map": {
-        "0": "dark_oak_log",
-        "1": "dark_oak_fence"
+        "crop": "barley_stage_7"
       },
       "name": "default"
     }

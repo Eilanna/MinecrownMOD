@@ -40,34 +40,34 @@ import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockCropBarleyPlant3 extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:cropbarleyplant3")
+public class BlockCropBarleyPlant4 extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:cropbarleyplant4")
 	public static final Block block = null;
-	public BlockCropBarleyPlant3(ElementsMinecrownMOD instance) {
-		super(instance, 170);
+	public BlockCropBarleyPlant4(ElementsMinecrownMOD instance) {
+		super(instance, 171);
 	}
 
 	@Override
 	public void initElements() {
-		elements.blocks.add(() -> new BlockCustom().setRegistryName("cropbarleyplant3"));
+		elements.blocks.add(() -> new BlockCustom().setRegistryName("cropbarleyplant4"));
 		elements.items.add(() -> new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitycropbarleyplant3");
+		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitycropbarleyplant4");
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:cropbarleyplant3", "inventory"));
+				new ModelResourceLocation("minecrown:cropbarleyplant4", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
 		public BlockCustom() {
 			super(Material.FIRE);
-			setUnlocalizedName("cropbarleyplant3");
+			setUnlocalizedName("cropbarleyplant4");
 			setSoundType(SoundType.PLANT);
 			setHarvestLevel("axe", 0);
 			setHardness(0F);
@@ -174,7 +174,7 @@ public class BlockCropBarleyPlant3 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getName() {
-			return "container.cropbarleyplant3";
+			return "container.cropbarleyplant4";
 		}
 
 		@Override
@@ -220,7 +220,7 @@ public class BlockCropBarleyPlant3 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getGuiID() {
-			return "minecrown:cropbarleyplant3";
+			return "minecrown:cropbarleyplant4";
 		}
 
 		@Override
