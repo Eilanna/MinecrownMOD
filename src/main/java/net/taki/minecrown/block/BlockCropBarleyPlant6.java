@@ -1,6 +1,7 @@
 
 package net.taki.minecrown.block;
 
+import net.taki.minecrown.procedure.ProcedureCropBarleyUpdateTick;
 import net.taki.minecrown.item.ItemCropBarleySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -39,6 +40,8 @@ import net.minecraft.block.SoundType;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
 
+import java.util.Random;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockCropBarleyPlant6 extends ElementsMinecrownMOD.ModElement {
 	@GameRegistry.ObjectHolder("minecrown:cropbarleyplant6")
@@ -69,18 +72,18 @@ public class BlockCropBarleyPlant6 extends ElementsMinecrownMOD.ModElement {
 			super(Material.FIRE);
 			setUnlocalizedName("cropbarleyplant6");
 			setSoundType(SoundType.PLANT);
-			setHarvestLevel("axe", 0);
 			setHardness(0F);
 			setResistance(0F);
 			setLightLevel(0F);
 			setLightOpacity(0);
 			setCreativeTab(null);
+			setBlockUnbreakable();
 		}
 
 		@SideOnly(Side.CLIENT)
 		@Override
 		public BlockRenderLayer getBlockLayer() {
-			return BlockRenderLayer.CUTOUT_MIPPED;
+			return BlockRenderLayer.TRANSLUCENT;
 		}
 
 		@Override
@@ -101,7 +104,7 @@ public class BlockCropBarleyPlant6 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 1D, 1D);
+			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.868D, 1D);
 		}
 
 		@Override
@@ -144,6 +147,32 @@ public class BlockCropBarleyPlant6 extends ElementsMinecrownMOD.ModElement {
 		@Override
 		public EnumBlockRenderType getRenderType(IBlockState state) {
 			return EnumBlockRenderType.MODEL;
+		}
+
+		@Override
+		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
+			super.onBlockAdded(world, pos, state);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
+		}
+
+		@Override
+		public void updateTick(World world, BlockPos pos, IBlockState state, Random random) {
+			super.updateTick(world, pos, state, random);
+			int x = pos.getX();
+			int y = pos.getY();
+			int z = pos.getZ();
+			{
+				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
+				ProcedureCropBarleyUpdateTick.executeProcedure($_dependencies);
+			}
+			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
 	}
 
