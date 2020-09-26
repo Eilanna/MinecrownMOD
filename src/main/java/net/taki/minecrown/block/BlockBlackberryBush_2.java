@@ -7,6 +7,7 @@ import net.taki.minecrown.procedure.ProcedureBlackberryBush_Transform2;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Recolt1;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Break2;
 import net.taki.minecrown.item.ItemBlackberrySeed;
+import net.taki.minecrown.item.ItemBlackberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -87,13 +88,8 @@ public class BlockBlackberryBush_2 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public int quantityDropped(Random random) {
-			return 0;
-		}
-
-		@Override
 		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-			drops.add(new ItemStack(this));
+			drops.add(new ItemStack(ItemBlackberry.block, (int) (0)));
 		}
 
 		@Override

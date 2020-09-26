@@ -7,6 +7,7 @@ import net.taki.minecrown.procedure.ProcedureCranberryBush_Break2;
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
 import net.taki.minecrown.item.ItemCranberrySeed;
+import net.taki.minecrown.item.ItemCranberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -87,13 +88,8 @@ public class BlockCranberryBush_2 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public int quantityDropped(Random random) {
-			return 0;
-		}
-
-		@Override
 		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-			drops.add(new ItemStack(this));
+			drops.add(new ItemStack(ItemCranberry.block, (int) (0)));
 		}
 
 		@Override

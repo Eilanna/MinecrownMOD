@@ -20,7 +20,7 @@
       "value": "GROUND"
     },
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:Strawberry"
     },
     "dropAmount": 0,
     "isReplaceable": false,
