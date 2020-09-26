@@ -1,0 +1,10 @@
+{
+  "mappings": {
+    "default": {
+      "map": {
+        "crop": "barley_stage_0"
+      },
+      "name": "default"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecrown:custom/barley_stage_3",
+  "textures": {
+    "all": "minecrown:blocks/barley_stage_3",
+    "particle": "minecrown:blocks/barley_stage_3",
+    "crop": "minecrown:blocks/barley_stage_3"
+  }
+}
