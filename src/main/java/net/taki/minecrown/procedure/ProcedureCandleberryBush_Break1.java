@@ -1,6 +1,6 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemFaucille;
+import net.taki.minecrown.item.ItemToolSickle;
 import net.taki.minecrown.item.ItemCandleberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -45,7 +45,7 @@ public class ProcedureCandleberryBush_Break1 extends ElementsMinecrownMOD.ModEle
 		World world = (World) dependencies.get("world");
 		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == new ItemStack(ItemFaucille.block, (int) (1)).getItem())) {
+				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
 			if ((Math.random() <= 0.1)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCandleberrySeed.block, (int) (1)));

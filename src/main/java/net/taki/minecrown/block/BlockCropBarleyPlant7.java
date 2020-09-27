@@ -109,7 +109,7 @@ public class BlockCropBarleyPlant7 extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public int tickRate(World world) {
-			return 100;
+			return 1;
 		}
 
 		@Override

@@ -1,6 +1,6 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemFaucille;
+import net.taki.minecrown.item.ItemToolSickle;
 import net.taki.minecrown.item.ItemCandleberrySeed;
 import net.taki.minecrown.item.ItemCandleBerry;
 import net.taki.minecrown.block.BlockCandleberryBush_1;
@@ -47,7 +47,7 @@ public class ProcedureCandleberryBush_Recolt2 extends ElementsMinecrownMOD.ModEl
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == new ItemStack(ItemFaucille.block, (int) (1)).getItem())) {
+				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCandleberryBush_0.block.getDefaultState(), 3);
 			if ((Math.random() > 0.7)) {

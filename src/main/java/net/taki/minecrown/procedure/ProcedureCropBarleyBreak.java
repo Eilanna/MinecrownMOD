@@ -1,6 +1,6 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemCropBarleyItem;
+import net.taki.minecrown.item.ItemCropBarleySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -37,7 +37,7 @@ public class ProcedureCropBarleyBreak extends ElementsMinecrownMOD.ModElement {
 		World world = (World) dependencies.get("world");
 		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 		if (!world.isRemote) {
-			EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCropBarleyItem.block, (int) (1)));
+			EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCropBarleySeed.block, (int) (1)));
 			entityToSpawn.setPickupDelay(10);
 			world.spawnEntity(entityToSpawn);
 		}

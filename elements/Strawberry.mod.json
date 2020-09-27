@@ -3,11 +3,11 @@
   "_type": "food",
   "definition": {
     "renderType": 0,
-    "texture": "strawberryitem",
+    "texture": "strawberryitem.png",
     "customModelName": "Normal",
     "name": "Fraise",
     "creativeTab": {
-      "value": "CUSTOM:MiCroJobsAgriculteur"
+      "value": "CUSTOM:MiCroJobsBotaniste"
     },
     "stackSize": 64,
     "nutritionalValue": 1,

@@ -42,7 +42,7 @@
     "material": {
       "value": "FIRE"
     },
-    "tickRate": 100,
+    "tickRate": 1,
     "tickRandomly": false,
     "isReplaceable": false,
     "colorOnMap": "DEFAULT",

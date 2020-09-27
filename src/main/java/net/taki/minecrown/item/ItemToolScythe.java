@@ -40,23 +40,23 @@ import net.minecraft.block.state.IBlockState;
 import com.google.common.collect.Multimap;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class ItemFaucille extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:faucille")
+public class ItemToolScythe extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:toolscythe")
 	public static final Item block = null;
-	public ItemFaucille(ElementsMinecrownMOD instance) {
-		super(instance, 42);
+	public ItemToolScythe(ElementsMinecrownMOD instance) {
+		super(instance, 184);
 	}
 
 	@Override
 	public void initElements() {
 		elements.items.add(() -> new ItemToolCustom() {
-		}.setUnlocalizedName("faucille").setRegistryName("faucille").setCreativeTab(TabMiCroJobsAgriculteur.tab));
+		}.setUnlocalizedName("toolscythe").setRegistryName("toolscythe").setCreativeTab(TabMiCroJobsAgriculteur.tab));
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
-		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("minecrown:faucille", "inventory"));
+		ModelLoader.setCustomModelResourceLocation(block, 0, new ModelResourceLocation("minecrown:toolscythe", "inventory"));
 	}
 	private static class ItemToolCustom extends Item {
 		protected ItemToolCustom() {

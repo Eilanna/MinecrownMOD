@@ -33,7 +33,11 @@ public class ProcedureStrawberryBush_Transform2 extends ElementsMinecrownMOD.Mod
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockStrawberryBush_3.block.getDefaultState(), 3);
+		double randomNumber = 0;
+		randomNumber = (double) (Math.random() * 100);
+		if (((randomNumber) <= 5)) {
+			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockStrawberryBush_3.block.getDefaultState(), 3);
+		}
 	}
 }

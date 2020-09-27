@@ -44,7 +44,7 @@ public class ProcedureCropBarleyUpdateTick extends ElementsMinecrownMOD.ModEleme
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		double randomGrowth = 0;
-		if ((!((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.DIRT.getStateFromMeta(2).getBlock()))) {
+		if ((!((world.getBlockState(new BlockPos((int) x, (int) (y - 1), (int) z))).getBlock() == Blocks.FARMLAND.getDefaultState().getBlock()))) {
 			if ((((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlockCropBarleyPlant0.block.getDefaultState()
 					.getBlock())
 					|| (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlockCropBarleyPlant1.block.getDefaultState()

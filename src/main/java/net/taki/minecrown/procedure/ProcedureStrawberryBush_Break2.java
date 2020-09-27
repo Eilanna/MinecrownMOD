@@ -1,8 +1,8 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.item.ItemToolSickle;
 import net.taki.minecrown.item.ItemStrawberrySeed;
 import net.taki.minecrown.item.ItemStrawberry;
-import net.taki.minecrown.item.ItemFaucille;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
@@ -45,7 +45,7 @@ public class ProcedureStrawberryBush_Break2 extends ElementsMinecrownMOD.ModElem
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-				.getItem() == new ItemStack(ItemFaucille.block, (int) (1)).getItem())) {
+				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
 			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			if ((Math.random() <= 0.5)) {
 				if (!world.isRemote) {

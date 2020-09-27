@@ -1,0 +1,76 @@
+{
+  "_fv": 6,
+  "_type": "tool",
+  "definition": {
+    "renderType": 0,
+    "texture": "oue",
+    "customModelName": "Normal",
+    "name": "Faux",
+    "creativeTab": {
+      "value": "CUSTOM:MiCroJobsAgriculteur"
+    },
+    "toolType": "Special",
+    "harvestLevel": 1,
+    "efficiency": 4.0,
+    "attackSpeed": 1.0,
+    "enchantability": 2,
+    "damageVsEntity": 4.0,
+    "usageCount": 100,
+    "blocksAffected": [
+      {
+        "value": "CUSTOM:CranberryBush_2"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_3"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_1"
+      },
+      {
+        "value": "CUSTOM:CranberryBush_0"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_0"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_1"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_2"
+      },
+      {
+        "value": "CUSTOM:BlackberryBush_3"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_0"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_1"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_2"
+      },
+      {
+        "value": "CUSTOM:StrawberryBush_3"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_0"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_1"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_2"
+      },
+      {
+        "value": "CUSTOM:CandleberryBush_3"
+      }
+    ],
+    "hasGlow": false,
+    "repairItems": [
+      {
+        "value": "Items.IRON_INGOT"
+      }
+    ]
+  }
+}

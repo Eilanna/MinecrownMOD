@@ -2,7 +2,7 @@
 package net.taki.minecrown.item;
 
 import net.taki.minecrown.procedure.ProcedureStrawberryBushPlantation;
-import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
+import net.taki.minecrown.creativetab.TabMiCroJobsBotaniste;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -46,7 +46,7 @@ public class ItemStrawberrySeed extends ElementsMinecrownMOD.ModElement {
 			maxStackSize = 64;
 			setUnlocalizedName("strawberryseed");
 			setRegistryName("strawberryseed");
-			setCreativeTab(TabMiCroJobsAgriculteur.tab);
+			setCreativeTab(TabMiCroJobsBotaniste.tab);
 		}
 
 		@Override

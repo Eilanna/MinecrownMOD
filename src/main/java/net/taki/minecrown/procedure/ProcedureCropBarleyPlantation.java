@@ -50,7 +50,7 @@ public class ProcedureCropBarleyPlantation extends ElementsMinecrownMOD.ModEleme
 								.getBlock())))
 				&& ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 						.getItem() == new ItemStack(ItemCropBarleySeed.block, (int) (1)).getItem())
-						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.DIRT.getStateFromMeta(2)
+						&& ((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == Blocks.FARMLAND.getDefaultState()
 								.getBlock())))) {
 			world.setBlockState(new BlockPos((int) x, (int) (y + 1), (int) z), BlockCropBarleyPlant0.block.getDefaultState(), 3);
 			if ((!((entity instanceof EntityPlayer) ? ((EntityPlayer) entity).capabilities.isCreativeMode : false))) {

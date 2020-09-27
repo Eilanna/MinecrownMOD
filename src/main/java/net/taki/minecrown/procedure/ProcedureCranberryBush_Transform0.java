@@ -33,7 +33,11 @@ public class ProcedureCranberryBush_Transform0 extends ElementsMinecrownMOD.ModE
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_1.block.getDefaultState(), 3);
+		double randomNumber = 0;
+		randomNumber = (double) (Math.random() * 100);
+		if (((randomNumber) <= 20)) {
+			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_1.block.getDefaultState(), 3);
+		}
 	}
 }
