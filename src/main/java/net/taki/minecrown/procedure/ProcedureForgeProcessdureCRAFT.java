@@ -47,14 +47,14 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 				}
 				return 0;
 			}
-		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (9))) < 64) && ((((new Object() {
+		}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (10))) <= 64) && ((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
 				if (inv instanceof TileEntityLockableLoot)
 					return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 				return ItemStack.EMPTY;
 			}
-		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (10))).getItem() == new ItemStack(Items.COAL, (int) (1), 0).getItem())
+		}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (9))).getItem() == new ItemStack(Items.COAL, (int) (1), 0).getItem())
 				&& (((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
@@ -142,14 +142,14 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 						}
 						return 0;
 					}
-				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (9))) <= 63) && ((new Object() {
+				}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (10))) <= 63) && ((new Object() {
 					public ItemStack getItemStack(BlockPos pos, int sltid) {
 						TileEntity inv = world.getTileEntity(pos);
 						if (inv instanceof TileEntityLockableLoot)
 							return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 						return ItemStack.EMPTY;
 					}
-				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (9))).getItem() == new ItemStack(Items.DIAMOND_CHESTPLATE, (int) (1))
+				}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (10))).getItem() == new ItemStack(Items.DIAMOND_CHESTPLATE, (int) (1))
 						.getItem())) || ((new Object() {
 							public ItemStack getItemStack(BlockPos pos, int sltid) {
 								TileEntity inv = world.getTileEntity(pos);
@@ -157,13 +157,8 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 									return ((TileEntityLockableLoot) inv).getStackInSlot(sltid);
 								return ItemStack.EMPTY;
 							}
-						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (9))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
+						}.getItemStack(new BlockPos((int) x, (int) y, (int) z), (int) (10))).getItem() == new ItemStack(Blocks.AIR, (int) (1))
 								.getItem()))))) {
-			{
-				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
-				if (inv instanceof TileEntityLockableLoot)
-					((TileEntityLockableLoot) inv).decrStackSize((int) (10), (int) (4));
-			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (inv instanceof TileEntityLockableLoot)
@@ -211,6 +206,11 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 			}
 			{
 				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
+				if (inv instanceof TileEntityLockableLoot)
+					((TileEntityLockableLoot) inv).decrStackSize((int) (9), (int) (4));
+			}
+			{
+				TileEntity inv = world.getTileEntity(new BlockPos((int) x, (int) y, (int) z));
 				if (inv != null && (inv instanceof TileEntityLockableLoot)) {
 					ItemStack _setstack = new ItemStack(Items.DIAMOND_CHESTPLATE, (int) (1));
 					_setstack.setCount(((new Object() {
@@ -223,8 +223,8 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 							}
 							return 0;
 						}
-					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (9))) + 1));
-					((TileEntityLockableLoot) inv).setInventorySlotContents((int) (9), _setstack);
+					}.getAmount(new BlockPos((int) x, (int) y, (int) z), (int) (10))) + 1));
+					((TileEntityLockableLoot) inv).setInventorySlotContents((int) (10), _setstack);
 				}
 			}
 		}

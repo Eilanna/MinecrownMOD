@@ -8,6 +8,20 @@
     "renderBgLayer": true,
     "components": [
       {
+        "type": "button",
+        "data": {
+          "text": "Forger",
+          "onClick": {
+            "name": "ForgeProcessdureCRAFT"
+          },
+          "width": 120,
+          "height": 40,
+          "name": "Forger",
+          "x": 462,
+          "y": 168
+        }
+      },
+      {
         "type": "inputslot",
         "data": {
           "inputLimit": {
@@ -85,9 +99,9 @@
           "inputLimit": {
             "value": ""
           },
-          "id": 7,
-          "name": "Slot #7",
-          "x": 300,
+          "id": 6,
+          "name": "Slot #6",
+          "x": 264,
           "y": 168
         }
       },
@@ -97,9 +111,9 @@
           "inputLimit": {
             "value": ""
           },
-          "id": 6,
-          "name": "Slot #6",
-          "x": 264,
+          "id": 7,
+          "name": "Slot #7",
+          "x": 300,
           "y": 168
         }
       },
@@ -116,38 +130,24 @@
         }
       },
       {
-        "type": "button",
+        "type": "inputslot",
         "data": {
-          "text": "Forger",
-          "onClick": {
-            "name": "ForgeProcessdureCRAFT"
+          "inputLimit": {
+            "value": ""
           },
-          "width": 120,
-          "height": 40,
-          "name": "Forger",
-          "x": 462,
+          "id": 9,
+          "name": "Slot #9",
+          "x": 390,
           "y": 168
         }
       },
       {
         "type": "outputslot",
         "data": {
-          "id": 9,
-          "name": "Slot #9",
-          "x": 498,
-          "y": 114
-        }
-      },
-      {
-        "type": "inputslot",
-        "data": {
-          "inputLimit": {
-            "value": ""
-          },
           "id": 10,
           "name": "Slot #10",
-          "x": 400,
-          "y": 168
+          "x": 516,
+          "y": 114
         }
       }
     ]

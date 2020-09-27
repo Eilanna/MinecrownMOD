@@ -75,19 +75,19 @@ public class GuiGUIForgeron extends ElementsMinecrownMOD.ModElement {
 			}));
 			this.customSlots.put(5, this.addSlotToContainer(new Slot(internal, 5, 44, 30) {
 			}));
-			this.customSlots.put(7, this.addSlotToContainer(new Slot(internal, 7, 26, 48) {
-			}));
 			this.customSlots.put(6, this.addSlotToContainer(new Slot(internal, 6, 8, 48) {
+			}));
+			this.customSlots.put(7, this.addSlotToContainer(new Slot(internal, 7, 26, 48) {
 			}));
 			this.customSlots.put(8, this.addSlotToContainer(new Slot(internal, 8, 44, 48) {
 			}));
-			this.customSlots.put(9, this.addSlotToContainer(new Slot(internal, 9, 125, 21) {
+			this.customSlots.put(9, this.addSlotToContainer(new Slot(internal, 9, 71, 48) {
+			}));
+			this.customSlots.put(10, this.addSlotToContainer(new Slot(internal, 10, 134, 21) {
 				@Override
 				public boolean isItemValid(ItemStack stack) {
 					return false;
 				}
-			}));
-			this.customSlots.put(10, this.addSlotToContainer(new Slot(internal, 10, 76, 48) {
 			}));
 			int si;
 			int sj;

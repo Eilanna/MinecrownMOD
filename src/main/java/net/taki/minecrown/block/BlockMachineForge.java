@@ -136,10 +136,10 @@ public class BlockMachineForge extends ElementsMinecrownMOD.ModElement {
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
-		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(9, ItemStack.EMPTY);
+		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(11, ItemStack.EMPTY);
 		@Override
 		public int getSizeInventory() {
-			return 9;
+			return 11;
 		}
 
 		@Override
@@ -152,6 +152,8 @@ public class BlockMachineForge extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public boolean isItemValidForSlot(int index, ItemStack stack) {
+			if (index == 1)
+				return false;
 			return true;
 		}
 

@@ -72,11 +72,13 @@
     "hasInventory": true,
     "guiBoundTo": "<NONE>",
     "openGUIOnRightClick": false,
-    "inventorySize": 9,
+    "inventorySize": 11,
     "inventoryStackSize": 64,
     "inventoryDropWhenDestroyed": true,
     "inventoryComparatorPower": true,
-    "inventoryOutSlotIDs": [],
+    "inventoryOutSlotIDs": [
+      1
+    ],
     "onRightClicked": {
       "name": "FORGEPROCESSOPEN"
     },
