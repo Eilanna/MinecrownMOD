@@ -149,6 +149,19 @@
           "x": 516,
           "y": 114
         }
+      },
+      {
+        "type": "label",
+        "data": {
+          "text": "FORGER",
+          "color": {
+            "value": -1,
+            "falpha": 0.0
+          },
+          "name": "FORGER",
+          "x": 516,
+          "y": 81
+        }
       }
     ]
   }

@@ -292,6 +292,7 @@ public class GuiGUIForgeron extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		protected void drawGuiContainerForegroundLayer(int par1, int par2) {
+			this.fontRenderer.drawString("FORGER", 133, 4, -1);
 		}
 
 		@Override
