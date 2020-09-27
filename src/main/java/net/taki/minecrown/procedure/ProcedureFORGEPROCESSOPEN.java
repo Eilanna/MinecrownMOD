@@ -1,8 +1,15 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.gui.GuiGUIForgeron;
+import net.taki.minecrown.MinecrownMOD;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraft.world.World;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.Entity;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class ProcedureFORGEPROCESSOPEN extends ElementsMinecrownMOD.ModElement {
-
 	public ProcedureFORGEPROCESSOPEN(ElementsMinecrownMOD instance) {
 		super(instance, 189);
 	}
@@ -28,16 +35,12 @@ public class ProcedureFORGEPROCESSOPEN extends ElementsMinecrownMOD.ModElement {
 			System.err.println("Failed to load dependency world for procedure FORGEPROCESSOPEN!");
 			return;
 		}
-
 		Entity entity = (Entity) dependencies.get("entity");
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-
 		if (entity instanceof EntityPlayer)
 			((EntityPlayer) entity).openGui(MinecrownMOD.instance, GuiGUIForgeron.GUIID, world, x, y, z);
-
 	}
-
 }

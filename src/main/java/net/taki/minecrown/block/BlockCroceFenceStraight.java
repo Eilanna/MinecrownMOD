@@ -1,12 +1,62 @@
 
 package net.taki.minecrown.block;
 
+import net.taki.minecrown.procedure.ProcedureCroceFenceUpdateTick;
+import net.taki.minecrown.procedure.ProcedureCroceFencePlace;
+import net.taki.minecrown.procedure.ProcedureCroceFenceExplode;
+import net.taki.minecrown.procedure.ProcedureCroceFenceDestroyedByPlayer;
+import net.taki.minecrown.creativetab.TabMiCroJobsMenuisier;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+
+import net.minecraft.world.World;
+import net.minecraft.world.IBlockAccess;
+import net.minecraft.world.Explosion;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.math.AxisAlignedBB;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.tileentity.TileEntityLockableLoot;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.Item;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.inventory.Container;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MapColor;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.Block;
+
+import java.util.Random;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
-
 	@GameRegistry.ObjectHolder("minecrown:crocefencestraight")
 	public static final Block block = null;
-
 	public BlockCroceFenceStraight(ElementsMinecrownMOD instance) {
 		super(instance, 189);
 	}
@@ -27,29 +77,20 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
 				new ModelResourceLocation("minecrown:crocefencestraight", "inventory"));
-
 	}
-
 	public static class BlockCustom extends Block implements ITileEntityProvider {
-
 		public static final PropertyDirection FACING = BlockHorizontal.FACING;
-
 		public BlockCustom() {
 			super(Material.WOOD);
-
 			setUnlocalizedName("crocefencestraight");
 			setSoundType(SoundType.WOOD);
-
 			setHarvestLevel("axe", 0);
-
 			setHardness(2F);
 			setResistance(3F);
 			setLightLevel(0F);
 			setLightOpacity(0);
 			setCreativeTab(TabMiCroJobsMenuisier.tab);
-
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-
 		}
 
 		@SideOnly(Side.CLIENT)
@@ -170,7 +211,10 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				ProcedureCroceFenceUpdateTick.executeProcedure($_dependencies);
 			}
 			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
@@ -184,7 +228,10 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				ProcedureCroceFenceDestroyedByPlayer.executeProcedure($_dependencies);
 			}
 			return retval;
@@ -202,7 +249,6 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureCroceFenceExplode.executeProcedure($_dependencies);
 			}
 		}
@@ -215,17 +261,17 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-
+				$_dependencies.put("x", x);
+				$_dependencies.put("y", y);
+				$_dependencies.put("z", z);
+				$_dependencies.put("world", world);
 				ProcedureCroceFencePlace.executeProcedure($_dependencies);
 			}
 		}
-
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
-
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(0, ItemStack.EMPTY);
-
 		@Override
 		public int getSizeInventory() {
 			return 0;
@@ -310,7 +356,5 @@ public class BlockCroceFenceStraight extends ElementsMinecrownMOD.ModElement {
 		protected NonNullList<ItemStack> getItems() {
 			return this.stacks;
 		}
-
 	}
-
 }

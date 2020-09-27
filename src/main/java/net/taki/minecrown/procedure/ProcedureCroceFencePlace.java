@@ -1,8 +1,23 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.block.BlockCroceFenceXCorner;
+import net.taki.minecrown.block.BlockCroceFenceTCorner;
+import net.taki.minecrown.block.BlockCroceFenceStraight;
+import net.taki.minecrown.block.BlockCroceFenceNone;
+import net.taki.minecrown.block.BlockCroceFenceEnd;
+import net.taki.minecrown.block.BlockCroceFenceCorner;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.IProperty;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
-
 	public ProcedureCroceFencePlace(ElementsMinecrownMOD instance) {
 		super(instance, 192);
 	}
@@ -24,12 +39,10 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 			System.err.println("Failed to load dependency world for procedure CroceFencePlace!");
 			return;
 		}
-
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-
 		String fenceGroup = "";
 		String fenceUpdate = "";
 		fenceGroup = (String) "crocedFences";
@@ -694,6 +707,7 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) (z - 1)), (fenceGroup))) == (true))) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCroceFenceEnd.block.getDefaultState(), 3);
 			try {
 				IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 				for (IProperty<?> prop : _bs.getProperties().keySet()) {
@@ -729,6 +743,7 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 			}
 		}.getValue(new BlockPos((int) (x + 1), (int) y, (int) z), (fenceGroup))) == (true))) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCroceFenceEnd.block.getDefaultState(), 3);
 			try {
 				IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 				for (IProperty<?> prop : _bs.getProperties().keySet()) {
@@ -764,6 +779,7 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 			}
 		}.getValue(new BlockPos((int) x, (int) y, (int) (z + 1)), (fenceGroup))) == (true))) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCroceFenceEnd.block.getDefaultState(), 3);
 			try {
 				IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 				for (IProperty<?> prop : _bs.getProperties().keySet()) {
@@ -799,6 +815,7 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 			}
 		}.getValue(new BlockPos((int) (x - 1), (int) y, (int) z), (fenceGroup))) == (true))) {
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCroceFenceEnd.block.getDefaultState(), 3);
 			try {
 				IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 				for (IProperty<?> prop : _bs.getProperties().keySet()) {
@@ -855,7 +872,5 @@ public class ProcedureCroceFencePlace extends ElementsMinecrownMOD.ModElement {
 				_tileEntity.getTileData().setBoolean((fenceUpdate), (false));
 			world.notifyBlockUpdate(_bp, _bs, _bs, 3);
 		}
-
 	}
-
 }

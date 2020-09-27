@@ -1,8 +1,14 @@
 package net.taki.minecrown.procedure;
 
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.block.state.IBlockState;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class ProcedureCroceFenceGateDestroyedByPlayer extends ElementsMinecrownMOD.ModElement {
-
 	public ProcedureCroceFenceGateDestroyedByPlayer(ElementsMinecrownMOD instance) {
 		super(instance, 198);
 	}
@@ -24,12 +30,10 @@ public class ProcedureCroceFenceGateDestroyedByPlayer extends ElementsMinecrownM
 			System.err.println("Failed to load dependency world for procedure CroceFenceGateDestroyedByPlayer!");
 			return;
 		}
-
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-
 		String fenceGroup = "";
 		String fenceUpdate = "";
 		fenceGroup = (String) "crocedFences";
@@ -530,7 +534,5 @@ public class ProcedureCroceFenceGateDestroyedByPlayer extends ElementsMinecrownM
 				world.notifyBlockUpdate(_bp, _bs, _bs, 3);
 			}
 		}
-
 	}
-
 }
