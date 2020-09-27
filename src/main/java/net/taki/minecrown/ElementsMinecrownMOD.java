@@ -6,6 +6,7 @@
  */
 package net.taki.minecrown;
 
+import net.taki.minecrown.gui.GuiGUIForgeron;
 import net.taki.minecrown.gui.GuiBroyeurGUI;
 
 import net.minecraftforge.fml.relauncher.Side;
@@ -126,6 +127,8 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiBroyeurGUI.GUIID)
 				return new GuiBroyeurGUI.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiGUIForgeron.GUIID)
+				return new GuiGUIForgeron.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
@@ -133,6 +136,8 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
 			if (id == GuiBroyeurGUI.GUIID)
 				return new GuiBroyeurGUI.GuiWindow(world, x, y, z, player);
+			if (id == GuiGUIForgeron.GUIID)
+				return new GuiGUIForgeron.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

@@ -1,6 +1,6 @@
 {
   "id_map": {
-    "GUI": 12
+    "GUI": 13
   },
   "mod_elements": [
     {
@@ -2660,6 +2660,84 @@
           }
         ]
       }
+    },
+    {
+      "name": "MachineForge",
+      "type": "block",
+      "sortid": 186,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "GUIForgeron",
+      "type": "gui",
+      "sortid": 187,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 13
+      }
+    },
+    {
+      "name": "ForgeProcessdureCRAFT",
+      "type": "procedure",
+      "sortid": 188,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "FORGEPROCESSOPEN",
+      "type": "procedure",
+      "sortid": 189,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -2669,9 +2747,9 @@
       "item.candleberryseed.name": "Graine de Symphorine",
       "tile.ropefencexcorner.name": "Rope Fence X Corner",
       "item.raspberry.name": "Framboise",
-      "item.cropbarleyseed.name": "Graine d\u0027Orge",
-      "tile.machineconcasseuse.name": "Concasseur",
       "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
+      "tile.machineconcasseuse.name": "Concasseur",
+      "item.cropbarleyseed.name": "Graine d\u0027Orge",
       "tile.candleberrybush_3.name": "Candleberry Bush3",
       "itemGroup.tabmicrojobsmenuisier": "Minecrown MENUISIER",
       "tile.ropefencegateclose.name": "Rope Fence Gate",
@@ -2697,6 +2775,7 @@
       "item.cranberry.name": "Canneberge",
       "tile.cropbarleyplant7.name": "Plant d\u0027Orge Stage6",
       "tile.cropbarleyplant4.name": "Plant d\u0027Orge Stage4",
+      "tile.machineforge.name": "Machine Forge",
       "tile.logfencestraight.name": "Log Fence Straight",
       "item.strawberryseed.name": "Graine de Fraise",
       "tile.ropefencecorner.name": "Rope Fence Corner",
