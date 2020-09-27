@@ -5,7 +5,6 @@ import net.taki.minecrown.item.ItemCranberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.EntityLivingBase;
@@ -45,7 +44,6 @@ public class ProcedureCranberryBush_Break1 extends ElementsMinecrownMOD.ModEleme
 		World world = (World) dependencies.get("world");
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
-			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 			if ((Math.random() <= 0.3)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));

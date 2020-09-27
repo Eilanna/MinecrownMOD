@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:crocefencenone"
+    },
+    "facing=north": {
+      "model": "minecrown:crocefencenone"
+    },
+    "facing=east": {
+      "model": "minecrown:crocefencenone",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:crocefencenone",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:crocefencenone",
+      "y": 270
+    }
+  }
+}

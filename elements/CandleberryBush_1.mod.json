@@ -20,7 +20,7 @@
       "value": "GROUND"
     },
     "customDrop": {
-      "value": ""
+      "value": "CUSTOM:CandleBerry"
     },
     "dropAmount": 0,
     "isReplaceable": false,

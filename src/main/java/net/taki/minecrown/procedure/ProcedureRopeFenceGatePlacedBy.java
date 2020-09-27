@@ -39,8 +39,8 @@ public class ProcedureRopeFenceGatePlacedBy extends ElementsMinecrownMOD.ModElem
 		World world = (World) dependencies.get("world");
 		String fenceGroup = "";
 		String fenceUpdate = "";
-		fenceGroup = (String) "unroppedFences";
-		fenceUpdate = (String) "unroppedFencesUpdate";
+		fenceGroup = (String) "roppedFences";
+		fenceUpdate = (String) "roppedFencesUpdate";
 		if ((((new Object() {
 			public boolean getValue(BlockPos pos, String tag) {
 				TileEntity tileEntity = world.getTileEntity(pos);

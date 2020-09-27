@@ -18,6 +18,8 @@ import net.minecraft.util.math.RayTraceResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.AxisAlignedBB;
 import net.minecraft.util.NonNullList;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.tileentity.TileEntityLockableLoot;
@@ -39,8 +41,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
-
-import java.util.Random;
 
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockCropBarleyPlant0 extends ElementsMinecrownMOD.ModElement {
@@ -87,24 +87,13 @@ public class BlockCropBarleyPlant0 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		@javax.annotation.Nullable
-		public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-			return NULL_AABB;
-		}
-
-		@Override
-		public boolean isPassable(IBlockAccess worldIn, BlockPos pos) {
-			return true;
-		}
-
-		@Override
 		public boolean isFullCube(IBlockState state) {
 			return false;
 		}
 
 		@Override
 		public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.124D, 1D);
+			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.125D, 1D);
 		}
 
 		@Override
@@ -150,29 +139,22 @@ public class BlockCropBarleyPlant0 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
-			super.onBlockAdded(world, pos, state);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
-		}
-
-		@Override
-		public void updateTick(World world, BlockPos pos, IBlockState state, Random random) {
-			super.updateTick(world, pos, state, random);
+		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
+				float hitX, float hitY, float hitZ) {
+			super.onBlockActivated(world, pos, state, entity, hand, direction, hitX, hitY, hitZ);
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
+				$_dependencies.put("entity", entity);
 				$_dependencies.put("x", x);
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
 				ProcedureCropBarleyUpdateTick.executeProcedure($_dependencies);
 			}
-			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
+			return true;
 		}
 	}
 

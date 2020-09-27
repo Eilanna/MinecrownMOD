@@ -119,7 +119,7 @@ public class ProcedureRopeFenceGateRightClicked extends ElementsMinecrownMOD.Mod
 					IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH),
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH),
 									3);
 							break;
 						}
@@ -179,7 +179,7 @@ public class ProcedureRopeFenceGateRightClicked extends ElementsMinecrownMOD.Mod
 					IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.NORTH),
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.SOUTH),
 									3);
 							break;
 						}
@@ -267,7 +267,7 @@ public class ProcedureRopeFenceGateRightClicked extends ElementsMinecrownMOD.Mod
 					IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.WEST),
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.EAST),
 									3);
 							break;
 						}
@@ -327,7 +327,7 @@ public class ProcedureRopeFenceGateRightClicked extends ElementsMinecrownMOD.Mod
 					IBlockState _bs = world.getBlockState(new BlockPos((int) x, (int) y, (int) z));
 					for (IProperty<?> prop : _bs.getProperties().keySet()) {
 						if (prop.getName().equals("facing")) {
-							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.EAST),
+							world.setBlockState(new BlockPos((int) x, (int) y, (int) z), _bs.withProperty((PropertyDirection) prop, EnumFacing.WEST),
 									3);
 							break;
 						}

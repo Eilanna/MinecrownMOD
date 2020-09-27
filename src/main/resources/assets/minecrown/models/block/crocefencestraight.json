@@ -1,0 +1,8 @@
+{
+  "parent": "minecrown:custom/croce_fence_straight",
+  "textures": {
+    "all": "minecrown:blocks/fence_croce",
+    "particle": "minecrown:blocks/fence_croce",
+    "1": "minecrown:blocks/fence_croce"
+  }
+}

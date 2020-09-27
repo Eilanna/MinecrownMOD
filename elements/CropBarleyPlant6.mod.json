@@ -17,7 +17,7 @@
     "my": 0.001,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 0.868,
+    "My": 0.125,
     "Mz": 1.0,
     "faceShape": "SOLID",
     "name": "Plant d'Orge Stage6",
@@ -59,7 +59,7 @@
       "value": "PLANT"
     },
     "luminance": 0.0,
-    "unbreakable": true,
+    "unbreakable": false,
     "breakHarvestLevel": 0,
     "spawnParticles": false,
     "particleToSpawn": {
@@ -77,8 +77,8 @@
     "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
-    "onTickUpdate": {
-      "name": "CropBarleyUpdateTick"
+    "onRightClicked": {
+      "name": "CropBarleyRecolt0"
     },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
