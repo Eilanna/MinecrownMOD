@@ -17,7 +17,7 @@
     "my": 0.001,
     "mz": 0.0,
     "Mx": 1.0,
-    "My": 0.372,
+    "My": 0.125,
     "Mz": 1.0,
     "faceShape": "SOLID",
     "name": "Plant d'Orge Stage2",
@@ -54,7 +54,7 @@
     "isLadder": false,
     "slipperiness": 0.6,
     "reactionToPushing": "NORMAL",
-    "isNotColidable": true,
+    "isNotColidable": false,
     "soundOnStep": {
       "value": "PLANT"
     },
@@ -77,9 +77,6 @@
     "inventoryDropWhenDestroyed": false,
     "inventoryComparatorPower": false,
     "inventoryOutSlotIDs": [],
-    "onTickUpdate": {
-      "name": "CropBarleyUpdateTick"
-    },
     "spawnWorldTypes": [],
     "restrictionBiomes": [],
     "blocksToReplace": [

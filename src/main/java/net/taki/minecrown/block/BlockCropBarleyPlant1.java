@@ -1,7 +1,6 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureCropBarleyUpdateTick;
 import net.taki.minecrown.item.ItemCropBarleySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -39,8 +38,6 @@ import net.minecraft.block.material.Material;
 import net.minecraft.block.SoundType;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.Block;
-
-import java.util.Random;
 
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockCropBarleyPlant1 extends ElementsMinecrownMOD.ModElement {
@@ -87,24 +84,13 @@ public class BlockCropBarleyPlant1 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		@javax.annotation.Nullable
-		public AxisAlignedBB getCollisionBoundingBox(IBlockState blockState, IBlockAccess worldIn, BlockPos pos) {
-			return NULL_AABB;
-		}
-
-		@Override
-		public boolean isPassable(IBlockAccess worldIn, BlockPos pos) {
-			return true;
-		}
-
-		@Override
 		public boolean isFullCube(IBlockState state) {
 			return false;
 		}
 
 		@Override
 		public AxisAlignedBB getBoundingBox(IBlockState state, IBlockAccess source, BlockPos pos) {
-			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.248D, 1D);
+			return new AxisAlignedBB(0D, 0.001D, 0D, 1D, 0.125D, 1D);
 		}
 
 		@Override
@@ -147,32 +133,6 @@ public class BlockCropBarleyPlant1 extends ElementsMinecrownMOD.ModElement {
 		@Override
 		public EnumBlockRenderType getRenderType(IBlockState state) {
 			return EnumBlockRenderType.MODEL;
-		}
-
-		@Override
-		public void onBlockAdded(World world, BlockPos pos, IBlockState state) {
-			super.onBlockAdded(world, pos, state);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
-		}
-
-		@Override
-		public void updateTick(World world, BlockPos pos, IBlockState state, Random random) {
-			super.updateTick(world, pos, state, random);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureCropBarleyUpdateTick.executeProcedure($_dependencies);
-			}
-			world.scheduleUpdate(new BlockPos(x, y, z), this, this.tickRate(world));
 		}
 	}
 

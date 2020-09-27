@@ -46,9 +46,10 @@ public class ProcedureCropBarleyRecolt0 extends ElementsMinecrownMOD.ModElement 
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
-		if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlockCropBarleyPlant7.block.getDefaultState().getBlock())) {
-			if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
-					.getItem() == new ItemStack(ItemToolScythe.block, (int) (1)).getItem())) {
+		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
+				.getItem() == new ItemStack(ItemToolScythe.block, (int) (1)).getItem())) {
+			if (((world.getBlockState(new BlockPos((int) x, (int) y, (int) z))).getBlock() == BlockCropBarleyPlant7.block.getDefaultState()
+					.getBlock())) {
 				world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 				world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCropBarleyPlant0.block.getDefaultState(), 3);
 				if (!world.isRemote) {

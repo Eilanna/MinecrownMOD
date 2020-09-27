@@ -1,17 +1,8 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.ElementsMinecrownMOD;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntityLockableLoot;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.init.Items;
-import net.minecraft.init.Blocks;
-
 @ElementsMinecrownMOD.ModElement.Tag
 public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElement {
+
 	public ProcedureForgeProcessdureCRAFT(ElementsMinecrownMOD instance) {
 		super(instance, 188);
 	}
@@ -33,10 +24,12 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 			System.err.println("Failed to load dependency world for procedure ForgeProcessdureCRAFT!");
 			return;
 		}
+
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+
 		if ((((new Object() {
 			public int getAmount(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
@@ -228,5 +221,7 @@ public class ProcedureForgeProcessdureCRAFT extends ElementsMinecrownMOD.ModElem
 				}
 			}
 		}
+
 	}
+
 }

@@ -6,6 +6,7 @@ import net.taki.minecrown.procedure.ProcedureCandleberryBush_Break3;
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
 import net.taki.minecrown.item.ItemCandleberrySeed;
+import net.taki.minecrown.item.ItemCandleBerry;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -86,13 +87,8 @@ public class BlockCandleberryBush_3 extends ElementsMinecrownMOD.ModElement {
 		}
 
 		@Override
-		public int quantityDropped(Random random) {
-			return 0;
-		}
-
-		@Override
 		public void getDrops(NonNullList<ItemStack> drops, IBlockAccess world, BlockPos pos, IBlockState state, int fortune) {
-			drops.add(new ItemStack(this));
+			drops.add(new ItemStack(ItemCandleBerry.block, (int) (0)));
 		}
 
 		@Override
