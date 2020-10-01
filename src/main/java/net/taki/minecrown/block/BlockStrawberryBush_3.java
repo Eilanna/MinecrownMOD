@@ -164,23 +164,6 @@ public class BlockStrawberryBush_3 extends ElementsMinecrownMOD.ModElement {
 			}
 		}
 
-		@Override
-		public void onBlockClicked(World world, BlockPos pos, EntityPlayer entity) {
-			super.onBlockClicked(world, pos, entity);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureStrawberryBush_Break3.executeProcedure($_dependencies);
-			}
-		}
-
 		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
 				float hitX, float hitY, float hitZ) {
 			int x = pos.getX();

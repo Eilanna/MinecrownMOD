@@ -1,10 +1,10 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureCandleberryBush_Recolt1;
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Transform1;
+import net.taki.minecrown.procedure.ProcedureBlackberryBush_Recolt1;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Break1;
 import net.taki.minecrown.item.ItemBlackberrySeed;
 import net.taki.minecrown.item.ItemBlackberry;
@@ -192,7 +192,7 @@ public class BlockBlackberryBush_1 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureCandleberryBush_Recolt1.executeProcedure($_dependencies);
+				ProcedureBlackberryBush_Recolt1.executeProcedure($_dependencies);
 			}
 			return true;
 		}
