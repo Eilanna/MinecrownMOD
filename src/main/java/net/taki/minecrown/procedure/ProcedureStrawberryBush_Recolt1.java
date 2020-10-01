@@ -44,11 +44,13 @@ public class ProcedureStrawberryBush_Recolt1 extends ElementsMinecrownMOD.ModEle
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		double randomSeed = 0;
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
+			randomSeed = (double) Math.random();
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockStrawberryBush_0.block.getDefaultState(), 3);
-			if ((Math.random() <= 0.05)) {
+			if (((randomSeed) <= 0.02)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemStrawberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);

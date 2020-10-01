@@ -43,10 +43,12 @@ public class ProcedureCandleberryBush_Break0 extends ElementsMinecrownMOD.ModEle
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		double randomSeed = 0;
 		world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
-			if ((Math.random() <= 0.1)) {
+			randomSeed = (double) Math.random();
+			if (((randomSeed) <= 0.02)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCandleberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);

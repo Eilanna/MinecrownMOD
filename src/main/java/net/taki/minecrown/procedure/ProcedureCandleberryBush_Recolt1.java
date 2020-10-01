@@ -2,7 +2,6 @@ package net.taki.minecrown.procedure;
 
 import net.taki.minecrown.item.ItemToolSickle;
 import net.taki.minecrown.item.ItemCandleberrySeed;
-import net.taki.minecrown.block.BlockCandleberryBush_1;
 import net.taki.minecrown.block.BlockCandleberryBush_0;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -45,20 +44,19 @@ public class ProcedureCandleberryBush_Recolt1 extends ElementsMinecrownMOD.ModEl
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		double randomSeed = 0;
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
+			randomSeed = (double) Math.random();
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCandleberryBush_0.block.getDefaultState(), 3);
-			if ((Math.random() <= 0.05)) {
+			if (((randomSeed) <= 0.05)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCandleberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.spawnEntity(entityToSpawn);
 				}
 			}
-		} else {
-			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCandleberryBush_1.block.getDefaultState(), 3);
 		}
 	}
 }

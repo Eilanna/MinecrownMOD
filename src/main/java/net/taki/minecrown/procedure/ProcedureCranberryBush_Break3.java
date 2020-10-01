@@ -75,6 +75,13 @@ public class ProcedureCranberryBush_Break3 extends ElementsMinecrownMOD.ModEleme
 						world.spawnEntity(entityToSpawn);
 					}
 				} else {
+					if ((Math.random() <= 0.5)) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
+					}
 					if (!world.isRemote) {
 						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
@@ -95,19 +102,49 @@ public class ProcedureCranberryBush_Break3 extends ElementsMinecrownMOD.ModEleme
 					world.spawnEntity(entityToSpawn);
 				}
 			}
-		} else if ((Math.random() <= 0.5)) {
-			for (int index1 = 0; index1 < (int) (2); index1++) {
+		} else {
+			if (((randomBerry) <= 0.3)) {
+				if ((Math.random() <= 0.15)) {
+					for (int index1 = 0; index1 < (int) (2); index1++) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemPaleoberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
+					}
+				} else if ((Math.random() <= 0.3)) {
+					if (!world.isRemote) {
+						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemPaleoberry.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.spawnEntity(entityToSpawn);
+					}
+				} else {
+					if ((Math.random() <= 0.5)) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
+					}
+					if (!world.isRemote) {
+						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.spawnEntity(entityToSpawn);
+					}
+				}
+			} else {
+				if ((Math.random() <= 0.5)) {
+					if (!world.isRemote) {
+						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+						entityToSpawn.setPickupDelay(10);
+						world.spawnEntity(entityToSpawn);
+					}
+				}
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.spawnEntity(entityToSpawn);
 				}
-			}
-		} else {
-			if (!world.isRemote) {
-				EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
-				entityToSpawn.setPickupDelay(10);
-				world.spawnEntity(entityToSpawn);
 			}
 		}
 	}

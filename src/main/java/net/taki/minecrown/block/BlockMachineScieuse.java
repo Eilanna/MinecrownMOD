@@ -18,7 +18,6 @@ import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumBlockRenderType;
-import net.minecraft.util.BlockRenderLayer;
 import net.minecraft.tileentity.TileEntityLockableLoot;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.network.play.server.SPacketUpdateTileEntity;
@@ -81,12 +80,6 @@ public class BlockMachineScieuse extends ElementsMinecrownMOD.ModElement {
 			setLightOpacity(0);
 			setCreativeTab(TabMiCroJobsMenuisier.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-		}
-
-		@SideOnly(Side.CLIENT)
-		@Override
-		public BlockRenderLayer getBlockLayer() {
-			return BlockRenderLayer.CUTOUT;
 		}
 
 		@Override

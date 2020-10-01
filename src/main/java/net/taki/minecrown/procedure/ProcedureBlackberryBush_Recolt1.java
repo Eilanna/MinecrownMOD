@@ -2,7 +2,6 @@ package net.taki.minecrown.procedure;
 
 import net.taki.minecrown.item.ItemToolSickle;
 import net.taki.minecrown.item.ItemBlackberrySeed;
-import net.taki.minecrown.item.ItemBlackberry;
 import net.taki.minecrown.block.BlockBlackberryBush_0;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -45,24 +44,19 @@ public class ProcedureBlackberryBush_Recolt1 extends ElementsMinecrownMOD.ModEle
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		double randomSeed = 0;
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
+			randomSeed = (double) Math.random();
 			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockBlackberryBush_0.block.getDefaultState(), 3);
-			if ((Math.random() <= 0.4)) {
-				if (!world.isRemote) {
-					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemBlackberry.block, (int) (1)));
-					entityToSpawn.setPickupDelay(10);
-					world.spawnEntity(entityToSpawn);
-				}
-			}
-			if ((Math.random() <= 0.1)) {
+			if (((randomSeed) <= 0.01)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemBlackberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
 					world.spawnEntity(entityToSpawn);
 				}
 			}
+			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockBlackberryBush_0.block.getDefaultState(), 3);
 		}
 	}
 }

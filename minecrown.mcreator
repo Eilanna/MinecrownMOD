@@ -1,6 +1,7 @@
 {
   "id_map": {
-    "GUI": 13
+    "GUI": 13,
+    "ENTITY": 8
   },
   "mod_elements": [
     {
@@ -399,38 +400,6 @@
       "name": "BlackberryBush_Plantation",
       "type": "procedure",
       "sortid": 51,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "int"
-          },
-          {
-            "name": "y",
-            "type": "int"
-          },
-          {
-            "name": "z",
-            "type": "int"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "BlackberryBush_Recolt0",
-      "type": "procedure",
-      "sortid": 54,
       "compiles": true,
       "locked_code": false,
       "ids": {},
@@ -3034,13 +3003,170 @@
       "compiles": true,
       "locked_code": false,
       "ids": {}
+    },
+    {
+      "name": "RacoonWalking",
+      "type": "mob",
+      "sortid": 203,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 3,
+        "1": 4
+      }
+    },
+    {
+      "name": "RacoonStanding",
+      "type": "mob",
+      "sortid": 205,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 5,
+        "1": 6
+      }
+    },
+    {
+      "name": "RacoonTransformStandToWalk",
+      "type": "procedure",
+      "sortid": 209,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RacoonTransformWalkToStand",
+      "type": "procedure",
+      "sortid": 210,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RacoonStandTimerSpawn",
+      "type": "procedure",
+      "sortid": 211,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RacoonWalkTimerSpawn",
+      "type": "procedure",
+      "sortid": 212,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          }
+        ]
+      }
+    },
+    {
+      "name": "RacoonSitting",
+      "type": "mob",
+      "sortid": 213,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 7,
+        "1": 8
+      }
+    },
+    {
+      "name": "RacoonTransformToSitting",
+      "type": "procedure",
+      "sortid": 214,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "BlackBerryBush_Recolt3",
+      "type": "procedure",
+      "sortid": 215,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
   "sound_elements": [],
   "language_map": {
     "en_us": {
-      "item.candleberryseed.name": "Graine de Symphorine",
+      "item.candleberryseed.name": "Graine de buisson à baies blanches",
       "tile.ropefencexcorner.name": "Angle en X de barrière de cordes",
       "item.raspberry.name": "Framboise",
       "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
@@ -3056,7 +3182,7 @@
       "tile.strawberrybush_2.name": "Strawberry Bush2",
       "tile.blackberrybush_0.name": "Blackberry Bush0",
       "tile.ropefencegateopen.name": " Porte de barrière de cordes ouverte",
-      "item.blackberryseed.name": "Graine de Mûre",
+      "item.blackberryseed.name": "Graine de buisson à baies violettes",
       "item.paleoberry.name": "Paléobaie",
       "tile.machinebroyeuse.name": "Broyeur",
       "item.elderberry.name": "Sureau",
@@ -3073,11 +3199,14 @@
       "tile.cropbarleyplant7.name": "Plant d\u0027Orge Stage6",
       "tile.cropbarleyplant4.name": "Plant d\u0027Orge Stage4",
       "tile.crocefencegateopen.name": "Porte de barrière croisées ouverte",
+      "entity.racoonsitting.name": "Raton Laveur Assis",
       "tile.machineforge.name": "Machine Forge",
       "tile.logfencestraight.name": "Barrière en rondins",
-      "item.strawberryseed.name": "Graine de Fraise",
+      "entity.racoonwalking.name": "Raton Laveur qui marche",
+      "item.strawberryseed.name": "Graine de buisson à baies roses",
       "tile.crocefencetcorner.name": "Coin en T de barrière croisées",
       "tile.ropefencecorner.name": "Angle de barrière de cordes",
+      "entity.racoonstanding.name": "Raton Laveur",
       "tile.logfencegateopen.name": " Porte de barrière en rondins ouverte",
       "item.toolscythe.name": "Faux",
       "tile.crocefenceend.name": "Fin de barrière croisées",
@@ -3101,7 +3230,7 @@
       "tile.crocefencecorner.name": "Angle de barrière croisées",
       "tile.blackberrybush_3.name": "Cranberry Bush0",
       "item.cranberrypowder.name": "Poudre de Canneberge",
-      "item.cranberryseed.name": "Graine de Canneberge",
+      "item.cranberryseed.name": "Graine de buisson à baies rouges",
       "tile.logfencexcorner.name": "Angle en X de barrière en rondins",
       "tile.candleberrybush_1.name": "Candleberry Bush1",
       "item.candleberrypowder.name": "Poudre de Symphorine",

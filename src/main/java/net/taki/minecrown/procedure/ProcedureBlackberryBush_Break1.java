@@ -5,7 +5,6 @@ import net.taki.minecrown.item.ItemBlackberrySeed;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
 import net.minecraft.item.ItemStack;
 import net.minecraft.entity.item.EntityItem;
 import net.minecraft.entity.EntityLivingBase;
@@ -43,10 +42,11 @@ public class ProcedureBlackberryBush_Break1 extends ElementsMinecrownMOD.ModElem
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+		double randomSeed = 0;
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
-			world.destroyBlock(new BlockPos((int) x, (int) y, (int) z), false);
-			if ((Math.random() <= 0.3)) {
+			randomSeed = (double) Math.random();
+			if (((randomSeed) <= 0.02)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemBlackberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);

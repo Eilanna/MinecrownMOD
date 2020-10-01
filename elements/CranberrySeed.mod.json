@@ -5,7 +5,7 @@
     "renderType": 0,
     "texture": "cranberryseeditem",
     "customModelName": "Normal",
-    "name": "Graine de Canneberge",
+    "name": "Graine de buisson à baies rouges",
     "creativeTab": {
       "value": "CUSTOM:MiCroJobsBotaniste"
     },

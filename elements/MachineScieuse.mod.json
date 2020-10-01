@@ -12,7 +12,7 @@
     "customModelName": "woodcutter:default",
     "rotationMode": 1,
     "hasTransparency": true,
-    "transparencyType": "CUTOUT",
+    "transparencyType": "SOLID",
     "mx": 0.0,
     "my": 0.0,
     "mz": 0.0,

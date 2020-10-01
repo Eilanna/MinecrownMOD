@@ -48,13 +48,12 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 		World world = (World) dependencies.get("world");
 		double randomSeed = 0;
 		double randomBerry = 0;
+		world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
 		randomBerry = (double) Math.random();
 		if ((((entity instanceof EntityLivingBase) ? ((EntityLivingBase) entity).getHeldItemMainhand() : ItemStack.EMPTY)
 				.getItem() == new ItemStack(ItemToolSickle.block, (int) (1)).getItem())) {
 			randomSeed = (double) Math.random();
-			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_0.block.getDefaultState(), 3);
-			if (((randomSeed) <= 0.1)) {
+			if (((randomSeed) <= 0.15)) {
 				if (!world.isRemote) {
 					EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberrySeed.block, (int) (1)));
 					entityToSpawn.setPickupDelay(10);
@@ -63,10 +62,12 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 			}
 			if (((randomBerry) <= 0.3)) {
 				if ((Math.random() <= 0.3)) {
-					if (!world.isRemote) {
-						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemPaleoberry.block, (int) (1)));
-						entityToSpawn.setPickupDelay(10);
-						world.spawnEntity(entityToSpawn);
+					for (int index0 = 0; index0 < (int) (2); index0++) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemPaleoberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
 					}
 				} else if ((Math.random() <= 0.6)) {
 					if (!world.isRemote) {
@@ -75,6 +76,13 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 						world.spawnEntity(entityToSpawn);
 					}
 				} else {
+					if ((Math.random() <= 0.5)) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
+					}
 					if (!world.isRemote) {
 						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
@@ -96,8 +104,6 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 				}
 			}
 		} else {
-			world.setBlockToAir(new BlockPos((int) x, (int) y, (int) z));
-			world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_0.block.getDefaultState(), 3);
 			if (((randomBerry) <= 0.3)) {
 				if ((Math.random() <= 0.3)) {
 					if (!world.isRemote) {
@@ -105,9 +111,17 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 						entityToSpawn.setPickupDelay(10);
 						world.spawnEntity(entityToSpawn);
 					}
+				} else {
+					if ((Math.random() <= 0.5)) {
+						if (!world.isRemote) {
+							EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
+							entityToSpawn.setPickupDelay(10);
+							world.spawnEntity(entityToSpawn);
+						}
+					}
 				}
 			} else {
-				if ((Math.random() > 0.5)) {
+				if ((Math.random() <= 0.5)) {
 					if (!world.isRemote) {
 						EntityItem entityToSpawn = new EntityItem(world, x, y, z, new ItemStack(ItemCranberry.block, (int) (1)));
 						entityToSpawn.setPickupDelay(10);
@@ -116,5 +130,6 @@ public class ProcedureCranberryBush_Recolt2 extends ElementsMinecrownMOD.ModElem
 				}
 			}
 		}
+		world.setBlockState(new BlockPos((int) x, (int) y, (int) z), BlockCranberryBush_0.block.getDefaultState(), 3);
 	}
 }

@@ -3,8 +3,8 @@ package net.taki.minecrown.block;
 
 import net.taki.minecrown.procedure.ProcedureBush_UpdateBlock;
 import net.taki.minecrown.procedure.ProcedureBush_Break;
-import net.taki.minecrown.procedure.ProcedureBlackberryBush_Recolt2;
 import net.taki.minecrown.procedure.ProcedureBlackberryBush_Break3;
+import net.taki.minecrown.procedure.ProcedureBlackBerryBush_Recolt3;
 import net.taki.minecrown.item.ItemBlackberrySeed;
 import net.taki.minecrown.item.ItemBlackberry;
 import net.taki.minecrown.ElementsMinecrownMOD;
@@ -176,7 +176,7 @@ public class BlockBlackberryBush_3 extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureBlackberryBush_Recolt2.executeProcedure($_dependencies);
+				ProcedureBlackBerryBush_Recolt3.executeProcedure($_dependencies);
 			}
 			return true;
 		}
