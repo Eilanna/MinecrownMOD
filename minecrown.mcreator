@@ -1,7 +1,7 @@
 {
   "id_map": {
-    "GUI": 13,
-    "ENTITY": 8
+    "ENTITY": 8,
+    "GUI": 13
   },
   "mod_elements": [
     {
@@ -3099,37 +3099,6 @@
       }
     },
     {
-      "name": "RacoonSitting",
-      "type": "mob",
-      "sortid": 213,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 7,
-        "1": 8
-      }
-    },
-    {
-      "name": "RacoonTransformToSitting",
-      "type": "procedure",
-      "sortid": 214,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "BlackBerryBush_Recolt3",
       "type": "procedure",
       "sortid": 215,
@@ -3199,7 +3168,6 @@
       "tile.cropbarleyplant7.name": "Plant d\u0027Orge Stage6",
       "tile.cropbarleyplant4.name": "Plant d\u0027Orge Stage4",
       "tile.crocefencegateopen.name": "Porte de barrière croisées ouverte",
-      "entity.racoonsitting.name": "Raton Laveur Assis",
       "tile.machineforge.name": "Machine Forge",
       "tile.logfencestraight.name": "Barrière en rondins",
       "entity.racoonwalking.name": "Raton Laveur qui marche",

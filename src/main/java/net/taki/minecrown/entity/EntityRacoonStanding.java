@@ -1,7 +1,6 @@
 
 package net.taki.minecrown.entity;
 
-import net.taki.minecrown.procedure.ProcedureRacoonTransformToSitting;
 import net.taki.minecrown.procedure.ProcedureRacoonTransformStandToWalk;
 import net.taki.minecrown.procedure.ProcedureRacoonStandTimerSpawn;
 import net.taki.minecrown.ElementsMinecrownMOD;
@@ -16,9 +15,7 @@ import net.minecraft.world.World;
 import net.minecraft.world.DifficultyInstance;
 import net.minecraft.util.math.MathHelper;
 import net.minecraft.util.ResourceLocation;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.DamageSource;
-import net.minecraft.item.ItemStack;
 import net.minecraft.item.Item;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.entity.ai.EntityAIWander;
@@ -139,22 +136,6 @@ public class EntityRacoonStanding extends ElementsMinecrownMOD.ModElement {
 				ProcedureRacoonStandTimerSpawn.executeProcedure($_dependencies);
 			}
 			return retval;
-		}
-
-		@Override
-		public boolean processInteract(EntityPlayer entity, EnumHand hand) {
-			super.processInteract(entity, hand);
-			int x = (int) this.posX;
-			int y = (int) this.posY;
-			int z = (int) this.posZ;
-			ItemStack itemstack = entity.getHeldItem(hand);
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("world", world);
-				ProcedureRacoonTransformToSitting.executeProcedure($_dependencies);
-			}
-			return true;
 		}
 
 		@Override

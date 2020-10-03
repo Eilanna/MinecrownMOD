@@ -28,7 +28,7 @@ public class ProcedureRacoonTransformStandToWalk extends ElementsMinecrownMOD.Mo
 		}
 		entity.getEntityData().setDouble("Timer", ((entity.getEntityData().getDouble("Timer")) + 0.5));
 		if ((((entity.getEntityData().getDouble("Timer")) >= 15)
-				&& (((entity.motionX) >= 0.2) || (((entity.motionY) >= 0.2) || ((entity.motionZ) >= 0.2))))) {
+				&& (((entity.motionX) >= 0.15) || (((entity.motionY) >= 0.15) || ((entity.motionZ) >= 0.15))))) {
 			entity.getEntityData().setDouble("Timer", 0);
 			entity.world.removeEntity(entity);
 			if (!world.isRemote) {

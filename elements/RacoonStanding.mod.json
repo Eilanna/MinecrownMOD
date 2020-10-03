@@ -84,9 +84,6 @@
     "particleSpawningRadious": 0.5,
     "particleAmount": 4,
     "particleSpawningCondition": "ALWAYS",
-    "onRightClickedOn": {
-      "name": "RacoonTransformToSitting"
-    },
     "onMobTickUpdate": {
       "name": "RacoonTransformStandToWalk"
     },
