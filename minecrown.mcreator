@@ -1,7 +1,7 @@
 {
   "id_map": {
     "ENTITY": 8,
-    "GUI": 13
+    "GUI": 14
   },
   "mod_elements": [
     {
@@ -2253,92 +2253,6 @@
       "ids": {}
     },
     {
-      "name": "MachineMeuleuse",
-      "type": "block",
-      "sortid": 154,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "MachineBroyeuse",
-      "type": "block",
-      "sortid": 155,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "BroyeurGUI",
-      "type": "gui",
-      "sortid": 156,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 12
-      }
-    },
-    {
-      "name": "MachineBroyeuseProcess",
-      "type": "procedure",
-      "sortid": 157,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "x",
-            "type": "int"
-          },
-          {
-            "name": "y",
-            "type": "int"
-          },
-          {
-            "name": "z",
-            "type": "int"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "MachineBroyeuseOpen",
-      "type": "procedure",
-      "sortid": 158,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "x",
-            "type": "int"
-          },
-          {
-            "name": "y",
-            "type": "int"
-          },
-          {
-            "name": "z",
-            "type": "int"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
       "name": "MiCroJobsAgriculteur",
       "type": "tab",
       "sortid": 159,
@@ -2350,14 +2264,6 @@
       "name": "MiCroJobsMenuisier",
       "type": "tab",
       "sortid": 160,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "MachineConcasseuse",
-      "type": "block",
-      "sortid": 161,
       "compiles": true,
       "locked_code": false,
       "ids": {}
@@ -3035,6 +2941,92 @@
           }
         ]
       }
+    },
+    {
+      "name": "MachineAgriculteur",
+      "type": "block",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MachineMineur",
+      "type": "block",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "AgriculteurGUI",
+      "type": "gui",
+      "sortid": 218,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 14
+      }
+    },
+    {
+      "name": "MachineAgriculteurProcess",
+      "type": "procedure",
+      "sortid": 219,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
+    },
+    {
+      "name": "MachineAgriculteurOpen",
+      "type": "procedure",
+      "sortid": 220,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {},
+      "metadata": {
+        "dependencies": [
+          {
+            "name": "entity",
+            "type": "entity"
+          },
+          {
+            "name": "x",
+            "type": "int"
+          },
+          {
+            "name": "y",
+            "type": "int"
+          },
+          {
+            "name": "z",
+            "type": "int"
+          },
+          {
+            "name": "world",
+            "type": "world"
+          }
+        ]
+      }
     }
   ],
   "variable_elements": [],
@@ -3045,7 +3037,6 @@
       "tile.ropefencexcorner.name": "Angle en X de barrière de cordes",
       "item.raspberry.name": "Framboise",
       "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
-      "tile.machineconcasseuse.name": "Concasseur",
       "item.cropbarleyseed.name": "Graine d\u0027Orge",
       "tile.candleberrybush_3.name": "Candleberry Bush3",
       "itemGroup.tabmicrojobsmenuisier": "Minecrown MENUISIER",
@@ -3059,7 +3050,6 @@
       "tile.ropefencegateopen.name": " Porte de barrière de cordes ouverte",
       "item.blackberryseed.name": "Graine de buisson à baies violettes",
       "item.paleoberry.name": "Paléobaie",
-      "tile.machinebroyeuse.name": "Broyeur",
       "item.elderberry.name": "Sureau",
       "tile.strawberrybush_3.name": "Strawberry Bush3",
       "tile.logfencegateclosed.name": "Porte de barrière en rondins",
@@ -3094,7 +3084,9 @@
       "tile.candleberrybush_0.name": "Candleberry Bush0",
       "tile.ropefencetcorner.name": "Angle en T de barrière de cordes",
       "tile.crocefencenone.name": "Poteau de barrière croisées",
+      "tile.machineagriculteur.name": "Machine a moudre",
       "tile.cropbarleyplant6.name": "Plant d\u0027Orge Stage6",
+      "tile.machinemineur.name": "Broyeur de pierres",
       "tile.crocefencegateclose.name": "Porte de barrière croisées",
       "tile.cranberrybush_0.name": "Cranberry Bush0",
       "item.cropbarleyitem.name": "Orge",
@@ -3118,8 +3110,7 @@
       "itemGroup.tabmicrojobsagriculteur": "Minecrown AGRICULTEUR",
       "item.blackberrypowder.name": "Poudre de Mûre",
       "itemGroup.tabmicrojobsmineur": "Minecrown MINEUR",
-      "tile.cranberrybush_2.name": "Cranberry Bush2",
-      "tile.machinemeuleuse.name": "Broyeur Fixe"
+      "tile.cranberrybush_2.name": "Cranberry Bush2"
     }
   },
   "workspaceSettings": {

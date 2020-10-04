@@ -1,8 +1,0 @@
-{
-  "parent": "minecrown:custom/grindstone",
-  "textures": {
-    "all": "minecrown:blocks/grindstonetem64",
-    "particle": "minecrown:blocks/grindstonetem64",
-    "0": "minecrown:blocks/grindstone_wheel"
-  }
-}

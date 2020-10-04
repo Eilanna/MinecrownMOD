@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:machineagriculteur"
+    },
+    "facing=north": {
+      "model": "minecrown:machineagriculteur"
+    },
+    "facing=east": {
+      "model": "minecrown:machineagriculteur",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:machineagriculteur",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:machineagriculteur",
+      "y": 270
+    }
+  }
+}

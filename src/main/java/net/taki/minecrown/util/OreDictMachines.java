@@ -2,9 +2,8 @@
 package net.taki.minecrown.util;
 
 import net.taki.minecrown.block.BlockMachineScieuse;
-import net.taki.minecrown.block.BlockMachineMeuleuse;
-import net.taki.minecrown.block.BlockMachineConcasseuse;
-import net.taki.minecrown.block.BlockMachineBroyeuse;
+import net.taki.minecrown.block.BlockMachineMineur;
+import net.taki.minecrown.block.BlockMachineAgriculteur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.oredict.OreDictionary;
@@ -21,8 +20,7 @@ public class OreDictMachines extends ElementsMinecrownMOD.ModElement {
 	@Override
 	public void init(FMLInitializationEvent event) {
 		OreDictionary.registerOre("machines", new ItemStack(BlockMachineScieuse.block, (int) (1)));
-		OreDictionary.registerOre("machines", new ItemStack(BlockMachineMeuleuse.block, (int) (1)));
-		OreDictionary.registerOre("machines", new ItemStack(BlockMachineBroyeuse.block, (int) (1)));
-		OreDictionary.registerOre("machines", new ItemStack(BlockMachineConcasseuse.block, (int) (1)));
+		OreDictionary.registerOre("machines", new ItemStack(BlockMachineMineur.block, (int) (1)));
+		OreDictionary.registerOre("machines", new ItemStack(BlockMachineAgriculteur.block, (int) (1)));
 	}
 }

@@ -1,8 +1,7 @@
 
 package net.taki.minecrown.block;
 
-import net.taki.minecrown.procedure.ProcedureMachineBroyeuseOpen;
-import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
+import net.taki.minecrown.creativetab.TabMiCroJobsMineur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -17,7 +16,6 @@ import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.Rotation;
 import net.minecraft.util.NonNullList;
 import net.minecraft.util.Mirror;
-import net.minecraft.util.EnumHand;
 import net.minecraft.util.EnumFacing;
 import net.minecraft.util.EnumBlockRenderType;
 import net.minecraft.util.BlockRenderLayer;
@@ -47,41 +45,41 @@ import net.minecraft.block.BlockHorizontal;
 import net.minecraft.block.Block;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class BlockMachineBroyeuse extends ElementsMinecrownMOD.ModElement {
-	@GameRegistry.ObjectHolder("minecrown:machinebroyeuse")
+public class BlockMachineMineur extends ElementsMinecrownMOD.ModElement {
+	@GameRegistry.ObjectHolder("minecrown:machinemineur")
 	public static final Block block = null;
-	public BlockMachineBroyeuse(ElementsMinecrownMOD instance) {
-		super(instance, 155);
+	public BlockMachineMineur(ElementsMinecrownMOD instance) {
+		super(instance, 217);
 	}
 
 	@Override
 	public void initElements() {
-		elements.blocks.add(() -> new BlockCustom().setRegistryName("machinebroyeuse"));
+		elements.blocks.add(() -> new BlockCustom().setRegistryName("machinemineur"));
 		elements.items.add(() -> new ItemBlock(block).setRegistryName(block.getRegistryName()));
 	}
 
 	@Override
 	public void init(FMLInitializationEvent event) {
-		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachinebroyeuse");
+		GameRegistry.registerTileEntity(TileEntityCustom.class, "minecrown:tileentitymachinemineur");
 	}
 
 	@SideOnly(Side.CLIENT)
 	@Override
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
-				new ModelResourceLocation("minecrown:machinebroyeuse", "inventory"));
+				new ModelResourceLocation("minecrown:machinemineur", "inventory"));
 	}
 	public static class BlockCustom extends Block implements ITileEntityProvider {
 		public static final PropertyDirection FACING = BlockHorizontal.FACING;
 		public BlockCustom() {
 			super(Material.IRON);
-			setUnlocalizedName("machinebroyeuse");
+			setUnlocalizedName("machinemineur");
 			setSoundType(SoundType.METAL);
 			setHardness(3F);
 			setResistance(5F);
 			setLightLevel(0F);
 			setLightOpacity(0);
-			setCreativeTab(TabMiCroJobsAgriculteur.tab);
+			setCreativeTab(TabMiCroJobsMineur.tab);
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
 		}
 
@@ -171,25 +169,6 @@ public class BlockMachineBroyeuse extends ElementsMinecrownMOD.ModElement {
 			else
 				return 0;
 		}
-
-		@Override
-		public boolean onBlockActivated(World world, BlockPos pos, IBlockState state, EntityPlayer entity, EnumHand hand, EnumFacing direction,
-				float hitX, float hitY, float hitZ) {
-			super.onBlockActivated(world, pos, state, entity, hand, direction, hitX, hitY, hitZ);
-			int x = pos.getX();
-			int y = pos.getY();
-			int z = pos.getZ();
-			{
-				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
-				$_dependencies.put("entity", entity);
-				$_dependencies.put("x", x);
-				$_dependencies.put("y", y);
-				$_dependencies.put("z", z);
-				$_dependencies.put("world", world);
-				ProcedureMachineBroyeuseOpen.executeProcedure($_dependencies);
-			}
-			return true;
-		}
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
@@ -219,7 +198,7 @@ public class BlockMachineBroyeuse extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getName() {
-			return "container.machinebroyeuse";
+			return "container.machinemineur";
 		}
 
 		@Override
@@ -265,7 +244,7 @@ public class BlockMachineBroyeuse extends ElementsMinecrownMOD.ModElement {
 
 		@Override
 		public String getGuiID() {
-			return "minecrown:machinebroyeuse";
+			return "minecrown:machinemineur";
 		}
 
 		@Override

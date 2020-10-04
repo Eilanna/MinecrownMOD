@@ -4,7 +4,7 @@ package net.taki.minecrown.gui;
 import org.lwjgl.opengl.GL11;
 import org.lwjgl.input.Keyboard;
 
-import net.taki.minecrown.procedure.ProcedureMachineBroyeuseProcess;
+import net.taki.minecrown.procedure.ProcedureMachineAgriculteurProcess;
 import net.taki.minecrown.MinecrownMOD;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
@@ -35,11 +35,11 @@ import java.util.HashMap;
 import java.io.IOException;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class GuiBroyeurGUI extends ElementsMinecrownMOD.ModElement {
-	public static int GUIID = 12;
+public class GuiAgriculteurGUI extends ElementsMinecrownMOD.ModElement {
+	public static int GUIID = 14;
 	public static HashMap guistate = new HashMap();
-	public GuiBroyeurGUI(ElementsMinecrownMOD instance) {
-		super(instance, 156);
+	public GuiAgriculteurGUI(ElementsMinecrownMOD instance) {
+		super(instance, 218);
 	}
 
 	@Override
@@ -241,7 +241,7 @@ public class GuiBroyeurGUI extends ElementsMinecrownMOD.ModElement {
 			this.xSize = 176;
 			this.ySize = 166;
 		}
-		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/broyeurgui.png");
+		private static final ResourceLocation texture = new ResourceLocation("minecrown:textures/agriculteurgui.png");
 		@Override
 		public void drawScreen(int mouseX, int mouseY, float partialTicks) {
 			this.drawDefaultBackground();
@@ -414,7 +414,7 @@ public class GuiBroyeurGUI extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-				ProcedureMachineBroyeuseProcess.executeProcedure($_dependencies);
+				ProcedureMachineAgriculteurProcess.executeProcedure($_dependencies);
 			}
 		}
 	}

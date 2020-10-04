@@ -4,7 +4,7 @@
   "definition": {
     "name": "Minecrown MINEUR",
     "icon": {
-      "value": "CUSTOM:MachineConcasseuse"
+      "value": "CUSTOM:MachineMineur"
     },
     "showSearch": false
   }

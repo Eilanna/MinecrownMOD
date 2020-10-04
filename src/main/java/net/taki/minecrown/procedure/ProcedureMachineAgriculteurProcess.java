@@ -18,26 +18,26 @@ import net.minecraft.item.ItemStack;
 import net.minecraft.init.Blocks;
 
 @ElementsMinecrownMOD.ModElement.Tag
-public class ProcedureMachineBroyeuseProcess extends ElementsMinecrownMOD.ModElement {
-	public ProcedureMachineBroyeuseProcess(ElementsMinecrownMOD instance) {
-		super(instance, 157);
+public class ProcedureMachineAgriculteurProcess extends ElementsMinecrownMOD.ModElement {
+	public ProcedureMachineAgriculteurProcess(ElementsMinecrownMOD instance) {
+		super(instance, 219);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency x for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency y for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency z for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency world for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		int x = (int) dependencies.get("x");
