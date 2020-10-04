@@ -1,7 +1,7 @@
 {
   "id_map": {
     "ENTITY": 8,
-    "GUI": 13
+    "GUI": 14
   },
   "mod_elements": [
     {
@@ -3035,6 +3035,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "MachineGuiconcasseuse",
+      "type": "gui",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 14
+      }
+    },
+    {
+      "name": "MachineVapeur",
+      "type": "block",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
     }
   ],
   "variable_elements": [],
@@ -3087,6 +3105,7 @@
       "item.strawberry.name": "Fraise",
       "tile.strawberrybush_1.name": "Strawberry Bush1",
       "tile.blackberrybush_2.name": "Blackberry Bush2",
+      "tile.machinevapeur.name": "Machine Vapeur",
       "tile.logfenceend.name": "Fin de barrière en rondins",
       "item.toolsickle.name": "Faucille",
       "itemGroup.tabmicrojobsforgeron": "Minecrown FORGERON",

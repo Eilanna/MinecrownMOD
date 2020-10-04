@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "minecrown:blocks/dark_oak_log",
+    "up": "minecrown:blocks/dark_oak_log",
+    "north": "minecrown:blocks/dark_oak_log",
+    "east": "minecrown:blocks/dark_oak_log",
+    "south": "minecrown:blocks/dark_oak_log",
+    "west": "minecrown:blocks/dark_oak_log",
+    "particle": "minecrown:blocks/dark_oak_log"
+  }
+}
