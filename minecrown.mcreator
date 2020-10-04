@@ -3005,100 +3005,6 @@
       "ids": {}
     },
     {
-      "name": "RacoonWalking",
-      "type": "mob",
-      "sortid": 203,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 3,
-        "1": 4
-      }
-    },
-    {
-      "name": "RacoonStanding",
-      "type": "mob",
-      "sortid": 205,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {
-        "0": 5,
-        "1": 6
-      }
-    },
-    {
-      "name": "RacoonTransformStandToWalk",
-      "type": "procedure",
-      "sortid": 209,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "RacoonTransformWalkToStand",
-      "type": "procedure",
-      "sortid": 210,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          },
-          {
-            "name": "world",
-            "type": "world"
-          }
-        ]
-      }
-    },
-    {
-      "name": "RacoonStandTimerSpawn",
-      "type": "procedure",
-      "sortid": 211,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
-      "name": "RacoonWalkTimerSpawn",
-      "type": "procedure",
-      "sortid": 212,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {},
-      "metadata": {
-        "dependencies": [
-          {
-            "name": "entity",
-            "type": "entity"
-          }
-        ]
-      }
-    },
-    {
       "name": "BlackBerryBush_Recolt3",
       "type": "procedure",
       "sortid": 215,
@@ -3170,11 +3076,9 @@
       "tile.crocefencegateopen.name": "Porte de barrière croisées ouverte",
       "tile.machineforge.name": "Machine Forge",
       "tile.logfencestraight.name": "Barrière en rondins",
-      "entity.racoonwalking.name": "Raton Laveur qui marche",
       "item.strawberryseed.name": "Graine de buisson à baies roses",
       "tile.crocefencetcorner.name": "Coin en T de barrière croisées",
       "tile.ropefencecorner.name": "Angle de barrière de cordes",
-      "entity.racoonstanding.name": "Raton Laveur",
       "tile.logfencegateopen.name": " Porte de barrière en rondins ouverte",
       "item.toolscythe.name": "Faux",
       "tile.crocefenceend.name": "Fin de barrière croisées",
