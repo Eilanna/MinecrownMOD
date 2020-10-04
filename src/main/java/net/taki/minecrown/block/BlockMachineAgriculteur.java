@@ -1,12 +1,55 @@
 
 package net.taki.minecrown.block;
 
+import net.taki.minecrown.procedure.ProcedureMachineAgriculteurOpen;
+import net.taki.minecrown.creativetab.TabMiCroJobsAgriculteur;
+import net.taki.minecrown.ElementsMinecrownMOD;
+
+import net.minecraftforge.fml.relauncher.SideOnly;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.common.event.FMLInitializationEvent;
+import net.minecraftforge.client.model.ModelLoader;
+import net.minecraftforge.client.event.ModelRegistryEvent;
+
+import net.minecraft.world.World;
+import net.minecraft.util.math.BlockPos;
+import net.minecraft.util.Rotation;
+import net.minecraft.util.NonNullList;
+import net.minecraft.util.Mirror;
+import net.minecraft.util.EnumHand;
+import net.minecraft.util.EnumFacing;
+import net.minecraft.util.EnumBlockRenderType;
+import net.minecraft.util.BlockRenderLayer;
+import net.minecraft.tileentity.TileEntityLockableLoot;
+import net.minecraft.tileentity.TileEntity;
+import net.minecraft.network.play.server.SPacketUpdateTileEntity;
+import net.minecraft.network.NetworkManager;
+import net.minecraft.nbt.NBTTagCompound;
+import net.minecraft.item.ItemStack;
+import net.minecraft.item.ItemBlock;
+import net.minecraft.item.Item;
+import net.minecraft.inventory.ItemStackHelper;
+import net.minecraft.inventory.InventoryHelper;
+import net.minecraft.inventory.ContainerChest;
+import net.minecraft.inventory.Container;
+import net.minecraft.entity.player.InventoryPlayer;
+import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.entity.EntityLivingBase;
+import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.block.state.IBlockState;
+import net.minecraft.block.properties.PropertyDirection;
+import net.minecraft.block.properties.IProperty;
+import net.minecraft.block.material.Material;
+import net.minecraft.block.SoundType;
+import net.minecraft.block.ITileEntityProvider;
+import net.minecraft.block.BlockHorizontal;
+import net.minecraft.block.Block;
+
 @ElementsMinecrownMOD.ModElement.Tag
 public class BlockMachineAgriculteur extends ElementsMinecrownMOD.ModElement {
-
 	@GameRegistry.ObjectHolder("minecrown:machineagriculteur")
 	public static final Block block = null;
-
 	public BlockMachineAgriculteur(ElementsMinecrownMOD instance) {
 		super(instance, 216);
 	}
@@ -27,27 +70,19 @@ public class BlockMachineAgriculteur extends ElementsMinecrownMOD.ModElement {
 	public void registerModels(ModelRegistryEvent event) {
 		ModelLoader.setCustomModelResourceLocation(Item.getItemFromBlock(block), 0,
 				new ModelResourceLocation("minecrown:machineagriculteur", "inventory"));
-
 	}
-
 	public static class BlockCustom extends Block implements ITileEntityProvider {
-
 		public static final PropertyDirection FACING = BlockHorizontal.FACING;
-
 		public BlockCustom() {
 			super(Material.IRON);
-
 			setUnlocalizedName("machineagriculteur");
 			setSoundType(SoundType.METAL);
-
 			setHardness(3F);
 			setResistance(5F);
 			setLightLevel(0F);
 			setLightOpacity(0);
 			setCreativeTab(TabMiCroJobsAgriculteur.tab);
-
 			this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH));
-
 		}
 
 		@SideOnly(Side.CLIENT)
@@ -144,7 +179,6 @@ public class BlockMachineAgriculteur extends ElementsMinecrownMOD.ModElement {
 			int x = pos.getX();
 			int y = pos.getY();
 			int z = pos.getZ();
-
 			{
 				java.util.HashMap<String, Object> $_dependencies = new java.util.HashMap<>();
 				$_dependencies.put("entity", entity);
@@ -152,18 +186,14 @@ public class BlockMachineAgriculteur extends ElementsMinecrownMOD.ModElement {
 				$_dependencies.put("y", y);
 				$_dependencies.put("z", z);
 				$_dependencies.put("world", world);
-
 				ProcedureMachineAgriculteurOpen.executeProcedure($_dependencies);
 			}
 			return true;
 		}
-
 	}
 
 	public static class TileEntityCustom extends TileEntityLockableLoot {
-
 		private NonNullList<ItemStack> stacks = NonNullList.<ItemStack>withSize(3, ItemStack.EMPTY);
-
 		@Override
 		public int getSizeInventory() {
 			return 3;
@@ -248,7 +278,5 @@ public class BlockMachineAgriculteur extends ElementsMinecrownMOD.ModElement {
 		protected NonNullList<ItemStack> getItems() {
 			return this.stacks;
 		}
-
 	}
-
 }
