@@ -1,7 +1,7 @@
 
 package net.taki.minecrown.creativetab;
 
-import net.taki.minecrown.block.BlockMachineConcasseuse;
+import net.taki.minecrown.block.BlockMachineMineur;
 import net.taki.minecrown.ElementsMinecrownMOD;
 
 import net.minecraftforge.fml.relauncher.SideOnly;
@@ -22,7 +22,7 @@ public class TabMiCroJobsMineur extends ElementsMinecrownMOD.ModElement {
 			@SideOnly(Side.CLIENT)
 			@Override
 			public ItemStack getTabIconItem() {
-				return new ItemStack(BlockMachineConcasseuse.block, (int) (1));
+				return new ItemStack(BlockMachineMineur.block, (int) (1));
 			}
 
 			@SideOnly(Side.CLIENT)

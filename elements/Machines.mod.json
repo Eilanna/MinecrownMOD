@@ -9,13 +9,10 @@
         "value": "CUSTOM:MachineScieuse"
       },
       {
-        "value": "CUSTOM:MachineMeuleuse"
+        "value": "CUSTOM:MachineMineur"
       },
       {
-        "value": "CUSTOM:MachineBroyeuse"
-      },
-      {
-        "value": "CUSTOM:MachineConcasseuse"
+        "value": "CUSTOM:MachineAgriculteur"
       }
     ],
     "functions": [],

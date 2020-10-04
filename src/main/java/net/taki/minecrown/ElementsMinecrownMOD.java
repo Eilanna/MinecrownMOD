@@ -8,7 +8,7 @@ package net.taki.minecrown;
 
 import net.taki.minecrown.gui.GuiMachineGuiconcasseuse;
 import net.taki.minecrown.gui.GuiGUIForgeron;
-import net.taki.minecrown.gui.GuiBroyeurGUI;
+import net.taki.minecrown.gui.GuiAgriculteurGUI;
 
 import net.minecraftforge.fml.relauncher.Side;
 import net.minecraftforge.fml.common.registry.EntityEntry;
@@ -126,23 +126,23 @@ public class ElementsMinecrownMOD implements IFuelHandler, IWorldGenerator {
 	public static class GuiHandler implements IGuiHandler {
 		@Override
 		public Object getServerGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiBroyeurGUI.GUIID)
-				return new GuiBroyeurGUI.GuiContainerMod(world, x, y, z, player);
 			if (id == GuiGUIForgeron.GUIID)
 				return new GuiGUIForgeron.GuiContainerMod(world, x, y, z, player);
 			if (id == GuiMachineGuiconcasseuse.GUIID)
 				return new GuiMachineGuiconcasseuse.GuiContainerMod(world, x, y, z, player);
+			if (id == GuiAgriculteurGUI.GUIID)
+				return new GuiAgriculteurGUI.GuiContainerMod(world, x, y, z, player);
 			return null;
 		}
 
 		@Override
 		public Object getClientGuiElement(int id, EntityPlayer player, World world, int x, int y, int z) {
-			if (id == GuiBroyeurGUI.GUIID)
-				return new GuiBroyeurGUI.GuiWindow(world, x, y, z, player);
 			if (id == GuiGUIForgeron.GUIID)
 				return new GuiGUIForgeron.GuiWindow(world, x, y, z, player);
 			if (id == GuiMachineGuiconcasseuse.GUIID)
 				return new GuiMachineGuiconcasseuse.GuiWindow(world, x, y, z, player);
+			if (id == GuiAgriculteurGUI.GUIID)
+				return new GuiAgriculteurGUI.GuiWindow(world, x, y, z, player);
 			return null;
 		}
 	}

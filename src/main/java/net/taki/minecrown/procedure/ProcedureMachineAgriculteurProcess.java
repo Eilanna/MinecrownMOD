@@ -1,49 +1,35 @@
 package net.taki.minecrown.procedure;
 
-import net.taki.minecrown.item.ItemStrawberrySeed;
-import net.taki.minecrown.item.ItemStrawberryPowder;
-import net.taki.minecrown.item.ItemCranberrySeed;
-import net.taki.minecrown.item.ItemCranberryPowder;
-import net.taki.minecrown.item.ItemCandleberrySeed;
-import net.taki.minecrown.item.ItemCandleberryPowder;
-import net.taki.minecrown.item.ItemBlackberrySeed;
-import net.taki.minecrown.item.ItemBlackberryPowder;
-import net.taki.minecrown.ElementsMinecrownMOD;
-
-import net.minecraft.world.World;
-import net.minecraft.util.math.BlockPos;
-import net.minecraft.tileentity.TileEntityLockableLoot;
-import net.minecraft.tileentity.TileEntity;
-import net.minecraft.item.ItemStack;
-import net.minecraft.init.Blocks;
-
 @ElementsMinecrownMOD.ModElement.Tag
-public class ProcedureMachineBroyeuseProcess extends ElementsMinecrownMOD.ModElement {
-	public ProcedureMachineBroyeuseProcess(ElementsMinecrownMOD instance) {
-		super(instance, 157);
+public class ProcedureMachineAgriculteurProcess extends ElementsMinecrownMOD.ModElement {
+
+	public ProcedureMachineAgriculteurProcess(ElementsMinecrownMOD instance) {
+		super(instance, 219);
 	}
 
 	public static void executeProcedure(java.util.HashMap<String, Object> dependencies) {
 		if (dependencies.get("x") == null) {
-			System.err.println("Failed to load dependency x for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency x for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("y") == null) {
-			System.err.println("Failed to load dependency y for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency y for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("z") == null) {
-			System.err.println("Failed to load dependency z for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency z for procedure MachineAgriculteurProcess!");
 			return;
 		}
 		if (dependencies.get("world") == null) {
-			System.err.println("Failed to load dependency world for procedure MachineBroyeuseProcess!");
+			System.err.println("Failed to load dependency world for procedure MachineAgriculteurProcess!");
 			return;
 		}
+
 		int x = (int) dependencies.get("x");
 		int y = (int) dependencies.get("y");
 		int z = (int) dependencies.get("z");
 		World world = (World) dependencies.get("world");
+
 		if ((((((new Object() {
 			public ItemStack getItemStack(BlockPos pos, int sltid) {
 				TileEntity inv = world.getTileEntity(pos);
@@ -448,5 +434,7 @@ public class ProcedureMachineBroyeuseProcess extends ElementsMinecrownMOD.ModEle
 				}
 			}
 		}
+
 	}
+
 }

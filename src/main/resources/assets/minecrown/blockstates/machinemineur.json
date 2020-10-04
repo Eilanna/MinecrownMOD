@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "normal": {
+      "model": "minecrown:machinemineur"
+    },
+    "facing=north": {
+      "model": "minecrown:machinemineur"
+    },
+    "facing=east": {
+      "model": "minecrown:machinemineur",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "minecrown:machinemineur",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "minecrown:machinemineur",
+      "y": 270
+    }
+  }
+}
