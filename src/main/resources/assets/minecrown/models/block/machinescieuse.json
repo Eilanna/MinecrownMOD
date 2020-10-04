@@ -1,8 +1,8 @@
 {
   "parent": "minecrown:custom/woodcutter",
   "textures": {
-    "all": "minecrown:blocks/stonecutter_saw",
-    "particle": "minecrown:blocks/stonecutter_saw",
+    "all": "minecrown:blocks/toneuttertem64",
+    "particle": "minecrown:blocks/toneuttertem64",
     "side": "minecrown:blocks/stonecutter_side",
     "top": "minecrown:blocks/stonecutter_top",
     "bottom": "minecrown:blocks/stonecutter_bottom",

@@ -2943,7 +2943,15 @@
       }
     },
     {
-      "name": "MachineVapeur",
+      "name": "MachineAgriculteur",
+      "type": "block",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MachineMineur",
       "type": "block",
       "sortid": 217,
       "compiles": true,
@@ -2951,9 +2959,9 @@
       "ids": {}
     },
     {
-      "name": "MachineGuiconcasseuse",
+      "name": "AgriculteurGUI",
       "type": "gui",
-      "sortid": 216,
+      "sortid": 218,
       "compiles": true,
       "locked_code": false,
       "ids": {
@@ -3021,15 +3029,7 @@
       }
     },
     {
-      "name": "MachineAgriculteur",
-      "type": "block",
-      "sortid": 216,
-      "compiles": true,
-      "locked_code": false,
-      "ids": {}
-    },
-    {
-      "name": "MachineMineur",
+      "name": "MachineVapeur",
       "type": "block",
       "sortid": 217,
       "compiles": true,
@@ -3037,9 +3037,9 @@
       "ids": {}
     },
     {
-      "name": "AgriculteurGUI",
+      "name": "MachineGuiconcasseuse",
       "type": "gui",
-      "sortid": 218,
+      "sortid": 216,
       "compiles": true,
       "locked_code": false,
       "ids": {
@@ -3054,8 +3054,8 @@
       "item.candleberryseed.name": "Graine de buisson à baies blanches",
       "tile.ropefencexcorner.name": "Angle en X de barrière de cordes",
       "item.raspberry.name": "Framboise",
-      "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
       "item.cropbarleyseed.name": "Graine d\u0027Orge",
+      "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
       "tile.machineconcasseuse.name": "Concasseur",
       "tile.candleberrybush_3.name": "Candleberry Bush3",
       "itemGroup.tabmicrojobsmenuisier": "Minecrown MENUISIER",
@@ -3097,7 +3097,6 @@
       "item.strawberry.name": "Fraise",
       "tile.strawberrybush_1.name": "Strawberry Bush1",
       "tile.blackberrybush_2.name": "Blackberry Bush2",
-      "tile.machinevapeur.name": "Machine Vapeur",
       "tile.logfenceend.name": "Fin de barrière en rondins",
       "item.toolsickle.name": "Faucille",
       "itemGroup.tabmicrojobsforgeron": "Minecrown FORGERON",
