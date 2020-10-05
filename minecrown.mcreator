@@ -1,7 +1,7 @@
 {
   "id_map": {
     "ENTITY": 8,
-    "GUI": 14
+    "GUI": 15
   },
   "mod_elements": [
     {
@@ -3027,6 +3027,24 @@
           }
         ]
       }
+    },
+    {
+      "name": "MachineVapeur",
+      "type": "block",
+      "sortid": 217,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {}
+    },
+    {
+      "name": "MachineGuiconcasseuse",
+      "type": "gui",
+      "sortid": 216,
+      "compiles": true,
+      "locked_code": false,
+      "ids": {
+        "0": 14
+      }
     }
   ],
   "variable_elements": [],
@@ -3038,6 +3056,7 @@
       "item.raspberry.name": "Framboise",
       "itemGroup.tabmicrojobsbotaniste": "Minecrown BOTANISTE",
       "item.cropbarleyseed.name": "Graine d\u0027Orge",
+      "tile.machineconcasseuse.name": "Concasseur",
       "tile.candleberrybush_3.name": "Candleberry Bush3",
       "itemGroup.tabmicrojobsmenuisier": "Minecrown MENUISIER",
       "tile.ropefencegateclose.name": "Porte de barrière de cordes",
@@ -3050,6 +3069,7 @@
       "tile.ropefencegateopen.name": " Porte de barrière de cordes ouverte",
       "item.blackberryseed.name": "Graine de buisson à baies violettes",
       "item.paleoberry.name": "Paléobaie",
+      "tile.machinebroyeuse.name": "Broyeur",
       "item.elderberry.name": "Sureau",
       "tile.strawberrybush_3.name": "Strawberry Bush3",
       "tile.logfencegateclosed.name": "Porte de barrière en rondins",
@@ -3110,7 +3130,8 @@
       "itemGroup.tabmicrojobsagriculteur": "Minecrown AGRICULTEUR",
       "item.blackberrypowder.name": "Poudre de Mûre",
       "itemGroup.tabmicrojobsmineur": "Minecrown MINEUR",
-      "tile.cranberrybush_2.name": "Cranberry Bush2"
+      "tile.cranberrybush_2.name": "Cranberry Bush2",
+      "tile.machinemeuleuse.name": "Broyeur Fixe"
     }
   },
   "workspaceSettings": {
